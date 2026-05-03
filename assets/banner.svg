@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 540" role="img" aria-label="Dr. Milad Khatib — Civil Engineering Consultancy">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#0A0E17"/>
+      <stop offset="60%"  stop-color="#0F1A2E"/>
+      <stop offset="100%" stop-color="#1A2640"/>
+    </linearGradient>
+    <pattern id="grid" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#C8A44E" stroke-width="0.4" stroke-opacity="0.10"/>
+    </pattern>
+  </defs>
+
+  <!-- background -->
+  <rect width="1600" height="540" fill="url(#bg)"/>
+  <rect width="1600" height="540" fill="url(#grid)"/>
+
+  <!-- corner ticks -->
+  <g stroke="#C8A44E" stroke-width="1.4" fill="none" opacity="0.55">
+    <path d="M 60 60  L 100 60  M 60 60 L 60 100"/>
+    <path d="M 1540 60 L 1500 60 M 1540 60 L 1540 100"/>
+    <path d="M 60 480 L 100 480 M 60 480 L 60 440"/>
+    <path d="M 1540 480 L 1500 480 M 1540 480 L 1540 440"/>
+  </g>
+
+  <!-- top gold rule -->
+  <line x1="500" y1="160" x2="1100" y2="160" stroke="#C8A44E" stroke-width="1.5"/>
+  <circle cx="800" cy="160" r="3" fill="#C8A44E"/>
+
+  <!-- monogram MK -->
+  <g transform="translate(800, 235)">
+    <text font-family="'Cormorant Garamond', 'EB Garamond', Georgia, serif"
+          font-weight="700"
+          font-size="86"
+          fill="#FFFFFF"
+          text-anchor="middle"
+          letter-spacing="6">MK</text>
+  </g>
+
+  <!-- name -->
+  <text x="800" y="320"
+        font-family="'Cormorant Garamond', 'EB Garamond', Georgia, serif"
+        font-weight="600"
+        font-size="58"
+        fill="#FFFFFF"
+        text-anchor="middle"
+        letter-spacing="2">Dr. Milad Khatib</text>
+
+  <!-- arabic name -->
+  <text x="800" y="362"
+        font-family="'IBM Plex Sans Arabic', 'Noto Naskh Arabic', system-ui, sans-serif"
+        font-size="26"
+        fill="#D4B76A"
+        text-anchor="middle"
+        letter-spacing="2">د. ميلاد الخطيب</text>
+
+  <!-- discipline -->
+  <text x="800" y="408"
+        font-family="'IBM Plex Sans', system-ui, sans-serif"
+        font-size="16"
+        fill="#F5F1E8"
+        text-anchor="middle"
+        letter-spacing="6"
+        opacity="0.85">CIVIL ENGINEERING CONSULTANCY</text>
+
+  <!-- bottom gold rule -->
+  <line x1="500" y1="445" x2="1100" y2="445" stroke="#C8A44E" stroke-width="1.5"/>
+  <circle cx="800" cy="445" r="3" fill="#C8A44E"/>
+
+  <!-- tagline -->
+  <text x="800" y="488"
+        font-family="'Cormorant Garamond', 'EB Garamond', Georgia, serif"
+        font-style="italic"
+        font-size="22"
+        fill="#C8A44E"
+        text-anchor="middle"
+        letter-spacing="3">Engineering by proof.</text>
+</svg>

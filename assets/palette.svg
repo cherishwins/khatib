@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 200" role="img" aria-label="Brand palette">
+  <style>
+    .label   { font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 13px; fill: #5A5651; letter-spacing: 1px; }
+    .name    { font-family: 'IBM Plex Sans', system-ui, sans-serif; font-size: 14px; font-weight: 600; fill: #0F1A2E; letter-spacing: 0.5px; }
+    .nameW   { fill: #F5F1E8; }
+    .role    { font-family: 'IBM Plex Sans', system-ui, sans-serif; font-size: 11px; fill: #5A5651; letter-spacing: 0.3px; }
+    .roleW   { fill: #D4B76A; }
+  </style>
+
+  <rect width="1200" height="200" fill="#F5F1E8"/>
+
+  <!-- 6 swatches, each 180px wide with 20px gutter, starting at x=20 -->
+  <g>
+    <!-- Deep Navy -->
+    <rect x="20"  y="40" width="180" height="120" fill="#0A0E17"/>
+    <text x="35"  y="68" class="label" fill="#C8A44E">01</text>
+    <text x="35"  y="120" class="name nameW">Deep Navy</text>
+    <text x="35"  y="138" class="role roleW">primary surface</text>
+    <text x="35"  y="180" class="label">#0A0E17</text>
+
+    <!-- Navy -->
+    <rect x="220" y="40" width="180" height="120" fill="#0F1A2E"/>
+    <text x="235" y="68" class="label" fill="#C8A44E">02</text>
+    <text x="235" y="120" class="name nameW">Navy</text>
+    <text x="235" y="138" class="role roleW">text &amp; line</text>
+    <text x="235" y="180" class="label">#0F1A2E</text>
+
+    <!-- Gold -->
+    <rect x="420" y="40" width="180" height="120" fill="#C8A44E"/>
+    <text x="435" y="68" class="label" fill="#0F1A2E">03</text>
+    <text x="435" y="120" class="name">Gold</text>
+    <text x="435" y="138" class="role">innovation accent</text>
+    <text x="435" y="180" class="label">#C8A44E</text>
+
+    <!-- Heritage Green -->
+    <rect x="620" y="40" width="180" height="120" fill="#1A4D2E"/>
+    <text x="635" y="68" class="label" fill="#C8A44E">04</text>
+    <text x="635" y="120" class="name nameW">Heritage</text>
+    <text x="635" y="138" class="role roleW">structure, growth</text>
+    <text x="635" y="180" class="label">#1A4D2E</text>
+
+    <!-- Blueprint Blue -->
+    <rect x="820" y="40" width="180" height="120" fill="#2E5E8B"/>
+    <text x="835" y="68" class="label" fill="#C8A44E">05</text>
+    <text x="835" y="120" class="name nameW">Blueprint</text>
+    <text x="835" y="138" class="role roleW">technical metadata</text>
+    <text x="835" y="180" class="label">#2E5E8B</text>
+
+    <!-- Cream -->
+    <rect x="1020" y="40" width="160" height="120" fill="#F5F1E8" stroke="#9A9589" stroke-width="0.5"/>
+    <text x="1035" y="68" class="label">06</text>
+    <text x="1035" y="120" class="name">Cream</text>
+    <text x="1035" y="138" class="role">page background</text>
+    <text x="1035" y="180" class="label">#F5F1E8</text>
+  </g>
+
+  <!-- top + bottom gold rules -->
+  <line x1="20" y1="20"  x2="1180" y2="20"  stroke="#C8A44E" stroke-width="1"/>
+  <line x1="20" y1="195" x2="1180" y2="195" stroke="#C8A44E" stroke-width="1"/>
+</svg>

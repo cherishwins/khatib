@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 380" role="img" aria-label="Publication topic distribution">
+  <style>
+    .h    { font-family: 'Cormorant Garamond', 'EB Garamond', Georgia, serif; font-size: 22px; font-weight: 600; fill: #0F1A2E; letter-spacing: 0.5px; }
+    .lab  { font-family: 'IBM Plex Sans', system-ui, sans-serif; font-size: 14px; font-weight: 500; fill: #0F1A2E; }
+    .num  { font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 13px; fill: #5A5651; letter-spacing: 0.5px; }
+    .pct  { font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 12px; fill: #C8A44E; font-weight: 600; }
+    .footer { font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 11px; fill: #9A9589; letter-spacing: 0.5px; }
+  </style>
+
+  <rect width="1200" height="380" fill="#F5F1E8"/>
+
+  <!-- top + bottom gold rules -->
+  <line x1="40" y1="20" x2="1160" y2="20" stroke="#C8A44E" stroke-width="1"/>
+  <line x1="40" y1="360" x2="1160" y2="360" stroke="#C8A44E" stroke-width="1"/>
+
+  <!-- title -->
+  <text x="40" y="55" class="h">Publication topics · 52 entries · 1998 → 2026</text>
+  <text x="1160" y="55" text-anchor="end" class="num">36 with DOI · 23 journal · 23 book-chapter · 3 thesis · 2 conference · 1 book</text>
+
+  <!-- bars: x=260 starts the bar track. Bar track width = 700px. Max value = 23 (sustainable). -->
+  <!-- Each row: y baseline; label at x=40-250; bar at x=260; count + % after the bar. -->
+
+  <!-- Row 1: sustainable — 23 (44.2%) -->
+  <text x="40" y="106" class="lab">Sustainability &amp; SDG</text>
+  <rect x="260" y="90" width="700" height="22" fill="#E5DFCE"/>
+  <rect x="260" y="90" width="700" height="22" fill="#1A4D2E"/>
+  <text x="975" y="106" class="num">23</text>
+  <text x="1015" y="106" class="pct">44.2%</text>
+
+  <!-- Row 2: water — 15 (28.8%) -->
+  <text x="40" y="156" class="lab">Water &amp; environmental</text>
+  <rect x="260" y="140" width="700" height="22" fill="#E5DFCE"/>
+  <rect x="260" y="140" width="456" height="22" fill="#2E5E8B"/>
+  <text x="975" y="156" class="num">15</text>
+  <text x="1015" y="156" class="pct">28.8%</text>
+
+  <!-- Row 3: post-tension — 14 (26.9%) -->
+  <text x="40" y="206" class="lab">Post-tension &amp; prestress</text>
+  <rect x="260" y="190" width="700" height="22" fill="#E5DFCE"/>
+  <rect x="260" y="190" width="426" height="22" fill="#0F1A2E"/>
+  <text x="975" y="206" class="num">14</text>
+  <text x="1015" y="206" class="pct">26.9%</text>
+
+  <!-- Row 4: geotech — 5 (9.6%) -->
+  <text x="40" y="256" class="lab">Geotechnical</text>
+  <rect x="260" y="240" width="700" height="22" fill="#E5DFCE"/>
+  <rect x="260" y="240" width="152" height="22" fill="#5A5651"/>
+  <text x="975" y="256" class="num">5</text>
+  <text x="1015" y="256" class="pct">9.6%</text>
+
+  <!-- Row 5: seismic — 4 (7.7%) -->
+  <text x="40" y="306" class="lab">Seismic</text>
+  <rect x="260" y="290" width="700" height="22" fill="#E5DFCE"/>
+  <rect x="260" y="290" width="122" height="22" fill="#C8A44E"/>
+  <text x="975" y="306" class="num">4</text>
+  <text x="1015" y="306" class="pct">7.7%</text>
+
+  <!-- footer -->
+  <text x="40" y="345" class="footer">Source: content/publications.ts on miladkhatib.com — recomputed at build. Some publications carry more than one topic, so percentages sum above 100%.</text>
+</svg>
