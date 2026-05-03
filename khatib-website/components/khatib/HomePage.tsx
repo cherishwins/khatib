@@ -1,9 +1,9 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import type { Locale } from '@/lib/tokens';
 import { brand, profiles } from '@/lib/tokens';
 import type { Dictionary } from '@/lib/i18n';
 import { Mono, Tagline, GoldRule } from './atoms';
-import { Monogram } from './Monogram';
 import { PillarCard, PatentCard } from './cards';
 import { PublicationItem } from './PublicationItem';
 import { SectionHeading } from './SectionHeading';
@@ -37,19 +37,19 @@ export function HomePage({ locale, dict }: { locale: Locale; dict: Dictionary })
           {/* Portrait column */}
           <div className="order-2 md:order-1">
             <div className="relative aspect-[4/5] overflow-hidden border border-gold/30">
-              <div className="absolute inset-0 bg-gradient-to-b from-navy/20 via-navy/40 to-deep-navy" />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <Monogram size={220} ariaLabel={dict.meta.shortName} />
-              </div>
-              <div className="absolute bottom-0 left-0 right-0 flex flex-col gap-1 bg-deep-navy/90 px-4 py-3">
+              <Image
+                src="/images/khatib-portrait.png"
+                alt={isAr ? 'د. ميلاد الخطيب في مكتبه، بيروت، 2026' : 'Dr. Milad Khatib at his office, Beirut, 2026'}
+                fill
+                priority
+                sizes="(max-width: 768px) 100vw, 45vw"
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-b from-transparent via-deep-navy/10 to-deep-navy/85" />
+              <div className="absolute bottom-0 left-0 right-0 flex flex-col gap-1 bg-deep-navy/85 px-4 py-3 backdrop-blur-sm">
                 <Mono className="text-[10px] uppercase tracking-tracked text-gold">
                   {dict.meta.city} · 2026
                 </Mono>
-                <span className="text-xs text-warm-gray">
-                  {isAr
-                    ? 'صورة د. الخطيب — تُحدَّث عند توفّر النسخة المعتمدة'
-                    : 'Authorised portrait — replace with khatib-portrait-original.jpg on launch'}
-                </span>
               </div>
             </div>
           </div>

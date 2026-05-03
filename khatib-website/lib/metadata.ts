@@ -7,8 +7,6 @@ interface BuildMetadataInput {
   description: string;
   path: string;
   locale?: Locale;
-  ogImage?: string;
-  ogImageAlt?: string;
   ogType?: 'website' | 'profile' | 'article';
   publishedTime?: string;
   modifiedTime?: string;
@@ -16,16 +14,14 @@ interface BuildMetadataInput {
 
 const SITE = process.env.NEXT_PUBLIC_SITE_URL ?? `https://${brand.domain}`;
 
+// OG and Twitter images are auto-generated per locale via Next.js conventions:
+// app/(en)/opengraph-image.tsx and app/(ar)/opengraph-image.tsx. Twitter inherits.
 export function buildMetadata(input: BuildMetadataInput): Metadata {
   const locale = input.locale ?? 'en';
   const otherLocale: Locale = locale === 'en' ? 'ar' : 'en';
   const enPath = stripLocale(input.path);
   const arPath = enPath === '/' ? '/ar' : `/ar${enPath}`;
   const canonical = locale === 'en' ? enPath : arPath;
-  const ogImage = input.ogImage ?? '/icons-and-meta/og-default.png';
-  const ogImageAbsolute = ogImage.startsWith('http') ? ogImage : `${SITE}${ogImage}`;
-  const ogImageAlt =
-    input.ogImageAlt ?? 'Dr. Milad Khatib at his office, Beirut, 2026.';
   const ogLocale = locale === 'en' ? 'en_US' : 'ar_LB';
   const altLocale = otherLocale === 'en' ? 'en_US' : 'ar_LB';
 
@@ -48,15 +44,6 @@ export function buildMetadata(input: BuildMetadataInput): Metadata {
       type: input.ogType ?? 'website',
       locale: ogLocale,
       alternateLocale: [altLocale],
-      images: [
-        {
-          url: ogImageAbsolute,
-          width: 1200,
-          height: 630,
-          alt: ogImageAlt,
-          type: 'image/png',
-        },
-      ],
       ...(input.publishedTime ? { publishedTime: input.publishedTime } : {}),
       ...(input.modifiedTime ? { modifiedTime: input.modifiedTime } : {}),
     },
@@ -64,7 +51,6 @@ export function buildMetadata(input: BuildMetadataInput): Metadata {
       card: 'summary_large_image',
       title: input.title,
       description: input.description,
-      images: [ogImageAbsolute],
     },
     robots: {
       index: process.env.VERCEL_ENV !== 'preview',
@@ -116,7 +102,7 @@ export function personJsonLd() {
       `https://sciprofiles.com/profile/${profiles.sciprofiles}`,
     ],
     url: SITE,
-    image: `${SITE}/icons-and-meta/og-default.png`,
+    image: `${SITE}/images/khatib-portrait.png`,
     description:
       'Beirut-based civilian civil engineering consultant. Structural, geotechnical, and forensic. Two registered Lebanese patents, fifty-two peer-reviewed publications, twenty-one editorial positions.',
   };

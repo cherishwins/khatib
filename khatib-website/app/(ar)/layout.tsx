@@ -3,6 +3,7 @@ import '../globals.css';
 import { fontVariables } from '@/lib/fonts';
 import { getDictionary } from '@/lib/i18n';
 import { brand } from '@/lib/tokens';
+import { Analytics } from '@/components/khatib/Analytics';
 import { SiteHeader } from '@/components/khatib/SiteHeader';
 import { SiteFooter } from '@/components/khatib/SiteFooter';
 
@@ -25,14 +26,8 @@ export const metadata: Metadata = {
   formatDetection: { telephone: false },
   referrer: 'strict-origin-when-cross-origin',
   manifest: '/icons-and-meta/manifest-ar.webmanifest',
-  icons: {
-    icon: [
-      { url: '/icons-and-meta/favicon.ico' },
-      { url: '/icons-and-meta/favicon-32.png', sizes: '32x32', type: 'image/png' },
-      { url: '/icons-and-meta/favicon-16.png', sizes: '16x16', type: 'image/png' },
-    ],
-    apple: [{ url: '/icons-and-meta/apple-touch-icon.png', sizes: '180x180' }],
-  },
+  // icons + opengraph-image auto-injected by Next.js conventions:
+  // app/icon.tsx · app/apple-icon.tsx · app/(ar)/opengraph-image.tsx
 };
 
 export default function ArabicRootLayout({ children }: { children: React.ReactNode }) {
@@ -45,6 +40,7 @@ export default function ArabicRootLayout({ children }: { children: React.ReactNo
         <SiteHeader locale="ar" dict={dict} />
         <main id="main">{children}</main>
         <SiteFooter locale="ar" dict={dict} />
+        <Analytics />
       </body>
     </html>
   );
