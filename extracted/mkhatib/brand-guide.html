@@ -1,0 +1,1069 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Brand Guide — Dr. Milad Khatib · Civil Engineering Consultancy</title>
+<meta name="description" content="Brand identity, color system, typography, voice, and application examples for Dr. Milad Khatib's civil engineering consultancy."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet"/>
+<style>
+  :root {
+    --deep-navy: #0A0E17;
+    --navy: #0F1A2E;
+    --midnight: #1A2640;
+    --gold: #C8A44E;
+    --gold-light: #D4B76A;
+    --gold-dark: #A68A3E;
+    --heritage-green: #1A4D2E;
+    --green-light: #2A6B40;
+    --green-dark: #0F3A1F;
+    --blueprint-blue: #2E5E8B;
+    --blueprint-light: #5A8AB8;
+    --blueprint-dark: #1F4567;
+    --cream: #F5F1E8;
+    --warm-gray: #9A9589;
+    --stone: #5A5651;
+    --white: #FFFFFF;
+    --danger: #8B2020;
+
+    --font-display: 'Cormorant Garamond', Georgia, serif;
+    --font-body: 'IBM Plex Sans', Arial, system-ui, sans-serif;
+    --font-arabic: 'IBM Plex Sans Arabic', Arial, sans-serif;
+    --font-mono: 'IBM Plex Mono', 'Courier New', monospace;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--font-body);
+    font-weight: 400;
+    color: var(--stone);
+    background: var(--cream);
+    line-height: 1.55;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* ───────────────  HERO  ─────────────── */
+  .hero {
+    background: var(--deep-navy);
+    color: var(--cream);
+    padding: 72px 48px 96px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background-image:
+      linear-gradient(120deg, transparent 49.6%, rgba(200,164,78,0.04) 49.6%, rgba(200,164,78,0.04) 50.4%, transparent 50.4%),
+      linear-gradient(60deg,  transparent 49.6%, rgba(200,164,78,0.04) 49.6%, rgba(200,164,78,0.04) 50.4%, transparent 50.4%),
+      linear-gradient(0deg,   transparent 49.6%, rgba(200,164,78,0.03) 49.6%, rgba(200,164,78,0.03) 50.4%, transparent 50.4%);
+    background-size: 48px 83px;
+    opacity: 0.7;
+    pointer-events: none;
+  }
+  .hero-inner {
+    max-width: 1100px; margin: 0 auto;
+    position: relative; z-index: 1;
+  }
+  .hero-eyebrow {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.4em;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 36px;
+  }
+  .hero-rule {
+    width: 100%; max-width: 480px;
+    height: 1px; background: var(--gold);
+    margin: 24px auto;
+  }
+  .hero-title {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: clamp(46px, 6vw, 84px);
+    line-height: 1.05;
+    color: var(--white);
+    text-align: center;
+    letter-spacing: -0.01em;
+  }
+  .hero-sub {
+    font-family: var(--font-body);
+    font-size: 14px;
+    letter-spacing: 0.25em;
+    color: var(--gold);
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 14px;
+  }
+  .hero-arabic {
+    font-family: var(--font-arabic);
+    font-weight: 500;
+    color: var(--warm-gray);
+    text-align: center;
+    margin-top: 28px;
+    direction: rtl;
+  }
+  .hero-arabic-name { font-size: 32px; }
+  .hero-arabic-sub { font-size: 18px; margin-top: 6px; opacity: 0.8; }
+  .hero-tagline {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: 22px;
+    color: var(--gold-light);
+    text-align: center;
+    margin-top: 40px;
+  }
+  .hero-tagline-ar {
+    font-family: var(--font-arabic);
+    font-size: 22px;
+    color: var(--gold-light);
+    text-align: center;
+    margin-top: 8px;
+    direction: rtl;
+  }
+
+  /* ───────────────  STRUCTURE  ─────────────── */
+  section.band {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 80px 48px;
+  }
+  section.band-dark {
+    background: var(--deep-navy);
+    color: var(--cream);
+    max-width: none;
+  }
+  section.band-dark .band-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 80px 48px;
+  }
+  section.band-green {
+    background: var(--heritage-green);
+    color: var(--cream);
+    max-width: none;
+  }
+  section.band-green .band-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 80px 48px;
+  }
+
+  .section-meta {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.4em;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .section-meta::before {
+    content: '';
+    width: 32px; height: 1px;
+    background: var(--gold);
+    display: inline-block;
+  }
+  .section-h {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: clamp(34px, 4vw, 52px);
+    line-height: 1.1;
+    color: var(--deep-navy);
+    margin-bottom: 24px;
+    letter-spacing: -0.01em;
+  }
+  section.band-dark .section-h,
+  section.band-green .section-h { color: var(--white); }
+
+  .section-lede {
+    font-family: var(--font-display);
+    font-size: 20px;
+    font-style: italic;
+    color: var(--stone);
+    max-width: 720px;
+    margin-bottom: 48px;
+    line-height: 1.45;
+  }
+  section.band-dark .section-lede,
+  section.band-green .section-lede { color: var(--warm-gray); }
+
+  /* ───────────────  LOGO SHOWCASE  ─────────────── */
+  .logo-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-top: 32px;
+  }
+  .logo-card {
+    background: var(--deep-navy);
+    border: 1px solid var(--midnight);
+    padding: 56px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 240px;
+  }
+  .logo-card.cream { background: var(--cream); border-color: rgba(0,0,0,0.08); }
+  .logo-card.green { background: var(--heritage-green); border-color: var(--green-dark); }
+  .logo-card svg { max-width: 100%; height: auto; }
+  .logo-caption {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.3em;
+    color: var(--warm-gray);
+    text-transform: uppercase;
+    margin-top: 12px;
+    text-align: center;
+  }
+  .mono-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-top: 32px;
+  }
+  .mono-cell {
+    background: var(--deep-navy);
+    aspect-ratio: 1 / 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+  }
+  .mono-cell.size-16 { padding: 0; }
+  .mono-cell svg { max-width: 80%; max-height: 80%; }
+  .mono-size-label {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    color: var(--warm-gray);
+    text-transform: uppercase;
+    margin-top: 8px;
+    text-align: center;
+  }
+
+  /* ───────────────  COLOR SYSTEM  ─────────────── */
+  .color-cluster { margin-bottom: 48px; }
+  .color-cluster-h {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 24px;
+    color: var(--deep-navy);
+    margin-bottom: 4px;
+  }
+  section.band-dark .color-cluster-h,
+  section.band-green .color-cluster-h { color: var(--white); }
+  .color-cluster-meta {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    color: var(--warm-gray);
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+  .swatches {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px;
+  }
+  .swatch {
+    aspect-ratio: 1.4 / 1;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 0;
+    position: relative;
+    overflow: hidden;
+  }
+  .swatch-name {
+    font-family: var(--font-body);
+    font-size: 13px;
+    font-weight: 500;
+  }
+  .swatch-hex {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.05em;
+    opacity: 0.85;
+  }
+  .sw-deep-navy { background: var(--deep-navy); color: var(--cream); }
+  .sw-navy { background: var(--navy); color: var(--cream); }
+  .sw-midnight { background: var(--midnight); color: var(--cream); }
+  .sw-gold { background: var(--gold); color: var(--deep-navy); }
+  .sw-gold-light { background: var(--gold-light); color: var(--deep-navy); }
+  .sw-gold-dark { background: var(--gold-dark); color: var(--cream); }
+  .sw-heritage-green { background: var(--heritage-green); color: var(--cream); }
+  .sw-green-light { background: var(--green-light); color: var(--cream); }
+  .sw-green-dark { background: var(--green-dark); color: var(--cream); }
+  .sw-blueprint-blue { background: var(--blueprint-blue); color: var(--cream); }
+  .sw-blueprint-light { background: var(--blueprint-light); color: var(--deep-navy); }
+  .sw-blueprint-dark { background: var(--blueprint-dark); color: var(--cream); }
+  .sw-cream { background: var(--cream); color: var(--stone); border: 1px solid rgba(0,0,0,0.08); }
+  .sw-warm-gray { background: var(--warm-gray); color: var(--deep-navy); }
+  .sw-stone { background: var(--stone); color: var(--cream); }
+  .sw-white { background: var(--white); color: var(--stone); border: 1px solid rgba(0,0,0,0.08); }
+
+  /* ───────────────  TYPOGRAPHY  ─────────────── */
+  .type-stack { display: grid; gap: 36px; margin-top: 32px; }
+  .type-row {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 32px;
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+    padding-bottom: 28px;
+  }
+  .type-row:last-child { border-bottom: none; }
+  .type-label {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    color: var(--gold-dark);
+    text-transform: uppercase;
+    padding-top: 8px;
+  }
+  .type-meta {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--warm-gray);
+    margin-top: 8px;
+    letter-spacing: 0.05em;
+  }
+  .specimen-display {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 1.1;
+    color: var(--deep-navy);
+    letter-spacing: -0.01em;
+  }
+  .specimen-body {
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.5;
+    color: var(--deep-navy);
+  }
+  .specimen-arabic {
+    font-family: var(--font-arabic);
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 1.4;
+    color: var(--deep-navy);
+    direction: rtl;
+  }
+  .specimen-mono {
+    font-family: var(--font-mono);
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--deep-navy);
+    letter-spacing: 0.02em;
+  }
+
+  /* ───────────────  VOICE  ─────────────── */
+  .voice-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-top: 40px; }
+  .voice-card {
+    background: var(--cream);
+    border-left: 2px solid var(--gold);
+    padding: 32px;
+  }
+  section.band-dark .voice-card {
+    background: var(--midnight);
+    border-left-color: var(--gold);
+  }
+  .voice-name {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.3em;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .voice-h {
+    font-family: var(--font-display);
+    font-size: 26px;
+    color: var(--deep-navy);
+    margin-bottom: 18px;
+  }
+  section.band-dark .voice-h { color: var(--white); }
+  .voice-quote {
+    font-family: var(--font-body);
+    font-size: 14px;
+    line-height: 1.65;
+    color: var(--stone);
+  }
+  section.band-dark .voice-quote { color: var(--warm-gray); }
+  .voice-quote.ar {
+    font-family: var(--font-arabic);
+    font-size: 16px;
+    direction: rtl;
+    text-align: right;
+  }
+  .voice-motto {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: 18px;
+    color: var(--gold-dark);
+    margin-top: 18px;
+  }
+  section.band-dark .voice-motto { color: var(--gold); }
+  .voice-motto.ar { font-family: var(--font-arabic); font-style: normal; direction: rtl; text-align: right; }
+
+  /* ───────────────  PATTERNS  ─────────────── */
+  .pattern-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-top: 32px;
+  }
+  .pattern-card {
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    border: 1px solid var(--midnight);
+  }
+  .pattern-card img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+  /* ───────────────  HONESTY RULES  ─────────────── */
+  .honesty-list {
+    display: grid;
+    gap: 14px;
+    margin-top: 32px;
+    counter-reset: rule;
+  }
+  .honesty-item {
+    display: grid;
+    grid-template-columns: 56px 1fr;
+    gap: 20px;
+    padding: 18px 22px;
+    background: rgba(139, 32, 32, 0.04);
+    border-left: 2px solid var(--danger);
+    counter-increment: rule;
+  }
+  .honesty-item::before {
+    content: counter(rule, decimal-leading-zero);
+    font-family: var(--font-mono);
+    font-size: 13px;
+    color: var(--danger);
+    letter-spacing: 0.05em;
+    padding-top: 2px;
+    font-weight: 500;
+  }
+  .honesty-text {
+    font-family: var(--font-body);
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--stone);
+  }
+  .honesty-text strong { color: var(--deep-navy); font-weight: 600; }
+
+  /* ───────────────  APPLICATIONS  ─────────────── */
+  .app-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+    margin-top: 40px;
+  }
+  .app-card {
+    border: 1px solid var(--midnight);
+    overflow: hidden;
+    background: var(--deep-navy);
+  }
+  .app-img {
+    width: 100%;
+    display: block;
+    background: var(--deep-navy);
+  }
+  .app-meta {
+    background: var(--midnight);
+    color: var(--warm-gray);
+    padding: 14px 20px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+  }
+  .app-meta strong { color: var(--gold); font-weight: 500; }
+
+  /* ───────────────  FOOTER  ─────────────── */
+  footer {
+    background: var(--deep-navy);
+    color: var(--warm-gray);
+    padding: 64px 48px;
+    text-align: center;
+  }
+  footer .rule { width: 240px; height: 1px; background: var(--gold); margin: 0 auto 32px; }
+  footer h3 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    color: var(--white);
+    font-size: 28px;
+    margin-bottom: 8px;
+  }
+  footer .tagline {
+    font-family: var(--font-display);
+    font-style: italic;
+    color: var(--gold-light);
+    font-size: 18px;
+    margin-bottom: 24px;
+  }
+  footer .files {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.05em;
+    color: var(--warm-gray);
+    line-height: 2;
+  }
+  footer .files span { color: var(--gold); }
+  footer .credit {
+    margin-top: 32px;
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--stone);
+  }
+
+  @media (max-width: 720px) {
+    section.band, section.band-dark .band-inner, section.band-green .band-inner {
+      padding: 56px 24px;
+    }
+    .hero { padding: 56px 24px 72px; }
+    .logo-grid, .voice-grid, .pattern-grid { grid-template-columns: 1fr; }
+    .mono-grid { grid-template-columns: repeat(2, 1fr); }
+    .type-row { grid-template-columns: 1fr; gap: 12px; }
+    .specimen-display { font-size: 38px; }
+    .specimen-arabic { font-size: 24px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ─────────────── HERO ─────────────── -->
+<header class="hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">Brand&nbsp;Guide · v3.0 · May&nbsp;2026 · Civilian Edition</div>
+    <div class="hero-rule"></div>
+    <h1 class="hero-title">Dr. Milad Khatib</h1>
+    <div class="hero-sub">Civil Engineering Consultancy</div>
+    <div class="hero-arabic">
+      <div class="hero-arabic-name">د. ميلاد الخطيب</div>
+      <div class="hero-arabic-sub">الاستشارات الهندسية المدنية</div>
+    </div>
+    <div class="hero-rule" style="margin-top:48px"></div>
+    <p class="hero-tagline">Engineering by proof.</p>
+    <p class="hero-tagline-ar">الهندسة بالبرهان.</p>
+  </div>
+</header>
+
+<!-- ─────────────── 01 IDENTITY ─────────────── -->
+<section class="band">
+  <div class="section-meta">01 · Identity</div>
+  <h2 class="section-h">A senior consulting voice, set in serif and Arabic.</h2>
+  <p class="section-lede">
+    The Khatib brand presents a solo Beirut-based practice in structural,
+    geotechnical, and forensic civil engineering &mdash; patent-holding,
+    peer-reviewed, OEA-registered. The visual language is engineered
+    documentation: bilingual by default, evidence-led, technically
+    precise without becoming stiff. Inspired by the Ibrahim Energy
+    Partners system; distinct in mark, motif, and motto.
+  </p>
+</section>
+
+<!-- ─────────────── 02 LOGO SYSTEM ─────────────── -->
+<section class="band-dark">
+  <div class="band-inner">
+    <div class="section-meta">02 · Logo System</div>
+    <h2 class="section-h">Mark, monogram, wordmark.</h2>
+    <p class="section-lede">
+      Three lockups. The primary mark for document covers and large-format
+      surfaces. The MK monogram inside an isometric cube for avatars and
+      favicons &mdash; the structural-engineering counterpart to Ibrahim
+      Energy's Islamic hexagon. The wordmark for tight footers and email
+      signatures.
+    </p>
+
+    <div class="logo-grid">
+      <div>
+        <div class="logo-card">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 320" width="100%" preserveAspectRatio="xMidYMid meet">
+            <rect fill="#0A0E17" x="0" y="0" width="800" height="320"/>
+            <rect fill="#C8A44E" x="120" y="78" width="560" height="1"/>
+            <text fill="#FFFFFF" font-family="Cormorant Garamond, Georgia, serif" font-weight="700" font-size="46" x="400" y="140" text-anchor="middle">DR. MILAD KHATIB</text>
+            <text fill="#C8A44E" font-family="IBM Plex Sans, Arial, sans-serif" font-weight="500" font-size="13" letter-spacing="2.6" x="400" y="172" text-anchor="middle">CIVIL ENGINEERING CONSULTANCY</text>
+            <text fill="#9A9589" font-family="IBM Plex Sans Arabic, Arial, sans-serif" font-weight="500" font-size="22" x="400" y="216" text-anchor="middle" direction="rtl">د. ميلاد الخطيب</text>
+            <text fill="#9A9589" font-family="IBM Plex Sans Arabic, Arial, sans-serif" font-weight="400" font-size="14" x="400" y="240" text-anchor="middle" direction="rtl">الاستشارات الهندسية المدنية</text>
+            <rect fill="#C8A44E" x="120" y="262" width="560" height="1"/>
+          </svg>
+        </div>
+        <div class="logo-caption">Primary · Navy · for hero surfaces</div>
+      </div>
+      <div>
+        <div class="logo-card cream">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 320" width="100%" preserveAspectRatio="xMidYMid meet">
+            <rect fill="#F5F1E8" x="0" y="0" width="800" height="320"/>
+            <rect fill="#C8A44E" x="120" y="78" width="560" height="1"/>
+            <text fill="#0A0E17" font-family="Cormorant Garamond, Georgia, serif" font-weight="700" font-size="46" x="400" y="140" text-anchor="middle">DR. MILAD KHATIB</text>
+            <text fill="#A68A3E" font-family="IBM Plex Sans, Arial, sans-serif" font-weight="500" font-size="13" letter-spacing="2.6" x="400" y="172" text-anchor="middle">CIVIL ENGINEERING CONSULTANCY</text>
+            <text fill="#5A5651" font-family="IBM Plex Sans Arabic, Arial, sans-serif" font-weight="500" font-size="22" x="400" y="216" text-anchor="middle" direction="rtl">د. ميلاد الخطيب</text>
+            <text fill="#5A5651" font-family="IBM Plex Sans Arabic, Arial, sans-serif" font-weight="400" font-size="14" x="400" y="240" text-anchor="middle" direction="rtl">الاستشارات الهندسية المدنية</text>
+            <rect fill="#C8A44E" x="120" y="262" width="560" height="1"/>
+          </svg>
+        </div>
+        <div class="logo-caption">Inverse · Cream · for letterhead &amp; documents</div>
+      </div>
+    </div>
+
+    <div style="margin-top:48px">
+      <h3 style="font-family:var(--font-display);font-size:24px;color:var(--white);margin-bottom:16px">MK Monogram &mdash; isometric cube</h3>
+      <p style="color:var(--warm-gray);font-size:14px;line-height:1.6;max-width:680px;margin-bottom:24px">
+        The MK monogram for favicons, avatars, watermarks. Below 16&nbsp;px the cube outline drops away; the favicon variant carries gold rules above and below the MK only.
+      </p>
+
+      <div class="mono-grid">
+        <div>
+          <div class="mono-cell">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%">
+              <rect fill="#0A0E17" x="0" y="0" width="512" height="512"/>
+              <rect fill="#C8A44E" x="176" y="74" width="160" height="2"/>
+              <g stroke="#C8A44E" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M 256 168 L 369 233 L 256 298 L 143 233 Z"/>
+                <path d="M 143 233 L 256 298 L 256 428 L 143 363 Z"/>
+                <path d="M 369 233 L 256 298 L 256 428 L 369 363 Z"/>
+              </g>
+              <text fill="#FFFFFF" font-family="Cormorant Garamond, Georgia, serif" font-weight="700" font-size="160" letter-spacing="-4" x="256" y="370" text-anchor="middle">MK</text>
+              <text fill="#C8A44E" font-family="IBM Plex Mono, monospace" font-weight="500" font-size="20" letter-spacing="6" x="256" y="468" text-anchor="middle">ENG · LB</text>
+            </svg>
+          </div>
+          <div class="mono-size-label">512&nbsp;px · LinkedIn avatar</div>
+        </div>
+        <div>
+          <div class="mono-cell">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="60%">
+              <rect fill="#0A0E17" x="0" y="0" width="512" height="512"/>
+              <rect fill="#C8A44E" x="176" y="74" width="160" height="2"/>
+              <g stroke="#C8A44E" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M 256 168 L 369 233 L 256 298 L 143 233 Z"/>
+                <path d="M 143 233 L 256 298 L 256 428 L 143 363 Z"/>
+                <path d="M 369 233 L 256 298 L 256 428 L 369 363 Z"/>
+              </g>
+              <text fill="#FFFFFF" font-family="Cormorant Garamond, Georgia, serif" font-weight="700" font-size="160" letter-spacing="-4" x="256" y="370" text-anchor="middle">MK</text>
+              <text fill="#C8A44E" font-family="IBM Plex Mono, monospace" font-weight="500" font-size="20" letter-spacing="6" x="256" y="468" text-anchor="middle">ENG · LB</text>
+            </svg>
+          </div>
+          <div class="mono-size-label">192&nbsp;px · PWA icon</div>
+        </div>
+        <div>
+          <div class="mono-cell">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="40%">
+              <rect fill="#0A0E17" x="0" y="0" width="64" height="64"/>
+              <rect fill="#C8A44E" x="14" y="12" width="36" height="1.5"/>
+              <text font-family="Cormorant Garamond, Georgia, serif" font-weight="700" font-size="34" fill="#FFFFFF" text-anchor="middle" letter-spacing="-1" x="32" y="46">MK</text>
+              <rect fill="#C8A44E" x="14" y="52" width="36" height="1.5"/>
+            </svg>
+          </div>
+          <div class="mono-size-label">64&nbsp;px · Apple touch</div>
+        </div>
+        <div>
+          <div class="mono-cell">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="20%">
+              <rect fill="#0A0E17" x="0" y="0" width="64" height="64"/>
+              <rect fill="#C8A44E" x="14" y="12" width="36" height="1.5"/>
+              <text font-family="Cormorant Garamond, Georgia, serif" font-weight="700" font-size="34" fill="#FFFFFF" text-anchor="middle" letter-spacing="-1" x="32" y="46">MK</text>
+              <rect fill="#C8A44E" x="14" y="52" width="36" height="1.5"/>
+            </svg>
+          </div>
+          <div class="mono-size-label">16&nbsp;px · Favicon</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────── 03 COLOR SYSTEM ─────────────── -->
+<section class="band">
+  <div class="section-meta">03 · Color System</div>
+  <h2 class="section-h">Five families, with one role each.</h2>
+  <p class="section-lede">
+    Navy commands. Gold marks innovation. Heritage Green carries Arabic
+    and sustainability. Blueprint Blue handles diagrams. Cream is the
+    paper. Each family does one thing well; none does everything.
+  </p>
+
+  <div class="color-cluster">
+    <div class="color-cluster-h">Primary &mdash; Deep Navy System</div>
+    <div class="color-cluster-meta">Surface · Authority · Default consultant voice</div>
+    <div class="swatches">
+      <div class="swatch sw-deep-navy"><div class="swatch-name">Deep Navy</div><div class="swatch-hex">#0A0E17</div></div>
+      <div class="swatch sw-navy"><div class="swatch-name">Navy</div><div class="swatch-hex">#0F1A2E</div></div>
+      <div class="swatch sw-midnight"><div class="swatch-name">Midnight</div><div class="swatch-hex">#1A2640</div></div>
+    </div>
+  </div>
+
+  <div class="color-cluster">
+    <div class="color-cluster-h">Secondary &mdash; Gold System</div>
+    <div class="color-cluster-meta">Innovation accent · Three uses per page maximum</div>
+    <div class="swatches">
+      <div class="swatch sw-gold"><div class="swatch-name">Gold</div><div class="swatch-hex">#C8A44E</div></div>
+      <div class="swatch sw-gold-light"><div class="swatch-name">Gold Light</div><div class="swatch-hex">#D4B76A</div></div>
+      <div class="swatch sw-gold-dark"><div class="swatch-name">Gold Dark</div><div class="swatch-hex">#A68A3E</div></div>
+    </div>
+  </div>
+
+  <div class="color-cluster">
+    <div class="color-cluster-h">Tertiary &mdash; Heritage Green System</div>
+    <div class="color-cluster-meta">Sustainability · Water studies · Arabic-primary surfaces</div>
+    <div class="swatches">
+      <div class="swatch sw-heritage-green"><div class="swatch-name">Heritage Green</div><div class="swatch-hex">#1A4D2E</div></div>
+      <div class="swatch sw-green-light"><div class="swatch-name">Green Light</div><div class="swatch-hex">#2A6B40</div></div>
+      <div class="swatch sw-green-dark"><div class="swatch-name">Green Dark</div><div class="swatch-hex">#0F3A1F</div></div>
+    </div>
+  </div>
+
+  <div class="color-cluster">
+    <div class="color-cluster-h">Tertiary &mdash; Blueprint Blue System</div>
+    <div class="color-cluster-meta">Diagrams · Schematics · Information callouts</div>
+    <div class="swatches">
+      <div class="swatch sw-blueprint-blue"><div class="swatch-name">Blueprint Blue</div><div class="swatch-hex">#2E5E8B</div></div>
+      <div class="swatch sw-blueprint-light"><div class="swatch-name">Blueprint Light</div><div class="swatch-hex">#5A8AB8</div></div>
+      <div class="swatch sw-blueprint-dark"><div class="swatch-name">Blueprint Dark</div><div class="swatch-hex">#1F4567</div></div>
+    </div>
+  </div>
+
+  <div class="color-cluster">
+    <div class="color-cluster-h">Neutrals</div>
+    <div class="color-cluster-meta">Paper · Body text · Document feel</div>
+    <div class="swatches">
+      <div class="swatch sw-cream"><div class="swatch-name">Cream</div><div class="swatch-hex">#F5F1E8</div></div>
+      <div class="swatch sw-warm-gray"><div class="swatch-name">Warm Gray</div><div class="swatch-hex">#9A9589</div></div>
+      <div class="swatch sw-stone"><div class="swatch-name">Stone</div><div class="swatch-hex">#5A5651</div></div>
+      <div class="swatch sw-white"><div class="swatch-name">White</div><div class="swatch-hex">#FFFFFF</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────── 04 TYPOGRAPHY ─────────────── -->
+<section class="band-dark">
+  <div class="band-inner">
+    <div class="section-meta">04 · Typography</div>
+    <h2 class="section-h">Cormorant. Plex. Plex Arabic. Plex Mono.</h2>
+    <p class="section-lede">
+      Same display + body stack as Ibrahim Energy. The differentiator
+      here is IBM Plex Mono &mdash; reserved for technical metadata:
+      patent numbers, OEA registration, DOIs, equation refs, callout
+      labels. Mono is never used for body or headings.
+    </p>
+
+    <div class="type-stack">
+
+      <div class="type-row" style="border-color:rgba(255,255,255,0.08)">
+        <div>
+          <div class="type-label">Display</div>
+          <div class="type-meta" style="color:var(--warm-gray)">Cormorant Garamond · 700</div>
+        </div>
+        <div>
+          <div class="specimen-display" style="color:var(--white)">DR. MILAD KHATIB</div>
+          <div class="specimen-display" style="font-size:32px;color:var(--gold-light);font-style:italic;margin-top:6px">Engineering by proof.</div>
+        </div>
+      </div>
+
+      <div class="type-row" style="border-color:rgba(255,255,255,0.08)">
+        <div>
+          <div class="type-label">Body</div>
+          <div class="type-meta" style="color:var(--warm-gray)">IBM Plex Sans · 300–700</div>
+        </div>
+        <div>
+          <div class="specimen-body" style="color:var(--cream)">
+            Finite-element re-analysis using inverted-U shaped reinforcement
+            recovered 23&nbsp;% capacity in the failed monostrand zone.
+            Recommended remediation follows in Section&nbsp;4.
+          </div>
+        </div>
+      </div>
+
+      <div class="type-row" style="border-color:rgba(255,255,255,0.08)">
+        <div>
+          <div class="type-label">Arabic · all content</div>
+          <div class="type-meta" style="color:var(--warm-gray)">IBM Plex Sans Arabic · 400–700</div>
+        </div>
+        <div>
+          <div class="specimen-arabic" style="color:var(--cream)">د. ميلاد الخطيب · الاستشارات الهندسية المدنية</div>
+          <div class="specimen-arabic" style="font-size:18px;color:var(--warm-gray);margin-top:8px">
+            تقرير فني · إعادة تأهيل السد الثقالي. أظهر التحليل العددي تخفيضاً قدره ٤٢٪ في تدفق التسرب تحت أساس السد.
+          </div>
+        </div>
+      </div>
+
+      <div class="type-row" style="border-color:rgba(255,255,255,0.08)">
+        <div>
+          <div class="type-label">Technical mono</div>
+          <div class="type-meta" style="color:var(--warm-gray)">IBM Plex Mono · 400–500</div>
+        </div>
+        <div>
+          <div class="specimen-mono" style="color:var(--cream)">
+            PATENT · LB · 2023 / 091<br/>
+            OEA · BEIRUT · #####<br/>
+            DOI · 10.1007/s12205-018-1505-5<br/>
+            ORCID · 0000-0002-0140-0941
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────── 05 VOICE ─────────────── -->
+<section class="band">
+  <div class="section-meta">05 · Voice</div>
+  <h2 class="section-h">Two registers. One discipline.</h2>
+  <p class="section-lede">
+    English is the senior consultant: technical, plain-spoken, project-led.
+    Arabic is the heritage register: formal, scholarly, OEA-respectful.
+    Same evidence, same humility about scope, same refusal to inflate.
+  </p>
+
+  <div class="voice-grid">
+    <div class="voice-card">
+      <div class="voice-name">English Consultant</div>
+      <h3 class="voice-h">Numbers carry the argument.</h3>
+      <p class="voice-quote">
+        The 22-storey post-tensioned slab at the South Beirut site exhibited
+        progressive corner deflection of 38&nbsp;mm at 90 days, exceeding
+        the L/240 serviceability limit. Finite-element re-analysis using
+        inverted-U shaped reinforcement (per Khatib &amp; Abou Saleh, 2020,
+        <em>Case Studies in Construction Materials</em>) recovered 23&nbsp;%
+        capacity in the failed monostrand zone.
+      </p>
+      <p class="voice-motto">&mdash; Engineering by proof.</p>
+    </div>
+
+    <div class="voice-card" style="background:var(--green-dark);border-left-color:var(--gold)">
+      <div class="voice-name" style="color:var(--gold-light)">Arabic Heritage</div>
+      <h3 class="voice-h" style="color:var(--white)">يفتح بالاحترام، يُغلق بالشهادة.</h3>
+      <p class="voice-quote ar" style="color:var(--cream)">
+        تقرير فني &mdash; إعادة تأهيل السد الثقالي. أظهر التحليل العددي بطريقة "GIN" أن حقن الستار يحقق تخفيضاً قدره ٤٢٪ في تدفق التسرب تحت أساس السد، ضمن نطاق الحقن الموصى به (٨–١٢ ميغاباسكال). وقد جرى التحقق من النتائج اعتماداً على البحث المنشور في:
+        <em>Water Practice &amp; Technology</em> 17(8): 1679–1691 (2022).
+      </p>
+      <p class="voice-motto ar" style="color:var(--gold-light)">&mdash; الهندسة بالبرهان.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────── 06 PATTERNS ─────────────── -->
+<section class="band-green">
+  <div class="band-inner">
+    <div class="section-meta" style="color:var(--gold-light)">06 · Patterns</div>
+    <h2 class="section-h">Engineering vocabulary, never decoration.</h2>
+    <p class="section-lede">
+      Two pattern families &mdash; isometric structural grid and patent
+      callout schematic. Both deployed at low opacity (3&ndash;5&nbsp;%
+      on dark, 5&ndash;8&nbsp;% on light). Never Islamic geometric
+      (that's Ibrahim Energy). Never Hanok or river textures (that's
+      주체강). Never stock concrete photography.
+    </p>
+
+    <div class="pattern-grid">
+      <div>
+        <div class="pattern-card" style="background:var(--deep-navy)">
+          <svg viewBox="0 0 480 360" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="xMidYMid slice">
+            <defs>
+              <pattern id="iso2" x="0" y="0" width="48" height="83" patternUnits="userSpaceOnUse">
+                <g stroke="#C8A44E" stroke-width="0.6" fill="none">
+                  <line x1="0" y1="0" x2="48" y2="0"/>
+                  <line x1="0" y1="83" x2="48" y2="83"/>
+                  <line x1="0" y1="83" x2="48" y2="0"/>
+                  <line x1="0" y1="0" x2="48" y2="83"/>
+                </g>
+              </pattern>
+            </defs>
+            <rect fill="#0A0E17" x="0" y="0" width="480" height="360"/>
+            <rect fill="url(#iso2)" x="0" y="0" width="480" height="360" opacity="0.35"/>
+          </svg>
+        </div>
+        <div class="logo-caption" style="color:var(--cream)">Pattern 1 · Isometric Grid</div>
+      </div>
+
+      <div>
+        <div class="pattern-card" style="background:var(--deep-navy)">
+          <svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="xMidYMid slice">
+            <rect fill="#0A0E17" x="0" y="0" width="600" height="400"/>
+            <g stroke="#C8A44E" stroke-width="0.5" fill="none" opacity="0.4">
+              <path d="M 200 150 L 280 130 L 360 140 L 430 180 L 420 240 L 350 270 L 280 280 L 220 240 Z"/>
+              <line x1="280" y1="130" x2="280" y2="280"/>
+              <line x1="200" y1="150" x2="430" y2="180"/>
+            </g>
+            <g>
+              <line stroke="#C8A44E" stroke-width="0.8" opacity="0.65" x1="60" y1="60" x2="180" y2="120"/>
+              <circle stroke="#C8A44E" stroke-width="1" fill="#0A0E17" opacity="0.85" cx="60" cy="60" r="14"/>
+              <text fill="#C8A44E" font-family="IBM Plex Mono, monospace" font-size="11" font-weight="500" x="60" y="64" text-anchor="middle">01</text>
+
+              <line stroke="#C8A44E" stroke-width="0.8" opacity="0.65" x1="240" y1="40" x2="280" y2="170"/>
+              <circle stroke="#C8A44E" stroke-width="1" fill="#0A0E17" opacity="0.85" cx="240" cy="40" r="14"/>
+              <text fill="#C8A44E" font-family="IBM Plex Mono, monospace" font-size="11" font-weight="500" x="240" y="44" text-anchor="middle">02</text>
+
+              <line stroke="#C8A44E" stroke-width="0.8" opacity="0.65" x1="420" y1="55" x2="350" y2="180"/>
+              <circle stroke="#C8A44E" stroke-width="1" fill="#0A0E17" opacity="0.85" cx="420" cy="55" r="14"/>
+              <text fill="#C8A44E" font-family="IBM Plex Mono, monospace" font-size="11" font-weight="500" x="420" y="59" text-anchor="middle">03</text>
+
+              <line stroke="#C8A44E" stroke-width="0.8" opacity="0.65" x1="540" y1="100" x2="430" y2="200"/>
+              <circle stroke="#C8A44E" stroke-width="1" fill="#0A0E17" opacity="0.85" cx="540" cy="100" r="14"/>
+              <text fill="#C8A44E" font-family="IBM Plex Mono, monospace" font-size="11" font-weight="500" x="540" y="104" text-anchor="middle">04</text>
+
+              <line stroke="#C8A44E" stroke-width="0.8" opacity="0.65" x1="80" y1="200" x2="200" y2="240"/>
+              <circle stroke="#C8A44E" stroke-width="1" fill="#0A0E17" opacity="0.85" cx="80" cy="200" r="14"/>
+              <text fill="#C8A44E" font-family="IBM Plex Mono, monospace" font-size="11" font-weight="500" x="80" y="204" text-anchor="middle">05</text>
+
+              <line stroke="#C8A44E" stroke-width="0.8" opacity="0.65" x1="370" y1="340" x2="320" y2="260"/>
+              <circle stroke="#C8A44E" stroke-width="1" fill="#0A0E17" opacity="0.85" cx="370" cy="340" r="14"/>
+              <text fill="#C8A44E" font-family="IBM Plex Mono, monospace" font-size="11" font-weight="500" x="370" y="344" text-anchor="middle">07</text>
+
+              <line stroke="#C8A44E" stroke-width="0.8" opacity="0.65" x1="540" y1="300" x2="450" y2="240"/>
+              <circle stroke="#C8A44E" stroke-width="1" fill="#0A0E17" opacity="0.85" cx="540" cy="300" r="14"/>
+              <text fill="#C8A44E" font-family="IBM Plex Mono, monospace" font-size="11" font-weight="500" x="540" y="304" text-anchor="middle">08</text>
+            </g>
+          </svg>
+        </div>
+        <div class="logo-caption" style="color:var(--cream)">Pattern 2 · Patent Schematic</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────── 07 HONESTY RULES ─────────────── -->
+<section class="band">
+  <div class="section-meta">07 · Honesty Rules</div>
+  <h2 class="section-h">Brand-critical. Non-negotiable.</h2>
+  <p class="section-lede">
+    The research dossier flagged real positioning risks &mdash;
+    credential inflation, over-claimed IP coverage, namesake confusion
+    with Khatib &amp; Alami. These rules exist to keep every Khatib
+    document defensible.
+  </p>
+
+  <div class="honesty-list">
+    <div class="honesty-item"><div class="honesty-text"><strong>Patents are Lebanese-registered.</strong> Until verified PCT/USPTO/EPO certificates are produced, every reference says &ldquo;registered in Lebanon.&rdquo; Never &ldquo;internationally patented&rdquo; or &ldquo;global IP.&rdquo;</div></div>
+    <div class="honesty-item"><div class="honesty-text"><strong>Patent numbers go on the page only when the client supplies them.</strong> No invented numbers, no approximations.</div></div>
+    <div class="honesty-item"><div class="honesty-text"><strong>OEA-Beirut registration number</strong> appears on every external document. Placeholder until supplied.</div></div>
+    <div class="honesty-item"><div class="honesty-text"><strong>&ldquo;26+ years experience&rdquo; is replaced with named project references.</strong> Either name the projects (with client and date), or do not claim the years.</div></div>
+    <div class="honesty-item"><div class="honesty-text"><strong>SPSC Ambassador</strong> appears as a small membership badge, not in the hero. It is a free volunteer-community badge, not an accredited certification.</div></div>
+    <div class="honesty-item"><div class="honesty-text"><strong>Editorial / reviewer roles</strong> are listed by named journal (IWA, Heliyon, Case Studies in Construction Materials, KSCE JCE, EJECE), not as an aggregate &ldquo;18+ journals&rdquo; claim.</div></div>
+    <div class="honesty-item"><div class="honesty-text"><strong>No aggregate citation count</strong> displayed. Publications listed individually with DOIs.</div></div>
+    <div class="honesty-item"><div class="honesty-text"><strong>No stock imagery.</strong> Only authentic project, conference, and patent-demonstration photos.</div></div>
+    <div class="honesty-item"><div class="honesty-text"><strong>Civilian engineering brand.</strong> Per Dr. Khatib&rsquo;s explicit WhatsApp directive (May 2026), no military service or military-adjacent framing on any public material. The civilian engineering record &mdash; academic, patents, publications, services &mdash; carries the brand on its own.</div></div>
+    <div class="honesty-item"><div class="honesty-text"><strong>Disambiguation from Khatib &amp; Alami.</strong> Every external document carries the full practice name, &ldquo;Dr. Milad Khatib · Civil Engineering Consultancy.&rdquo;</div></div>
+  </div>
+</section>
+
+<!-- ─────────────── 08 APPLICATIONS ─────────────── -->
+<section class="band-dark">
+  <div class="band-inner">
+    <div class="section-meta">08 · Applications</div>
+    <h2 class="section-h">The brand is the document.</h2>
+    <p class="section-lede">
+      This practice produces documents &mdash; reports, opinions,
+      drawings, patents, papers. The brand lives in document craft.
+      Below: hero formats demonstrating the system in production.
+    </p>
+
+    <div class="app-grid">
+      <div class="app-card">
+        <img class="app-img" src="../examples/preview-og.png" alt="OG image preview"/>
+        <div class="app-meta"><span>OG · 1200×630 · website share preview</span><strong>og-image.html</strong></div>
+      </div>
+      <div class="app-card">
+        <img class="app-img" src="../examples/preview-linkedin.png" alt="LinkedIn banner preview"/>
+        <div class="app-meta"><span>LinkedIn personal banner · 1584×396</span><strong>linkedin-banner.html</strong></div>
+      </div>
+      <div class="app-card">
+        <img class="app-img" src="../examples/preview-letterhead-en.png" alt="English letterhead preview"/>
+        <div class="app-meta"><span>Letterhead · A4 · English</span><strong>letterhead-en.html</strong></div>
+      </div>
+      <div class="app-card">
+        <img class="app-img" src="../examples/preview-letterhead-ar.png" alt="Arabic letterhead preview"/>
+        <div class="app-meta"><span>Letterhead · A4 · Arabic / RTL</span><strong>letterhead-ar.html</strong></div>
+      </div>
+      <div class="app-card">
+        <img class="app-img" src="../examples/preview-patent.png" alt="Patent case study preview"/>
+        <div class="app-meta"><span>Patent case study · A4</span><strong>patent-case-study.html</strong></div>
+      </div>
+      <div class="app-card">
+        <img class="app-img" src="../examples/preview-capability.png" alt="Capability statement cover preview"/>
+        <div class="app-meta"><span>Capability statement · A4 cover · 3 pillars</span><strong>capability-statement-cover.html</strong></div>
+      </div>
+      <div class="app-card">
+        <img class="app-img" src="../examples/preview-patent-2.png" alt="Patent case study 2 preview"/>
+        <div class="app-meta"><span>Patent case study · 2025 · Food-Particle Device (new in v2)</span><strong>patent-case-study-2.html</strong></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────── 09 PUBLICATIONS SYSTEM ─────────────── -->
+<section class="band">
+  <div class="section-meta">09 · Publications System</div>
+  <h2 class="section-h">Fifty-two papers, sortable, sourced.</h2>
+  <p class="section-lede">
+    The asset Dr. Khatib explicitly asked for. Every peer-reviewed
+    publication from the seventeen-page CV, with topic clusters, venue
+    types, year filters, and a live keyword search. The book is pinned
+    at the top with the Amazon link. The stat strip is restrained: no
+    aggregate citation count, no vanity metrics, just the verifiable
+    record.
+  </p>
+
+  <div class="app-grid" style="grid-template-columns:1fr">
+    <div class="app-card" style="background:var(--cream)">
+      <img class="app-img" src="../examples/preview-publications.png" alt="Publications page full render"/>
+      <div class="app-meta"><span>Publications · 52 entries · live filters · ORCID linked</span><strong>publications-page.html</strong></div>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────── 10 EDITORIAL STANDING ─────────────── -->
+<section class="band-dark">
+  <div class="band-inner">
+    <div class="section-meta">10 · Editorial Standing</div>
+    <h2 class="section-h">Twenty-one positions, named, regional.</h2>
+    <p class="section-lede">
+      Editorial board memberships and reviewer positions at named
+      international journals. Grouped by publication region — Americas,
+      Europe &amp; UK, Asia &amp; Singapore, Additional &amp; Multi-Region.
+      Each role linked to its publisher of record where given in the
+      CV. Verifiable in under sixty seconds.
+    </p>
+
+    <div class="app-grid" style="grid-template-columns:1fr">
+      <div class="app-card">
+        <img class="app-img" src="../examples/preview-editorial.png" alt="Editorial roles page render"/>
+        <div class="app-meta"><span>Editorial &amp; reviewer record · 21 positions · 5 regions</span><strong>editorial-roles.html</strong></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────── FOOTER ─────────────── -->
+<footer>
+  <div class="rule"></div>
+  <h3>Dr. Milad Khatib · Civil Engineering Consultancy</h3>
+  <p class="tagline">Engineering by proof. &mdash; الهندسة بالبرهان.</p>
+  <p class="files">
+    <span>SKILL.md</span> &nbsp; · &nbsp; <span>brand-dna.yaml</span> &nbsp; · &nbsp; <span>POSITIONING-SHIFT.md</span> &nbsp; · &nbsp; <span>RECONCILIATION-NOTES.md</span><br/>
+    <span>logos/</span> &nbsp; · &nbsp; <span>patterns/</span> &nbsp; · &nbsp; <span>examples/</span>
+  </p>
+  <p class="credit">Inspired by · Ibrahim Energy Partners brand system</p>
+</footer>
+
+</body>
+</html>

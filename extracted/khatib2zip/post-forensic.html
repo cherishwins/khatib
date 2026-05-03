@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Post · Forensic · Dr. Milad Khatib</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; overflow: hidden; }
+  body { background: #0A0E17; font-family: 'IBM Plex Sans', sans-serif; }
+
+  .post {
+    width: 100vw;
+    aspect-ratio: 1 / 1;
+    background: #F5F1E8;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
+  }
+  /* Patent-schematic-style background watermark */
+  .post::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 400'><g stroke='%230A0E17' stroke-width='0.5' fill='none' opacity='0.6'><path d='M 200 150 L 280 130 L 360 140 L 430 180 L 420 240 L 350 270 L 280 280 L 220 240 Z'/><line x1='280' y1='130' x2='280' y2='280'/><line x1='200' y1='150' x2='430' y2='180'/></g><g><circle stroke='%230A0E17' stroke-width='0.6' fill='none' cx='60' cy='60' r='14' opacity='0.4'/><circle stroke='%230A0E17' stroke-width='0.6' fill='none' cx='540' cy='100' r='14' opacity='0.4'/><circle stroke='%230A0E17' stroke-width='0.6' fill='none' cx='80' cy='340' r='14' opacity='0.4'/><circle stroke='%230A0E17' stroke-width='0.6' fill='none' cx='540' cy='320' r='14' opacity='0.4'/></g></svg>");
+    background-size: cover;
+    opacity: 0.06;
+    pointer-events: none;
+  }
+
+  .header {
+    display: flex;
+    align-items: center;
+    gap: 2.5%;
+    margin-bottom: 6%;
+    position: relative;
+    z-index: 2;
+  }
+  .avatar {
+    width: 8%;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    background-image: url('khatib-portrait-original.jpg');
+    background-size: cover;
+    background-position: center 28%;
+    border: 1.5px solid rgba(200, 164, 78, 0.7);
+    flex-shrink: 0;
+  }
+  .header-name {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    color: #0A0E17;
+    font-size: 2.2vw;
+    line-height: 1;
+    font-weight: 700;
+  }
+  .header-sub {
+    font-family: 'IBM Plex Mono', monospace;
+    color: #A68A3E;
+    font-size: 0.85vw;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    margin-top: 0.5vw;
+  }
+
+  .pillar-tag {
+    font-family: 'IBM Plex Mono', monospace;
+    color: #A68A3E;
+    font-size: 1vw;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    margin-bottom: 1.5vw;
+    position: relative;
+    z-index: 2;
+  }
+  .gold-rule {
+    width: 8vw;
+    height: 1.5px;
+    background: #C8A44E;
+    margin-bottom: 3vw;
+    position: relative;
+    z-index: 2;
+  }
+
+  .body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+  }
+  h1 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 600;
+    font-size: 4.2vw;
+    line-height: 1.05;
+    color: #0A0E17;
+    letter-spacing: -0.01em;
+    margin-bottom: 3vw;
+  }
+  .lede {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 1.4vw;
+    line-height: 1.55;
+    color: #5A5651;
+    max-width: 88%;
+    font-weight: 400;
+    margin-bottom: 3vw;
+  }
+  .lede strong {
+    color: #0A0E17;
+    font-weight: 600;
+  }
+
+  .case-list {
+    list-style: none;
+    margin-top: 1vw;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5vw;
+  }
+  .case-list li {
+    border-left: 2px solid #C8A44E;
+    padding: 1vw 1.5vw;
+    background: rgba(255,255,255,0.5);
+  }
+  .case-mono {
+    font-family: 'IBM Plex Mono', monospace;
+    color: #A68A3E;
+    font-size: 0.7vw;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    margin-bottom: 0.5vw;
+  }
+  .case-h {
+    font-family: 'Cormorant Garamond', serif;
+    color: #0A0E17;
+    font-size: 1.3vw;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+
+  .footer {
+    border-top: 1px solid rgba(200, 164, 78, 0.4);
+    padding-top: 2.5vw;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+  }
+  .tagline {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: #A68A3E;
+    font-size: 1.4vw;
+  }
+  .tagline-ar {
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+    color: #5A5651;
+    font-size: 1.1vw;
+    margin-top: 0.3vw;
+    direction: rtl;
+    text-align: left;
+  }
+  .url {
+    font-family: 'IBM Plex Mono', monospace;
+    color: #A68A3E;
+    font-size: 0.95vw;
+    letter-spacing: 0.15em;
+    text-align: right;
+  }
+</style>
+</head>
+<body>
+  <div class="post">
+
+    <div class="header">
+      <div class="avatar"></div>
+      <div>
+        <div class="header-name">Dr. Milad Khatib</div>
+        <div class="header-sub">Civil Engineering · Beirut</div>
+      </div>
+    </div>
+
+    <div class="pillar-tag">03 · Forensic &amp; Expert Witness</div>
+    <div class="gold-rule"></div>
+
+    <div class="body">
+      <h1>When the report has<br/>to survive cross-examination.</h1>
+      <p class="lede">
+        Independent forensic structural opinions for insurers, law firms, and
+        owners. <strong>Methodology before conclusion.</strong> Sources cited.
+        Limitations stated. Available for deposition in English or Arabic.
+      </p>
+
+      <ul class="case-list">
+        <li>
+          <div class="case-mono">Scope</div>
+          <div class="case-h">Failure analysis · post-tension, RC, masonry</div>
+        </li>
+        <li>
+          <div class="case-mono">Output</div>
+          <div class="case-h">Written opinion · drawings · cost-of-remediation</div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="footer">
+      <div>
+        <div class="tagline">— Engineering by proof.</div>
+        <div class="tagline-ar" dir="rtl">— الهندسة بالبرهان.</div>
+      </div>
+      <div class="url">miladkhatib.com</div>
+    </div>
+
+  </div>
+</body>
+</html>

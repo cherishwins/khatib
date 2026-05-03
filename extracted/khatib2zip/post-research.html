@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Post · Research · Dr. Milad Khatib</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; overflow: hidden; }
+  body { background: #0A0E17; font-family: 'IBM Plex Sans', sans-serif; }
+
+  .post {
+    width: 100vw;
+    aspect-ratio: 1 / 1;
+    background: #0A0E17;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
+  }
+  .post::before {
+    content: '';
+    position: absolute; inset: 0;
+    background-image:
+      linear-gradient(120deg, transparent 49.6%, rgba(200,164,78,0.05) 49.6%, rgba(200,164,78,0.05) 50.4%, transparent 50.4%),
+      linear-gradient(60deg,  transparent 49.6%, rgba(200,164,78,0.05) 49.6%, rgba(200,164,78,0.05) 50.4%, transparent 50.4%);
+    background-size: 48px 83px;
+    opacity: 0.5;
+    pointer-events: none;
+  }
+
+  .header {
+    display: flex; align-items: center; gap: 2.5%;
+    margin-bottom: 5%; position: relative; z-index: 2;
+  }
+  .avatar {
+    width: 8%; aspect-ratio: 1 / 1; border-radius: 50%;
+    background-image: url('khatib-portrait-original.jpg');
+    background-size: cover; background-position: center 28%;
+    border: 1.5px solid rgba(200, 164, 78, 0.5); flex-shrink: 0;
+  }
+  .header-name {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    color: #FFFFFF; font-size: 2.2vw; line-height: 1; font-weight: 700;
+  }
+  .header-sub {
+    font-family: 'IBM Plex Mono', monospace;
+    color: #C8A44E; font-size: 0.85vw; letter-spacing: 0.25em;
+    text-transform: uppercase; margin-top: 0.5vw;
+  }
+
+  .pillar-tag {
+    font-family: 'IBM Plex Mono', monospace;
+    color: #C8A44E; font-size: 1vw; letter-spacing: 0.4em;
+    text-transform: uppercase; margin-bottom: 1.2vw;
+    position: relative; z-index: 2;
+  }
+  .gold-rule {
+    width: 8vw; height: 1.5px; background: #C8A44E;
+    margin-bottom: 2.5vw; position: relative; z-index: 2;
+  }
+
+  .body {
+    flex: 1; display: flex; flex-direction: column;
+    justify-content: center; position: relative; z-index: 2;
+  }
+  h1 {
+    font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 600;
+    font-size: 3.6vw; line-height: 1.05; color: #FFFFFF;
+    letter-spacing: -0.01em; margin-bottom: 2.5vw;
+  }
+  .lede {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 1.3vw; line-height: 1.55; color: #F5F1E8;
+    max-width: 90%; font-weight: 300; margin-bottom: 2.5vw;
+  }
+  .lede strong { color: #FFFFFF; font-weight: 500; }
+
+  .citations {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 1vw 2vw;
+    margin-top: 1vw;
+  }
+  .cite {
+    border-left: 2px solid #C8A44E; padding: 0.6vw 1vw;
+  }
+  .cite-mono {
+    font-family: 'IBM Plex Mono', monospace;
+    color: #D4B76A; font-size: 0.7vw; letter-spacing: 0.2em;
+    text-transform: uppercase; margin-bottom: 0.3vw;
+  }
+  .cite-h {
+    font-family: 'Cormorant Garamond', serif; color: #FFFFFF;
+    font-size: 1.1vw; line-height: 1.25; font-weight: 500;
+  }
+
+  .footer {
+    border-top: 1px solid rgba(200, 164, 78, 0.25);
+    padding-top: 2vw; display: grid;
+    grid-template-columns: 1fr auto; align-items: center;
+    position: relative; z-index: 2;
+  }
+  .tagline {
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    color: #D4B76A; font-size: 1.4vw;
+  }
+  .tagline-ar {
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+    color: #9A9589; font-size: 1.1vw; margin-top: 0.3vw;
+    direction: rtl; text-align: left;
+  }
+  .url {
+    font-family: 'IBM Plex Mono', monospace; color: #C8A44E;
+    font-size: 0.95vw; letter-spacing: 0.15em; text-align: right;
+  }
+</style>
+</head>
+<body>
+  <div class="post">
+
+    <div class="header">
+      <div class="avatar"></div>
+      <div>
+        <div class="header-name">Dr. Milad Khatib</div>
+        <div class="header-sub">Civil Engineering · Beirut</div>
+      </div>
+    </div>
+
+    <div class="pillar-tag">04 · Research &amp; Publications</div>
+    <div class="gold-rule"></div>
+
+    <div class="body">
+      <h1>Ten years of inverted-U research, now a book.</h1>
+      <p class="lede">
+        Across four journal papers, two book chapters, and one PhD dissertation,
+        a single finding holds: <strong>inverted-U shaped reinforcement
+        recovers measurable shear capacity in failed monostrand zones of
+        post-tensioned slabs.</strong> Independently validated under bonded
+        and unbonded conditions, in beams and slabs, numerically and
+        experimentally. The methodology is now consolidated in a published book.
+      </p>
+
+      <div class="citations">
+        <div class="cite">
+          <div class="cite-mono">2018 · KSCE Journal</div>
+          <div class="cite-h">Numerical punching shear, unbonded slab</div>
+        </div>
+        <div class="cite">
+          <div class="cite-mono">2020 · CSCM</div>
+          <div class="cite-h">Bonded post-tension beams</div>
+        </div>
+        <div class="cite">
+          <div class="cite-mono">2023 · PCI Journal</div>
+          <div class="cite-h">Composite beam connectors</div>
+        </div>
+        <div class="cite">
+          <div class="cite-mono">2024 · Heliyon</div>
+          <div class="cite-h">Monostrand anchor behaviour</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div>
+        <div class="tagline">— Engineering by proof.</div>
+        <div class="tagline-ar" dir="rtl">— الهندسة بالبرهان.</div>
+      </div>
+      <div class="url">amazon · the book</div>
+    </div>
+
+  </div>
+</body>
+</html>

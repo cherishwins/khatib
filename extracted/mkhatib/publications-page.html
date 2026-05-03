@@ -1,0 +1,1074 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Publications · Dr. Milad Khatib</title>
+<meta name="description" content="Peer-reviewed publications, book chapters, and the published book of Dr. Milad Khatib — civil engineering research across post-tensioned concrete, geotechnical, water resources, and sustainable construction."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet"/>
+<style>
+  :root {
+    --deep-navy:#0A0E17; --navy:#0F1A2E; --midnight:#1A2640;
+    --gold:#C8A44E; --gold-light:#D4B76A; --gold-dark:#A68A3E;
+    --green:#1A4D2E; --green-dark:#0F3A1F; --green-light:#2A6B40;
+    --blueprint:#2E5E8B;
+    --cream:#F5F1E8; --warm:#9A9589; --stone:#5A5651; --white:#FFF;
+    --ff-display:'Cormorant Garamond', Georgia, serif;
+    --ff-body:'IBM Plex Sans', Arial, sans-serif;
+    --ff-ar:'IBM Plex Sans Arabic', Arial, sans-serif;
+    --ff-mono:'IBM Plex Mono', 'Courier New', monospace;
+  }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  html { scroll-behavior:smooth; }
+  body {
+    font-family:var(--ff-body);
+    color:var(--stone); background:var(--cream);
+    line-height:1.55; font-size:16px;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  /* HEADER */
+  .top {
+    background:var(--deep-navy); color:var(--cream);
+    padding:60px 48px 80px; position:relative; overflow:hidden;
+  }
+  .top::before {
+    content:''; position:absolute; inset:0;
+    background-image:
+      linear-gradient(120deg,transparent 49.6%,rgba(200,164,78,0.04) 49.6%,rgba(200,164,78,0.04) 50.4%,transparent 50.4%),
+      linear-gradient(60deg,transparent 49.6%,rgba(200,164,78,0.04) 49.6%,rgba(200,164,78,0.04) 50.4%,transparent 50.4%);
+    background-size:48px 83px; opacity:0.6; pointer-events:none;
+  }
+  .top-inner { max-width:1200px; margin:0 auto; position:relative; z-index:1; }
+  .eyebrow {
+    font-family:var(--ff-mono); font-size:11px; letter-spacing:0.4em;
+    color:var(--gold); text-transform:uppercase; margin-bottom:24px;
+  }
+  .eyebrow::before {
+    content:''; display:inline-block; width:32px; height:1px;
+    background:var(--gold); margin-right:14px; vertical-align:middle;
+  }
+  h1 {
+    font-family:var(--ff-display); font-weight:700;
+    font-size:clamp(44px,5.5vw,72px); line-height:1.05;
+    color:var(--white); letter-spacing:-0.01em; margin-bottom:16px;
+  }
+  .h-ar {
+    font-family:var(--ff-ar); font-weight:500;
+    font-size:24px; color:var(--warm); direction:rtl;
+    text-align:left; margin-bottom:32px;
+  }
+  .lede {
+    font-family:var(--ff-display); font-style:italic;
+    font-size:20px; color:var(--gold-light); max-width:680px;
+    line-height:1.45; margin-bottom:28px;
+  }
+  .stat-strip {
+    display:flex; flex-wrap:wrap; gap:18px 32px;
+    border-top:1px solid rgba(200,164,78,0.3);
+    padding-top:24px; margin-top:8px;
+    font-family:var(--ff-mono); font-size:12px; letter-spacing:0.15em;
+    color:var(--warm); text-transform:uppercase;
+  }
+  .stat-strip strong { color:var(--gold); font-weight:500; margin-right:6px; }
+
+  /* TOOLBAR */
+  .toolbar {
+    background:var(--cream); border-bottom:1px solid rgba(0,0,0,0.08);
+    position:sticky; top:0; z-index:20;
+    padding:18px 48px;
+  }
+  .toolbar-inner {
+    max-width:1200px; margin:0 auto;
+    display:grid; grid-template-columns:1fr auto auto auto;
+    gap:14px; align-items:center;
+  }
+  .toolbar-search {
+    border:1px solid rgba(0,0,0,0.12); background:#FFF;
+    padding:10px 14px; font-family:var(--ff-body); font-size:14px;
+    color:var(--deep-navy); width:100%;
+    border-radius:0;
+  }
+  .toolbar-search:focus { outline:none; border-color:var(--gold); }
+  .toolbar select {
+    border:1px solid rgba(0,0,0,0.12); background:#FFF;
+    padding:10px 14px; font-family:var(--ff-mono); font-size:12px;
+    letter-spacing:0.1em; color:var(--deep-navy); text-transform:uppercase;
+    cursor:pointer; min-width:180px; border-radius:0;
+  }
+  .toolbar select:focus { outline:none; border-color:var(--gold); }
+  .toolbar-count {
+    font-family:var(--ff-mono); font-size:11px; letter-spacing:0.2em;
+    color:var(--stone); text-transform:uppercase;
+    white-space:nowrap;
+  }
+  .toolbar-count strong { color:var(--gold-dark); }
+
+  /* MAIN */
+  main { max-width:1200px; margin:0 auto; padding:48px; }
+
+  .pub {
+    display:grid; grid-template-columns:64px 1fr; gap:24px;
+    padding:28px 0; border-bottom:1px solid rgba(0,0,0,0.08);
+    transition:opacity 0.2s;
+  }
+  .pub.hidden { display:none; }
+  .pub-num {
+    font-family:var(--ff-mono); font-size:13px;
+    color:var(--gold-dark); letter-spacing:0.05em; padding-top:6px;
+  }
+  .pub-body { display:flex; flex-direction:column; gap:6px; }
+  .pub-meta {
+    font-family:var(--ff-mono); font-size:11px; letter-spacing:0.2em;
+    color:var(--stone); text-transform:uppercase;
+  }
+  .pub-year { color:var(--gold-dark); font-weight:500; }
+  .pub-sep { color:var(--warm); margin:0 8px; }
+  .pub-type { color:var(--stone); }
+  .pub-title {
+    font-family:var(--ff-display); font-weight:600;
+    font-size:21px; line-height:1.3; color:var(--deep-navy);
+    margin:2px 0 4px; letter-spacing:-0.005em;
+  }
+  .pub-venue {
+    font-family:var(--ff-body); font-style:italic;
+    font-size:14px; color:var(--stone); line-height:1.45;
+  }
+  .pub-tags { display:flex; flex-wrap:wrap; gap:6px; margin-top:6px; }
+  .pill {
+    font-family:var(--ff-mono); font-size:9.5px; letter-spacing:0.15em;
+    color:var(--gold-dark); background:rgba(200,164,78,0.08);
+    padding:3px 8px; text-transform:uppercase; border:1px solid rgba(200,164,78,0.25);
+  }
+  .doi {
+    font-family:var(--ff-mono); font-size:11px; letter-spacing:0.05em;
+    color:var(--blueprint); text-decoration:none; margin-top:6px;
+    display:inline-block; border-bottom:1px solid transparent;
+  }
+  .doi:hover { border-bottom-color:var(--blueprint); }
+
+  /* BOOK feature card — pinned at top */
+  .pub.is-book {
+    background:var(--deep-navy); color:var(--cream);
+    padding:32px; margin-bottom:24px; border-bottom:none;
+    grid-template-columns:64px 1fr;
+    position:relative; overflow:hidden;
+  }
+  .pub.is-book::before {
+    content:''; position:absolute; inset:0;
+    background-image:
+      linear-gradient(120deg,transparent 49.6%,rgba(200,164,78,0.04) 49.6%,rgba(200,164,78,0.04) 50.4%,transparent 50.4%),
+      linear-gradient(60deg,transparent 49.6%,rgba(200,164,78,0.04) 49.6%,rgba(200,164,78,0.04) 50.4%,transparent 50.4%);
+    background-size:36px 62px; opacity:0.5; pointer-events:none;
+  }
+  .pub.is-book > * { position:relative; z-index:1; }
+  .pub.is-book .pub-num { color:var(--gold); }
+  .pub.is-book .pub-meta { color:var(--gold); }
+  .pub.is-book .pub-year { color:var(--gold-light); }
+  .pub.is-book .pub-sep, .pub.is-book .pub-type { color:var(--warm); }
+  .pub.is-book .pub-title { color:var(--white); font-size:28px; }
+  .pub.is-book .pub-venue { color:var(--gold-light); font-size:15px; }
+  .pub.is-book .pill { color:var(--gold-light); background:rgba(200,164,78,0.12); border-color:rgba(200,164,78,0.4); }
+  .pub.is-book .doi.amazon {
+    color:var(--gold); font-size:13px; margin-top:14px;
+    padding:8px 14px; border:1px solid var(--gold);
+    text-transform:uppercase; letter-spacing:0.2em;
+    transition:background 0.15s;
+  }
+  .pub.is-book .doi.amazon:hover { background:var(--gold); color:var(--deep-navy); }
+
+  .empty {
+    padding:80px 24px; text-align:center;
+    font-family:var(--ff-display); font-style:italic;
+    color:var(--warm); font-size:18px;
+  }
+
+  /* FOOTER */
+  footer.foot {
+    background:var(--deep-navy); color:var(--warm);
+    padding:48px 48px 56px; margin-top:60px;
+  }
+  .foot-inner {
+    max-width:1200px; margin:0 auto;
+    display:grid; grid-template-columns:1fr 1fr 1fr; gap:32px;
+    font-family:var(--ff-mono); font-size:11px; letter-spacing:0.05em;
+    line-height:1.7;
+  }
+  .foot-h {
+    color:var(--gold); text-transform:uppercase; font-weight:500;
+    font-size:10px; letter-spacing:0.25em; margin-bottom:8px;
+  }
+  .foot strong { color:var(--cream); font-weight:500; }
+  .foot a { color:var(--warm); text-decoration:none; }
+  .foot a:hover { color:var(--gold); }
+  .foot-tagline {
+    text-align:center; padding-top:32px; margin-top:32px;
+    border-top:1px solid rgba(200,164,78,0.2);
+    grid-column:1 / -1;
+    font-family:var(--ff-display); font-style:italic;
+    color:var(--gold-light); font-size:16px;
+  }
+
+  @media (max-width:768px) {
+    .top, .toolbar, main, footer.foot { padding-left:24px; padding-right:24px; }
+    .toolbar-inner { grid-template-columns:1fr; }
+    .toolbar select, .toolbar-count { width:100%; min-width:0; text-align:left; }
+    .foot-inner { grid-template-columns:1fr; gap:24px; }
+    .pub { grid-template-columns:48px 1fr; gap:16px; }
+    .pub.is-book { padding:24px; }
+    .pub.is-book .pub-title { font-size:22px; }
+    h1 { font-size:38px; }
+    .lede { font-size:17px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="top">
+  <div class="top-inner">
+    <div class="eyebrow">Publications · Peer-Reviewed Record</div>
+    <h1>The published record.</h1>
+    <div class="h-ar" dir="rtl">سجل المنشورات العلمية</div>
+    <p class="lede">
+      Fifty-two contributions across journal articles, book chapters,
+      proceedings, and one book. Spanning post-tensioned concrete, dam
+      grouting, water-resource engineering, and sustainable construction.
+      Each linked to its DOI or publisher of record.
+    </p>
+    <div class="stat-strip">
+      <span><strong>52</strong> publications</span>
+      <span><strong>23</strong> journal articles</span>
+      <span><strong>23</strong> book chapters &amp; proceedings</span>
+      <span><strong>1</strong> book</span>
+      <span><strong>1998 → 2026</strong></span>
+    </div>
+  </div>
+</header>
+
+<!-- TOOLBAR -->
+<div class="toolbar">
+  <div class="toolbar-inner">
+    <input class="toolbar-search" type="search" id="search" placeholder="Search by title keyword…" aria-label="Search publications by title"/>
+    <select id="topic-filter" aria-label="Filter by topic">
+      <option value="">All topics</option>
+      <option value="post-tension">Post-tensioned &amp; prestressed</option>
+      <option value="geotech">Geotechnical &amp; dam</option>
+      <option value="water">Water resources</option>
+      <option value="sustainable">Sustainable construction</option>
+      <option value="seismic">Seismic &amp; disaster</option>
+    </select>
+    <select id="type-filter" aria-label="Filter by venue type">
+      <option value="">All types</option>
+      <option value="journal">Journal articles</option>
+      <option value="book-chapter">Book chapters</option>
+      <option value="conference">Proceedings</option>
+      <option value="book">Books</option>
+    </select>
+    <div class="toolbar-count" id="count"><strong id="count-num">52</strong> shown</div>
+  </div>
+</div>
+
+<!-- MAIN -->
+<main>
+  <div id="pub-list">
+    <article class="pub is-book" data-year="2025" data-type="book" data-topics="post-tension" data-title="breaking limits in prestressed concrete: shear strength enhancement through inverted-u-shaped reinforcement">
+      <div class="pub-num">40</div>
+      <div class="pub-body">
+        <div class="pub-meta">
+          <span class="pub-year">2025</span>
+          <span class="pub-sep">·</span>
+          <span class="pub-type">Book</span>
+        </div>
+        <h3 class="pub-title">Breaking Limits in Prestressed Concrete: Shear Strength Enhancement through Inverted-U-Shaped Reinforcement</h3>
+        <div class="pub-venue">Available on Amazon</div>
+        <div class="pub-tags"><span class="pill" data-topic="post-tension">Post-tensioned &amp; prestressed concrete</span></div>
+        <a class="doi amazon" href="https://www.amazon.in/-/hi/M-S-Khatib-ebook/dp/B0FZ5XV829" target="_blank" rel="noopener">Amazon · view book →</a>
+      </div>
+    </article>
+    <article class="pub" data-year="2026" data-type="book-chapter" data-topics="sustainable" data-title="social media, public engagement, and climate policy uptake in pakistan and india: opportunities and barriers">
+      <div class="pub-num">52</div>
+      <div class="pub-body">
+        <div class="pub-meta">
+          <span class="pub-year">2026</span>
+          <span class="pub-sep">·</span>
+          <span class="pub-type">Book chapter</span>
+        </div>
+        <h3 class="pub-title">Social Media, Public Engagement, and Climate Policy Uptake in Pakistan and India: Opportunities and Barriers</h3>
+        <div class="pub-venue">Forthcoming book chapter</div>
+        <div class="pub-tags"><span class="pill" data-topic="sustainable">Sustainable construction &amp; materials</span></div>
+        
+      </div>
+    </article>
+    <article class="pub" data-year="2026" data-type="book-chapter" data-topics="sustainable" data-title="the role of social media in enhancing public engagement and climate change literacy at the grassroots level">
+      <div class="pub-num">51</div>
+      <div class="pub-body">
+        <div class="pub-meta">
+          <span class="pub-year">2026</span>
+          <span class="pub-sep">·</span>
+          <span class="pub-type">Book chapter</span>
+        </div>
+        <h3 class="pub-title">The Role of Social Media in Enhancing Public Engagement and Climate Change Literacy at the Grassroots Level</h3>
+        <div class="pub-venue">Forthcoming book chapter</div>
+        <div class="pub-tags"><span class="pill" data-topic="sustainable">Sustainable construction &amp; materials</span></div>
+        
+      </div>
+    </article>
+    <article class="pub" data-year="2026" data-type="journal" data-topics="seismic" data-title="simulation-based seismic design and isolator optimization using ec8 and ubc-97: a nonlinear comparative framework">
+      <div class="pub-num">50</div>
+      <div class="pub-body">
+        <div class="pub-meta">
+          <span class="pub-year">2026</span>
+          <span class="pub-sep">·</span>
+          <span class="pub-type">Journal article</span>
+        </div>
+        <h3 class="pub-title">Simulation-Based Seismic Design and Isolator Optimization Using EC8 and UBC-97: A Nonlinear Comparative Framework</h3>
+        <div class="pub-venue">Earthquake Engineering and Resilience</div>
+        <div class="pub-tags"><span class="pill" data-topic="seismic">Disaster engineering &amp; seismic</span></div>
+        
+      </div>
+    </article>
+    <article class="pub" data-year="2026" data-type="book-chapter" data-topics="sustainable" data-title="green bridges of the future: integrating waste materials and smart waste management into suspended bridge design in support of sdgs">
+      <div class="pub-num">49</div>
+      <div class="pub-body">
+        <div class="pub-meta">
+          <span class="pub-year">2026</span>
+          <span class="pub-sep">·</span>
+          <span class="pub-type">Book chapter</span>
+        </div>
+        <h3 class="pub-title">Green Bridges of the Future: Integrating Waste Materials and Smart Waste Management into Suspended Bridge Design in Support of SDGs</h3>
+        <div class="pub-venue">Forthcoming book chapter</div>
+        <div class="pub-tags"><span class="pill" data-topic="sustainable">Sustainable construction &amp; materials</span></div>
+        
+      </div>
+    </article>
+    <article class="pub" data-year="2026" data-type="book-chapter" data-topics="water sustainable" data-title="the algae paradigm: transforming wastewater into clean water, energy, and climate action">
+      <div class="pub-num">48</div>
+      <div class="pub-body">
+        <div class="pub-meta">
+          <span class="pub-year">2026</span>
+          <span class="pub-sep">·</span>
+          <span class="pub-type">Book chapter</span>
+        </div>
+        <h3 class="pub-title">The Algae Paradigm: Transforming Wastewater into Clean Water, Energy, and Climate Action</h3>
+        <div class="pub-venue">Forthcoming book chapter</div>
+        <div class="pub-tags"><span class="pill" data-topic="water">Water resources &amp; water quality</span> <span class="pill" data-topic="sustainable">Sustainable construction &amp; materials</span></div>
+        
+      </div>
+    </article>
+    <article class="pub" data-year="2026" data-type="book-chapter" data-topics="water sustainable" data-title="urban median algae cultivation for wastewater treatment and direct air capture: a circular economy approach">
+      <div class="pub-num">47</div>
+      <div class="pub-body">
+        <div class="pub-meta">
+          <span class="pub-year">2026</span>
+          <span class="pub-sep">·</span>
+          <span class="pub-type">Book chapter</span>
+        </div>
+        <h3 class="pub-title">Urban Median Algae Cultivation for Wastewater Treatment and Direct Air Capture: A Circular Economy Approach</h3>
+        <div class="pub-venue">Forthcoming book chapter</div>
+        <div class="pub-tags"><span class="pill" data-topic="water">Water resources &amp; water quality</span> <span class="pill" data-topic="sustainable">Sustainable construction &amp; materials</span></div>
+        
+      </div>
+    </article>
+    <article class="pub" data-year="2026" data-type="book-chapter" data-topics="sustainable" data-title="future innovations and challenges in microbial bioplastics">
+      <div class="pub-num">46</div>
+      <div class="pub-body">
+        <div class="pub-meta">
+          <span class="pub-year">2026</span>
+          <span class="pub-sep">·</span>
+          <span class="pub-type">Book chapter</span>
+        </div>
+        <h3 class="pub-title">Future Innovations and Challenges in Microbial Bioplastics</h3>
+        <div class="pub-venue">Microbial Bioplastics: Innovation in Sustainable Polymers, AAP &amp; CRC Press</div>
+        <div class="pub-tags"><span class="pill" data-topic="sustainable">Sustainable construction &amp; materials</span></div>
+        
+      </div>
+    </article>
+    <article class="pub" data-year="2026" data-type="book-chapter" data-topics="sustainable" data-title="decarbonizing civil infrastructure: innovative materials, methods, and metrics">
+      <div class="pub-num">45</div>
+      <div class="pub-body">
+        <div class="pub-meta">
+          <span class="pub-year">2026</span>
+          <span class="pub-sep">·</span>
+          <span class="pub-type">Book chapter</span>
+        </div>
+        <h3 class="pub-title">Decarbonizing Civil Infrastructure: Innovative Materials, Methods, and Metrics</h3>
+        <div class="pub-venue">Forthcoming book chapter</div>
+        <div class="pub-tags"><span class="pill" data-topic="sustainable">Sustainable construction &amp; materials</span></div>
+        
+      </div>
+    </article>
+    <article class="pub" data-year="2026" data-type="journal" data-topics="sustainable" data-title="the impact of augmented reality in construction management: a lebanese building case study">
+      <div class="pub-num">44</div>
+      <div class="pub-body">
+        <div class="pub-meta">
+          <span class="pub-year">2026</span>
+          <span class="pub-sep">·</span>
+          <span class="pub-type">Journal article</span>
+        </div>
+        <h3 class="pub-title">The Impact of Augmented Reality in Construction Management: A Lebanese Building Case Study</h3>
+        <div class="pub-venue">Frontiers in Built Environment</div>
+        <div class="pub-tags"><span class="pill" data-topic="sustainable">Sustainable construction &amp; materials</span></div>
+        <a class="doi" href="https://doi.org/10.3389/fbuil.2026.1811987" target="_blank" rel="noopener">DOI · 10.3389/fbuil.2026.1811987</a>
+      </div>
+    </article>
+    <article class="pub" data-year="2026" data-type="journal" data-topics="sustainable" data-title="pathways to sustainable aviation in emerging economies: a case study of the airline industry in lebanon">
+      <div class="pub-num">43</div>
+      <div class="pub-body">
+        <div class="pub-meta">
+          <span class="pub-year">2026</span>
+          <span class="pub-sep">·</span>
+          <span class="pub-type">Journal article</span>
+        </div>
+        <h3 class="pub-title">Pathways to Sustainable Aviation in Emerging Economies: A Case Study of the Airline Industry in Lebanon</h3>
+        <div class="pub-venue">Research in Transportation Business &amp; Management</div>
+        <div class="pub-tags"><span class="pill" data-topic="sustainable">Sustainable construction &amp; materials</span></div>
+        <a class="doi" href="https://doi.org/10.1016/j.rtbm.2026.101629" target="_blank" rel="noopener">DOI · 10.1016/j.rtbm.2026.101629</a>
+      </div>
+    </article>
+    <article class="pub" data-year="2025" data-type="book-chapter" data-topics="water sustainable" data-title="sustainable wastewater treatment and morphological changes in phragmites australis from pollutant accumulation">
+      <div class="pub-num">42</div>
+      <div class="pub-body">
+        <div class="pub-meta">
+          <span class="pub-year">2025</span>
+          <span class="pub-sep">·</span>
+          <span class="pub-type">Book chapter</span>
+        </div>
+        <h3 class="pub-title">Sustainable Wastewater Treatment and Morphological Changes in Phragmites australis from Pollutant Accumulation</h3>
+        <div class="pub-venue">Phytoremediation and Circular Economy in Wastewater Management, AAP &amp; CRC Press</div>
+        <div class="pub-tags"><span class="pill" data-topic="water">Water resources &amp; water quality</span> <span class="pill" data-topic="sustainable">Sustainable construction &amp; materials</span></div>
+        
+      </div>
+    </article>
+    <article class="pub" data-year="2025" data-type="journal" data-topics="sustainable" data-title="integrating sustainable material performance and project success factors: insights from the lebanese construction sector">
+      <div class="pub-num">41</div>
+      <div class="pub-body">
+        <div class="pub-meta">
+          <span class="pub-year">2025</span>
+          <span class="pub-sep">·</span>
+          <span class="pub-type">Journal article</span>
+        </div>
+        <h3 class="pub-title">Integrating Sustainable Material Performance and Project Success Factors: Insights from the Lebanese Construction Sector</h3>
+        <div class="pub-venue">Frontiers in Built Environment</div>
+        <div class="pub-tags"><span class="pill" data-topic="sustainable">Sustainable construction &amp; materials</span></div>
+        <a class="doi" href="https://doi.org/10.3389/fbuil.2025.1734576" target="_blank" rel="noopener">DOI · 10.3389/fbuil.2025.1734576</a>
+      </div>
+    </article>
+    <article class="pub" data-year="2025" data-type="journal" data-topics="seismic" data-title="open-source matlab tool for mdof seismic response using real earthquake records">
+      <div class="pub-num">39</div>
+      <div class="pub-body">
+        <div class="pub-meta">
+          <span class="pub-year">2025</span>
+          <span class="pub-sep">·</span>
+          <span class="pub-type">Journal article</span>
+        </div>
+        <h3 class="pub-title">Open-Source MATLAB Tool for MDOF Seismic Response Using Real Earthquake Records</h3>
+        <div class="pub-venue">Journal of Dynamic Disasters</div>
+        <div class="pub-tags"><span class="pill" data-topic="seismic">Disaster engineering &amp; seismic</span></div>
+        <a class="doi" href="https://doi.org/10.1016/j.jdd.2025.100043" target="_blank" rel="noopener">DOI · 10.1016/j.jdd.2025.100043</a>
+      </div>
+    </article>
+    <article class="pub" data-year="2025" data-type="book-chapter" data-topics="water" data-title="the effect of civilization on the water quality (sdg 1, 6, 15): case study">
+      <div class="pub-num">38</div>
+      <div class="pub-body">
+        <div class="pub-meta">
+          <span class="pub-year">2025</span>
+          <span class="pub-sep">·</span>
+          <span class="pub-type">Book chapter</span>
+        </div>
+        <h3 class="pub-title">The effect of civilization on the water quality (SDG 1, 6, 15): Case Study</h3>
+        <div class="pub-venue">Hydraulic and Civil Engineering Technology X, Vol. 81</div>
+        <div class="pub-tags"><span class="pill" data-topic="water">Water resources &amp; water quality</span></div>
+        <a class="doi" href="https://doi.org/10.3233/ATDE251322" target="_blank" rel="noopener">DOI · 10.3233/ATDE251322</a>
+      </div>
+    </article>
+    <article class="pub" data-year="2025" data-type="journal" data-topics="sustainable" data-title="mechanical characteristics of clay-based masonry walls">
+      <div class="pub-num">37</div>
+      <div class="pub-body">
+        <div class="pub-meta">
+          <span class="pub-year">2025</span>
+          <span class="pub-sep">·</span>
+          <span class="pub-type">Journal article</span>
+        </div>
+        <h3 class="pub-title">Mechanical Characteristics of Clay-Based Masonry Walls</h3>
+        <div class="pub-venue">Eng (MDPI)</div>
+        <div class="pub-tags"><span class="pill" data-topic="sustainable">Sustainable construction &amp; materials</span></div>
+        <a class="doi" href="https://doi.org/10.3390/eng6100260" target="_blank" rel="noopener">DOI · 10.3390/eng6100260</a>
+      </div>
+    </article>
+    <article class="pub" data-year="2025" data-type="book-chapter" data-topics="geotech water" data-title="groundwater dam: comparative analysis between gravity dam and arch dam">
+      <div class="pub-num">36</div>
+      <div class="pub-body">
+        <div class="pub-meta">
+          <span class="pub-year">2025</span>
+          <span class="pub-sep">·</span>
+          <span class="pub-type">Book chapter</span>
+        </div>
+        <h3 class="pub-title">Groundwater Dam: Comparative Analysis between Gravity Dam and Arch Dam</h3>
+        <div class="pub-venue">Handbook of Hydrosystem Restoration: Groundwater Natural Recharge (GNR), Elsevier</div>
+        <div class="pub-tags"><span class="pill" data-topic="geotech">Geotechnical &amp; dam engineering</span> <span class="pill" data-topic="water">Water resources &amp; water quality</span></div>
+        <a class="doi" href="https://doi.org/10.1016/B978-0-443-28826-5.00010-4" target="_blank" rel="noopener">DOI · 10.1016/B978-0-443-28826-5.00010-4</a>
+      </div>
+    </article>
+    <article class="pub" data-year="2025" data-type="journal" data-topics="geotech" data-title="thermo-mechanical behavior of insulated diaphragm walls in urban excavations: a plaxis 2d case study">
+      <div class="pub-num">35</div>
+      <div class="pub-body">
+        <div class="pub-meta">
+          <span class="pub-year">2025</span>
+          <span class="pub-sep">·</span>
+          <span class="pub-type">Journal article</span>
+        </div>
+        <h3 class="pub-title">Thermo-Mechanical Behavior of Insulated Diaphragm Walls in Urban Excavations: A PLAXIS 2D Case Study</h3>
+        <div class="pub-venue">Geotechnical and Geological Engineering</div>
+        <div class="pub-tags"><span class="pill" data-topic="geotech">Geotechnical &amp; dam engineering</span></div>
+        <a class="doi" href="https://doi.org/10.1007/s10706-025-03320-x" target="_blank" rel="noopener">DOI · 10.1007/s10706-025-03320-x</a>
+      </div>
+    </article>
+    <article class="pub" data-year="2024" data-type="book-chapter" data-topics="water" data-title="surface water quality assessment in brahmani river basin, odisha, for sustainable drinking usage using multi-criteria decision-making tools and gis">
+      <div class="pub-num">34</div>
+      <div class="pub-body">
+        <div class="pub-meta">
+          <span class="pub-year">2024</span>
+          <span class="pub-sep">·</span>
+          <span class="pub-type">Book chapter</span>
+        </div>
+        <h3 class="pub-title">Surface Water Quality Assessment in Brahmani River Basin, Odisha, for Sustainable Drinking Usage using Multi-Criteria Decision-Making Tools and GIS</h3>
+        <div class="pub-venue">Environmental Science and Engineering, Springer (WREM 2024)</div>
+        <div class="pub-tags"><span class="pill" data-topic="water">Water resources &amp; water quality</span></div>
+        <a class="doi" href="https://doi.org/10.1007/978-3-031-88850-2_1" target="_blank" rel="noopener">DOI · 10.1007/978-3-031-88850-2_1</a>
+      </div>
+    </article>
+    <article class="pub" data-year="2024" data-type="book-chapter" data-topics="water sustainable" data-title="vermifiltration coupled with biofiltration technology: a sustainable approach to domestic wastewater">
+      <div class="pub-num">33</div>
+      <div class="pub-body">
+        <div class="pub-meta">
+          <span class="pub-year">2024</span>
+          <span class="pub-sep">·</span>
+          <span class="pub-type">Book chapter</span>
+        </div>
+        <h3 class="pub-title">Vermifiltration Coupled with Biofiltration Technology: A Sustainable Approach to Domestic Wastewater</h3>
+        <div class="pub-venue">3rd Vietnam Symposium on Advances in Offshore Engineering, Hanoi</div>
+        <div class="pub-tags"><span class="pill" data-topic="water">Water resources &amp; water quality</span> <span class="pill" data-topic="sustainable">Sustainable construction &amp; materials</span></div>
+        <a class="doi" href="https://doi.org/10.1007/978-981-96-3912-0_28" target="_blank" rel="noopener">DOI · 10.1007/978-981-96-3912-0_28</a>
+      </div>
+    </article>
+    <article class="pub" data-year="2024" data-type="book-chapter" data-topics="sustainable" data-title="effects of electromagnetic waves on bees&#x27; lives: implications for sdg 15 (life on land) and sdg 13 (climate action)">
+      <div class="pub-num">32</div>
+      <div class="pub-body">
+        <div class="pub-meta">
+          <span class="pub-year">2024</span>
+          <span class="pub-sep">·</span>
+          <span class="pub-type">Book chapter</span>
+        </div>
+        <h3 class="pub-title">Effects of Electromagnetic Waves on Bees&#x27; Lives: Implications for SDG 15 (Life on Land) and SDG 13 (Climate Action)</h3>
+        <div class="pub-venue">Technological Innovation in Multidisciplinary Engineering and Sciences, Gurgaon, India</div>
+        <div class="pub-tags"><span class="pill" data-topic="sustainable">Sustainable construction &amp; materials</span></div>
+        <a class="doi" href="https://doi.org/10.1007/978-3-031-83750-0_14" target="_blank" rel="noopener">DOI · 10.1007/978-3-031-83750-0_14</a>
+      </div>
+    </article>
+    <article class="pub" data-year="2024" data-type="journal" data-topics="sustainable" data-title="experimental and analytical investigation for mechanical behaviour of vegetable fiber reinforced concrete">
+      <div class="pub-num">31</div>
+      <div class="pub-body">
+        <div class="pub-meta">
+          <span class="pub-year">2024</span>
+          <span class="pub-sep">·</span>
+          <span class="pub-type">Journal article</span>
+        </div>
+        <h3 class="pub-title">Experimental and analytical investigation for mechanical behaviour of vegetable fiber reinforced concrete</h3>
+        <div class="pub-venue">European Journal of Environmental and Civil Engineering</div>
+        <div class="pub-tags"><span class="pill" data-topic="sustainable">Sustainable construction &amp; materials</span></div>
+        <a class="doi" href="https://doi.org/10.1080/19648189.2024.2439878" target="_blank" rel="noopener">DOI · 10.1080/19648189.2024.2439878</a>
+      </div>
+    </article>
+    <article class="pub" data-year="2024" data-type="book-chapter" data-topics="seismic sustainable" data-title="application of artificial intelligence in disaster mitigation of structures">
+      <div class="pub-num">30</div>
+      <div class="pub-body">
+        <div class="pub-meta">
+          <span class="pub-year">2024</span>
+          <span class="pub-sep">·</span>
+          <span class="pub-type">Book chapter</span>
+        </div>
+        <h3 class="pub-title">Application of Artificial Intelligence in Disaster Mitigation of Structures</h3>
+        <div class="pub-venue">9th International Conference on Hydraulic and Civil Engineering Technology, Chengdu, China</div>
+        <div class="pub-tags"><span class="pill" data-topic="seismic">Disaster engineering &amp; seismic</span> <span class="pill" data-topic="sustainable">Sustainable construction &amp; materials</span></div>
+        <a class="doi" href="https://doi.org/10.3233/ATDE240995" target="_blank" rel="noopener">DOI · 10.3233/ATDE240995</a>
+      </div>
+    </article>
+    <article class="pub" data-year="2024" data-type="book-chapter" data-topics="sustainable" data-title="hybrid hydro-pv system with pumped storage for rural region">
+      <div class="pub-num">29</div>
+      <div class="pub-body">
+        <div class="pub-meta">
+          <span class="pub-year">2024</span>
+          <span class="pub-sep">·</span>
+          <span class="pub-type">Book chapter</span>
+        </div>
+        <h3 class="pub-title">Hybrid hydro-PV system with pumped storage for rural region</h3>
+        <div class="pub-venue">GEESD 2024, SPIE Vol. 13279, Mianyang, China</div>
+        <div class="pub-tags"><span class="pill" data-topic="sustainable">Sustainable construction &amp; materials</span></div>
+        <a class="doi" href="https://doi.org/10.1117/12.3041606" target="_blank" rel="noopener">DOI · 10.1117/12.3041606</a>
+      </div>
+    </article>
+    <article class="pub" data-year="2024" data-type="book-chapter" data-topics="sustainable" data-title="reimagining household cooking: a critical assessment of improved cookstoves implementation for sustainable development">
+      <div class="pub-num">28</div>
+      <div class="pub-body">
+        <div class="pub-meta">
+          <span class="pub-year">2024</span>
+          <span class="pub-sep">·</span>
+          <span class="pub-type">Book chapter</span>
+        </div>
+        <h3 class="pub-title">Reimagining Household Cooking: A Critical Assessment of Improved Cookstoves Implementation for Sustainable Development</h3>
+        <div class="pub-venue">Lecture Notes in Civil Engineering Vol. 526, Springer Singapore (ICCE 2023)</div>
+        <div class="pub-tags"><span class="pill" data-topic="sustainable">Sustainable construction &amp; materials</span></div>
+        <a class="doi" href="https://doi.org/10.1007/978-981-97-4355-1_82" target="_blank" rel="noopener">DOI · 10.1007/978-981-97-4355-1_82</a>
+      </div>
+    </article>
+    <article class="pub" data-year="2024" data-type="journal" data-topics="post-tension" data-title="behavior of monostrand anchors in unbonded post tension flat slab system">
+      <div class="pub-num">27</div>
+      <div class="pub-body">
+        <div class="pub-meta">
+          <span class="pub-year">2024</span>
+          <span class="pub-sep">·</span>
+          <span class="pub-type">Journal article</span>
+        </div>
+        <h3 class="pub-title">Behavior of monostrand anchors in unbonded post tension flat slab system</h3>
+        <div class="pub-venue">Heliyon</div>
+        <div class="pub-tags"><span class="pill" data-topic="post-tension">Post-tensioned &amp; prestressed concrete</span></div>
+        <a class="doi" href="https://doi.org/10.1016/j.heliyon.2024.e28996" target="_blank" rel="noopener">DOI · 10.1016/j.heliyon.2024.e28996</a>
+      </div>
+    </article>
+    <article class="pub" data-year="2024" data-type="journal" data-topics="water" data-title="evaluating of the environmental risks of natural water sources in the alkalaa municipal community area – south lebanon">
+      <div class="pub-num">26</div>
+      <div class="pub-body">
+        <div class="pub-meta">
+          <span class="pub-year">2024</span>
+          <span class="pub-sep">·</span>
+          <span class="pub-type">Journal article</span>
+        </div>
+        <h3 class="pub-title">Evaluating of the environmental risks of natural water sources in the Alkalaa Municipal Community Area – South Lebanon</h3>
+        <div class="pub-venue">Water Supply</div>
+        <div class="pub-tags"><span class="pill" data-topic="water">Water resources &amp; water quality</span></div>
+        <a class="doi" href="https://doi.org/10.2166/ws.2024.026" target="_blank" rel="noopener">DOI · 10.2166/ws.2024.026</a>
+      </div>
+    </article>
+    <article class="pub" data-year="2024" data-type="book-chapter" data-topics="water" data-title="assessing surface water vulnerability zones in mahanadi river basin, odisha, india: an integrated approach using gis and mcdm">
+      <div class="pub-num">25</div>
+      <div class="pub-body">
+        <div class="pub-meta">
+          <span class="pub-year">2024</span>
+          <span class="pub-sep">·</span>
+          <span class="pub-type">Book chapter</span>
+        </div>
+        <h3 class="pub-title">Assessing Surface Water Vulnerability Zones in Mahanadi River Basin, Odisha, India: An Integrated Approach Using GIS and MCDM</h3>
+        <div class="pub-venue">Water Resources Management and Water Pollution Control (ISWPT 2023)</div>
+        <div class="pub-tags"><span class="pill" data-topic="water">Water resources &amp; water quality</span></div>
+        <a class="doi" href="https://doi.org/10.1007/978-3-031-53456-0" target="_blank" rel="noopener">DOI · 10.1007/978-3-031-53456-0</a>
+      </div>
+    </article>
+    <article class="pub" data-year="2024" data-type="book-chapter" data-topics="water" data-title="runoff modelling for the watershed using hydrological model swat under changing environment">
+      <div class="pub-num">24</div>
+      <div class="pub-body">
+        <div class="pub-meta">
+          <span class="pub-year">2024</span>
+          <span class="pub-sep">·</span>
+          <span class="pub-type">Book chapter</span>
+        </div>
+        <h3 class="pub-title">Runoff Modelling for the Watershed Using Hydrological Model SWAT Under Changing Environment</h3>
+        <div class="pub-venue">Water Resources Management and Water Pollution Control (ISWPT 2023)</div>
+        <div class="pub-tags"><span class="pill" data-topic="water">Water resources &amp; water quality</span></div>
+        <a class="doi" href="https://doi.org/10.1007/978-3-031-53456-0" target="_blank" rel="noopener">DOI · 10.1007/978-3-031-53456-0</a>
+      </div>
+    </article>
+    <article class="pub" data-year="2023" data-type="book-chapter" data-topics="sustainable" data-title="thermal behavior of old and recent façades">
+      <div class="pub-num">23</div>
+      <div class="pub-body">
+        <div class="pub-meta">
+          <span class="pub-year">2023</span>
+          <span class="pub-sep">·</span>
+          <span class="pub-type">Book chapter</span>
+        </div>
+        <h3 class="pub-title">Thermal Behavior of Old and Recent Façades</h3>
+        <div class="pub-venue">Hydraulic and Civil Engineering Technology VIII, Wuhan, China</div>
+        <div class="pub-tags"><span class="pill" data-topic="sustainable">Sustainable construction &amp; materials</span></div>
+        <a class="doi" href="https://doi.org/10.3233/ATDE230698" target="_blank" rel="noopener">DOI · 10.3233/ATDE230698</a>
+      </div>
+    </article>
+    <article class="pub" data-year="2023" data-type="book-chapter" data-topics="sustainable" data-title="effect of polyethylene terephthalate, rubber, and glass based on concrete properties">
+      <div class="pub-num">22</div>
+      <div class="pub-body">
+        <div class="pub-meta">
+          <span class="pub-year">2023</span>
+          <span class="pub-sep">·</span>
+          <span class="pub-type">Book chapter</span>
+        </div>
+        <h3 class="pub-title">Effect of Polyethylene Terephthalate, Rubber, and Glass Based on Concrete Properties</h3>
+        <div class="pub-venue">Proceedings of MMSE 2023, Wuhan, China</div>
+        <div class="pub-tags"><span class="pill" data-topic="sustainable">Sustainable construction &amp; materials</span></div>
+        <a class="doi" href="https://doi.org/10.3233/ATDE230569" target="_blank" rel="noopener">DOI · 10.3233/ATDE230569</a>
+      </div>
+    </article>
+    <article class="pub" data-year="2023" data-type="book-chapter" data-topics="water sustainable" data-title="economic vessel to clean the polluted water by solid waste in waterway">
+      <div class="pub-num">21</div>
+      <div class="pub-body">
+        <div class="pub-meta">
+          <span class="pub-year">2023</span>
+          <span class="pub-sep">·</span>
+          <span class="pub-type">Book chapter</span>
+        </div>
+        <h3 class="pub-title">Economic Vessel to Clean the Polluted Water by Solid Waste in Waterway</h3>
+        <div class="pub-venue">Lecture Notes in Civil Engineering Vol. 366, Springer Singapore (ISWPT 2022)</div>
+        <div class="pub-tags"><span class="pill" data-topic="water">Water resources &amp; water quality</span> <span class="pill" data-topic="sustainable">Sustainable construction &amp; materials</span></div>
+        <a class="doi" href="https://doi.org/10.1007/978-981-99-3737-0_11" target="_blank" rel="noopener">DOI · 10.1007/978-981-99-3737-0_11</a>
+      </div>
+    </article>
+    <article class="pub" data-year="2023" data-type="journal" data-topics="post-tension sustainable" data-title="moment capacity for steel and recycled waste plastic ducts in post-tensioned beams">
+      <div class="pub-num">20</div>
+      <div class="pub-body">
+        <div class="pub-meta">
+          <span class="pub-year">2023</span>
+          <span class="pub-sep">·</span>
+          <span class="pub-type">Journal article</span>
+        </div>
+        <h3 class="pub-title">Moment capacity for steel and recycled waste plastic ducts in post-tensioned beams</h3>
+        <div class="pub-venue">Journal of Building Engineering</div>
+        <div class="pub-tags"><span class="pill" data-topic="post-tension">Post-tensioned &amp; prestressed concrete</span> <span class="pill" data-topic="sustainable">Sustainable construction &amp; materials</span></div>
+        <a class="doi" href="https://doi.org/10.1016/j.jobe.2023.107412" target="_blank" rel="noopener">DOI · 10.1016/j.jobe.2023.107412</a>
+      </div>
+    </article>
+    <article class="pub" data-year="2023" data-type="journal" data-topics="water sustainable" data-title="restoration of qaraoun lake aquatic life based on wetland treatment concept">
+      <div class="pub-num">19</div>
+      <div class="pub-body">
+        <div class="pub-meta">
+          <span class="pub-year">2023</span>
+          <span class="pub-sep">·</span>
+          <span class="pub-type">Journal article</span>
+        </div>
+        <h3 class="pub-title">Restoration of Qaraoun Lake aquatic life based on wetland treatment concept</h3>
+        <div class="pub-venue">Heliyon</div>
+        <div class="pub-tags"><span class="pill" data-topic="water">Water resources &amp; water quality</span> <span class="pill" data-topic="sustainable">Sustainable construction &amp; materials</span></div>
+        <a class="doi" href="https://doi.org/10.1016/j.heliyon.2023.e18169" target="_blank" rel="noopener">DOI · 10.1016/j.heliyon.2023.e18169</a>
+      </div>
+    </article>
+    <article class="pub" data-year="2023" data-type="book-chapter" data-topics="post-tension" data-title="numerical evaluation of punching shear capacity between bonded and unbonded post-tensioned slab using inverted-u shape reinforcement">
+      <div class="pub-num">18</div>
+      <div class="pub-body">
+        <div class="pub-meta">
+          <span class="pub-year">2023</span>
+          <span class="pub-sep">·</span>
+          <span class="pub-type">Book chapter</span>
+        </div>
+        <h3 class="pub-title">Numerical Evaluation of Punching Shear Capacity between Bonded and Unbonded Post-Tensioned Slab Using Inverted-U Shape Reinforcement</h3>
+        <div class="pub-venue">Lecture Notes in Civil Engineering, Springer</div>
+        <div class="pub-tags"><span class="pill" data-topic="post-tension">Post-tensioned &amp; prestressed concrete</span></div>
+        <a class="doi" href="https://doi.org/10.1007/978-981-99-2532-2_50" target="_blank" rel="noopener">DOI · 10.1007/978-981-99-2532-2_50</a>
+      </div>
+    </article>
+    <article class="pub" data-year="2023" data-type="journal" data-topics="water" data-title="evaluation of water quality in the south of lebanon: case study">
+      <div class="pub-num">17</div>
+      <div class="pub-body">
+        <div class="pub-meta">
+          <span class="pub-year">2023</span>
+          <span class="pub-sep">·</span>
+          <span class="pub-type">Journal article</span>
+        </div>
+        <h3 class="pub-title">Evaluation of water quality in the South of Lebanon: Case study</h3>
+        <div class="pub-venue">Water, Air, &amp; Soil Pollution</div>
+        <div class="pub-tags"><span class="pill" data-topic="water">Water resources &amp; water quality</span></div>
+        <a class="doi" href="https://doi.org/10.1007/s11270-023-06453-y" target="_blank" rel="noopener">DOI · 10.1007/s11270-023-06453-y</a>
+      </div>
+    </article>
+    <article class="pub" data-year="2023" data-type="book-chapter" data-topics="water" data-title="characterization of groundwater contamination in the north lebanese aquifer">
+      <div class="pub-num">16</div>
+      <div class="pub-body">
+        <div class="pub-meta">
+          <span class="pub-year">2023</span>
+          <span class="pub-sep">·</span>
+          <span class="pub-type">Book chapter</span>
+        </div>
+        <h3 class="pub-title">Characterization of Groundwater Contamination in the North Lebanese Aquifer</h3>
+        <div class="pub-venue">Environmental Science and Engineering, Springer (WREM 2022)</div>
+        <div class="pub-tags"><span class="pill" data-topic="water">Water resources &amp; water quality</span></div>
+        <a class="doi" href="https://doi.org/10.1007/978-3-031-31289-2_1" target="_blank" rel="noopener">DOI · 10.1007/978-3-031-31289-2_1</a>
+      </div>
+    </article>
+    <article class="pub" data-year="2023" data-type="journal" data-topics="water" data-title="water quality parameters assessment of ras el-ain natural ponds, tyr, lebanon">
+      <div class="pub-num">15</div>
+      <div class="pub-body">
+        <div class="pub-meta">
+          <span class="pub-year">2023</span>
+          <span class="pub-sep">·</span>
+          <span class="pub-type">Journal article</span>
+        </div>
+        <h3 class="pub-title">Water Quality Parameters Assessment of Ras El-Ain Natural Ponds, Tyr, Lebanon</h3>
+        <div class="pub-venue">Water Supply</div>
+        <div class="pub-tags"><span class="pill" data-topic="water">Water resources &amp; water quality</span></div>
+        <a class="doi" href="https://doi.org/10.2166/ws.2023.140" target="_blank" rel="noopener">DOI · 10.2166/ws.2023.140</a>
+      </div>
+    </article>
+    <article class="pub" data-year="2023" data-type="journal" data-topics="post-tension" data-title="numerical modeling of inverted-u-shaped connectors to enhance the performance of composite beams">
+      <div class="pub-num">14</div>
+      <div class="pub-body">
+        <div class="pub-meta">
+          <span class="pub-year">2023</span>
+          <span class="pub-sep">·</span>
+          <span class="pub-type">Journal article</span>
+        </div>
+        <h3 class="pub-title">Numerical modeling of inverted-U-shaped connectors to enhance the performance of composite beams</h3>
+        <div class="pub-venue">PCI Journal</div>
+        <div class="pub-tags"><span class="pill" data-topic="post-tension">Post-tensioned &amp; prestressed concrete</span></div>
+        <a class="doi" href="https://doi.org/10.15554/pcij68.3-03" target="_blank" rel="noopener">DOI · 10.15554/pcij68.3-03</a>
+      </div>
+    </article>
+    <article class="pub" data-year="2022" data-type="journal" data-topics="geotech" data-title="temperature effects on the design parameters of a geothermal pile">
+      <div class="pub-num">13</div>
+      <div class="pub-body">
+        <div class="pub-meta">
+          <span class="pub-year">2022</span>
+          <span class="pub-sep">·</span>
+          <span class="pub-type">Journal article</span>
+        </div>
+        <h3 class="pub-title">Temperature Effects on the Design Parameters of a Geothermal Pile</h3>
+        <div class="pub-venue">Magazine of Civil Engineering</div>
+        <div class="pub-tags"><span class="pill" data-topic="geotech">Geotechnical &amp; dam engineering</span></div>
+        <a class="doi" href="https://doi.org/10.34910/MCE.116.6" target="_blank" rel="noopener">DOI · 10.34910/MCE.116.6</a>
+      </div>
+    </article>
+    <article class="pub" data-year="2022" data-type="journal" data-topics="geotech seismic" data-title="numerical effect of seismic force on a medium arch dam">
+      <div class="pub-num">12</div>
+      <div class="pub-body">
+        <div class="pub-meta">
+          <span class="pub-year">2022</span>
+          <span class="pub-sep">·</span>
+          <span class="pub-type">Journal article</span>
+        </div>
+        <h3 class="pub-title">Numerical effect of seismic force on a medium arch dam</h3>
+        <div class="pub-venue">Water Practice and Technology</div>
+        <div class="pub-tags"><span class="pill" data-topic="geotech">Geotechnical &amp; dam engineering</span> <span class="pill" data-topic="seismic">Disaster engineering &amp; seismic</span></div>
+        <a class="doi" href="https://doi.org/10.2166/wpt.2022.108" target="_blank" rel="noopener">DOI · 10.2166/wpt.2022.108</a>
+      </div>
+    </article>
+    <article class="pub" data-year="2022" data-type="journal" data-topics="geotech" data-title="numerical effect of veil injection on a gravity dam using grouting intensity number &#x27;gin&#x27; method">
+      <div class="pub-num">11</div>
+      <div class="pub-body">
+        <div class="pub-meta">
+          <span class="pub-year">2022</span>
+          <span class="pub-sep">·</span>
+          <span class="pub-type">Journal article</span>
+        </div>
+        <h3 class="pub-title">Numerical Effect of Veil Injection on a Gravity Dam Using Grouting Intensity Number &#x27;GIN&#x27; Method</h3>
+        <div class="pub-venue">Water Practice and Technology</div>
+        <div class="pub-tags"><span class="pill" data-topic="geotech">Geotechnical &amp; dam engineering</span></div>
+        <a class="doi" href="https://doi.org/10.2166/wpt.2022.083" target="_blank" rel="noopener">DOI · 10.2166/wpt.2022.083</a>
+      </div>
+    </article>
+    <article class="pub" data-year="2022" data-type="journal" data-topics="post-tension" data-title="numerical shear of post-tensioned beams with inverted-u shaped reinforcements">
+      <div class="pub-num">10</div>
+      <div class="pub-body">
+        <div class="pub-meta">
+          <span class="pub-year">2022</span>
+          <span class="pub-sep">·</span>
+          <span class="pub-type">Journal article</span>
+        </div>
+        <h3 class="pub-title">Numerical Shear of Post-Tensioned Beams with Inverted-U Shaped Reinforcements</h3>
+        <div class="pub-venue">Magazine of Civil Engineering</div>
+        <div class="pub-tags"><span class="pill" data-topic="post-tension">Post-tensioned &amp; prestressed concrete</span></div>
+        <a class="doi" href="https://doi.org/10.34910/MCE.110.6" target="_blank" rel="noopener">DOI · 10.34910/MCE.110.6</a>
+      </div>
+    </article>
+    <article class="pub" data-year="2021" data-type="conference" data-topics="post-tension" data-title="analytical analysis of bonded post-tensioned slabs using inverted-u shaped reinforcements">
+      <div class="pub-num">09</div>
+      <div class="pub-body">
+        <div class="pub-meta">
+          <span class="pub-year">2021</span>
+          <span class="pub-sep">·</span>
+          <span class="pub-type">Conference proceedings</span>
+        </div>
+        <h3 class="pub-title">Analytical Analysis of Bonded Post-Tensioned Slabs Using Inverted-U Shaped Reinforcements</h3>
+        <div class="pub-venue">NRSEM 2021, Cyprus</div>
+        <div class="pub-tags"><span class="pill" data-topic="post-tension">Post-tensioned &amp; prestressed concrete</span></div>
+        
+      </div>
+    </article>
+    <article class="pub" data-year="2021" data-type="journal" data-topics="post-tension" data-title="the use of shear connectors for enhancing the performance of steel-concrete composite beams: experimental and numerical assessment">
+      <div class="pub-num">08</div>
+      <div class="pub-body">
+        <div class="pub-meta">
+          <span class="pub-year">2021</span>
+          <span class="pub-sep">·</span>
+          <span class="pub-type">Journal article</span>
+        </div>
+        <h3 class="pub-title">The Use of Shear Connectors for Enhancing the Performance of Steel-Concrete Composite Beams: Experimental and Numerical Assessment</h3>
+        <div class="pub-venue">International Journal of Steel Structures</div>
+        <div class="pub-tags"><span class="pill" data-topic="post-tension">Post-tensioned &amp; prestressed concrete</span></div>
+        <a class="doi" href="https://doi.org/10.1007/s13296-021-00546-2" target="_blank" rel="noopener">DOI · 10.1007/s13296-021-00546-2</a>
+      </div>
+    </article>
+    <article class="pub" data-year="2020" data-type="journal" data-topics="post-tension" data-title="enhancement of shear strength of bonded post-tension beams using inverted-u shaped reinforcements">
+      <div class="pub-num">07</div>
+      <div class="pub-body">
+        <div class="pub-meta">
+          <span class="pub-year">2020</span>
+          <span class="pub-sep">·</span>
+          <span class="pub-type">Journal article</span>
+        </div>
+        <h3 class="pub-title">Enhancement of Shear Strength of Bonded Post-Tension Beams Using Inverted-U Shaped Reinforcements</h3>
+        <div class="pub-venue">Case Studies in Construction Materials</div>
+        <div class="pub-tags"><span class="pill" data-topic="post-tension">Post-tensioned &amp; prestressed concrete</span></div>
+        <a class="doi" href="https://doi.org/10.1016/j.cscm.2020.e00370" target="_blank" rel="noopener">DOI · 10.1016/j.cscm.2020.e00370</a>
+      </div>
+    </article>
+    <article class="pub" data-year="2018" data-type="journal" data-topics="post-tension" data-title="improved endurance in beams and prestressed concrete slabs using reinforcements in the form of inverted-u shaped reinforcement (arabic)">
+      <div class="pub-num">06</div>
+      <div class="pub-body">
+        <div class="pub-meta">
+          <span class="pub-year">2018</span>
+          <span class="pub-sep">·</span>
+          <span class="pub-type">Journal article</span>
+        </div>
+        <h3 class="pub-title">Improved Endurance in Beams and Prestressed Concrete Slabs Using Reinforcements in the form of Inverted-U Shaped Reinforcement (Arabic)</h3>
+        <div class="pub-venue">Lebanese Army Magazine</div>
+        <div class="pub-tags"><span class="pill" data-topic="post-tension">Post-tensioned &amp; prestressed concrete</span></div>
+        
+      </div>
+    </article>
+    <article class="pub" data-year="2018" data-type="thesis" data-topics="post-tension" data-title="enhancement of shear strength of prestressed concrete using inverted u-shaped reinforcement: experimental and numerical study">
+      <div class="pub-num">05</div>
+      <div class="pub-body">
+        <div class="pub-meta">
+          <span class="pub-year">2018</span>
+          <span class="pub-sep">·</span>
+          <span class="pub-type">Academic thesis</span>
+        </div>
+        <h3 class="pub-title">Enhancement of Shear Strength of Prestressed Concrete Using Inverted U-Shaped Reinforcement: Experimental and Numerical Study</h3>
+        <div class="pub-venue">PhD Project, Beirut Arab University</div>
+        <div class="pub-tags"><span class="pill" data-topic="post-tension">Post-tensioned &amp; prestressed concrete</span></div>
+        
+      </div>
+    </article>
+    <article class="pub" data-year="2018" data-type="journal" data-topics="post-tension" data-title="numerical punching shear analysis of unbonded post-tensioned slab provided with inverted-u shaped">
+      <div class="pub-num">04</div>
+      <div class="pub-body">
+        <div class="pub-meta">
+          <span class="pub-year">2018</span>
+          <span class="pub-sep">·</span>
+          <span class="pub-type">Journal article</span>
+        </div>
+        <h3 class="pub-title">Numerical Punching Shear Analysis of Unbonded Post-Tensioned Slab Provided with Inverted-U Shaped</h3>
+        <div class="pub-venue">KSCE Journal of Civil Engineering</div>
+        <div class="pub-tags"><span class="pill" data-topic="post-tension">Post-tensioned &amp; prestressed concrete</span></div>
+        <a class="doi" href="https://doi.org/10.1007/s12205-018-1505-5" target="_blank" rel="noopener">DOI · 10.1007/s12205-018-1505-5</a>
+      </div>
+    </article>
+    <article class="pub" data-year="2016" data-type="conference" data-topics="post-tension" data-title="punching shear analysis of bonded post-tensioned slabs with inverted u-shaped reinforcements">
+      <div class="pub-num">03</div>
+      <div class="pub-body">
+        <div class="pub-meta">
+          <span class="pub-year">2016</span>
+          <span class="pub-sep">·</span>
+          <span class="pub-type">Conference proceedings</span>
+        </div>
+        <h3 class="pub-title">Punching Shear Analysis of Bonded Post-Tensioned slabs with inverted U-shaped reinforcements</h3>
+        <div class="pub-venue">AICSGE 9, Alexandria International Conference on Structural and Geotechnical Engineering</div>
+        <div class="pub-tags"><span class="pill" data-topic="post-tension">Post-tensioned &amp; prestressed concrete</span></div>
+        
+      </div>
+    </article>
+    <article class="pub" data-year="2005" data-type="thesis" data-topics="post-tension" data-title="the effect of shear connectors on the behavior of composite beams">
+      <div class="pub-num">02</div>
+      <div class="pub-body">
+        <div class="pub-meta">
+          <span class="pub-year">2005</span>
+          <span class="pub-sep">·</span>
+          <span class="pub-type">Academic thesis</span>
+        </div>
+        <h3 class="pub-title">The Effect of Shear Connectors on the Behavior of Composite Beams</h3>
+        <div class="pub-venue">Master Project, Beirut Arab University</div>
+        <div class="pub-tags"><span class="pill" data-topic="post-tension">Post-tensioned &amp; prestressed concrete</span></div>
+        
+      </div>
+    </article>
+    <article class="pub" data-year="1998" data-type="thesis" data-topics="other" data-title="detailed engineering study on the establishment of a commercial &#x27;port of saida&#x27; in addition to the expansion of anglers&#x27; port">
+      <div class="pub-num">01</div>
+      <div class="pub-body">
+        <div class="pub-meta">
+          <span class="pub-year">1998</span>
+          <span class="pub-sep">·</span>
+          <span class="pub-type">Academic thesis</span>
+        </div>
+        <h3 class="pub-title">Detailed engineering study on the establishment of a commercial &#x27;Port of Saida&#x27; in addition to the expansion of anglers&#x27; port</h3>
+        <div class="pub-venue">Bachelor Project, Beirut Arab University</div>
+        <div class="pub-tags"><span class="pill" data-topic="other">Other</span></div>
+        
+      </div>
+    </article>
+
+  </div>
+  <div class="empty" id="empty" style="display:none">No publications match your filters. <button onclick="resetFilters()" style="background:none;border:none;border-bottom:1px solid var(--gold);color:var(--gold-dark);font-family:inherit;font-style:italic;cursor:pointer">Reset.</button></div>
+</main>
+
+<!-- FOOTER -->
+<footer class="foot">
+  <div class="foot-inner">
+    <div>
+      <div class="foot-h">Author</div>
+      <div><strong>Dr. Milad Khatib</strong></div>
+      <div>Civil Engineering Consultancy</div>
+      <div>Beirut · Lebanon</div>
+    </div>
+    <div>
+      <div class="foot-h">Verify</div>
+      <div><a href="https://orcid.org/0000-0002-0140-0941" target="_blank" rel="noopener"><strong>ORCID</strong> · 0000-0002-0140-0941</a></div>
+      <div><a href="https://www.scopus.com/authid/detail.uri?authorId=57202890131" target="_blank" rel="noopener"><strong>Scopus</strong> · 57202890131</a></div>
+      <div><a href="https://scholar.google.com/citations?user=rZQRkikAAAAJ" target="_blank" rel="noopener"><strong>Google Scholar</strong></a></div>
+      <div><a href="https://www.researchgate.net/profile/Milad-Khatib" target="_blank" rel="noopener"><strong>ResearchGate</strong></a></div>
+    </div>
+    <div>
+      <div class="foot-h">Source</div>
+      <div>Curriculum Vitae · 17 pp.</div>
+      <div>Last revised May 2026</div>
+      <div><a href="/">miladkhatib.com</a></div>
+    </div>
+    <div class="foot-tagline">— Engineering by proof. — الهندسة بالبرهان.</div>
+  </div>
+</footer>
+
+<script>
+  const list = document.getElementById('pub-list');
+  const search = document.getElementById('search');
+  const topicFilter = document.getElementById('topic-filter');
+  const typeFilter = document.getElementById('type-filter');
+  const countEl = document.getElementById('count-num');
+  const empty = document.getElementById('empty');
+  const allPubs = list.querySelectorAll('.pub');
+
+  function applyFilters() {
+    const q = search.value.trim().toLowerCase();
+    const topic = topicFilter.value;
+    const type = typeFilter.value;
+    let shown = 0;
+    allPubs.forEach(el => {
+      const titleOk = !q || el.dataset.title.includes(q);
+      const topicOk = !topic || (el.dataset.topics || '').split(' ').includes(topic);
+      const typeOk = !type || el.dataset.type === type;
+      const visible = titleOk && topicOk && typeOk;
+      el.classList.toggle('hidden', !visible);
+      if (visible) shown++;
+    });
+    countEl.textContent = shown;
+    empty.style.display = shown === 0 ? '' : 'none';
+  }
+
+  function resetFilters() {
+    search.value = '';
+    topicFilter.value = '';
+    typeFilter.value = '';
+    applyFilters();
+  }
+
+  search.addEventListener('input', applyFilters);
+  topicFilter.addEventListener('change', applyFilters);
+  typeFilter.addEventListener('change', applyFilters);
+</script>
+
+</body>
+</html>

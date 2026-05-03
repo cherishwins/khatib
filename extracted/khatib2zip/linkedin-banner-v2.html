@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>LinkedIn Banner v2 · Dr. Milad Khatib</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; overflow: hidden; }
+  body { background: #0A0E17; font-family: 'IBM Plex Sans', sans-serif; }
+
+  .banner {
+    width: 100vw;
+    aspect-ratio: 1584 / 396;
+    background: #0A0E17;
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 36% 1fr 24%;
+    align-items: center;
+  }
+
+  /* Iso grid texture */
+  .banner::before {
+    content: '';
+    position: absolute; inset: 0;
+    background-image:
+      linear-gradient(120deg, transparent 49.6%, rgba(200,164,78,0.05) 49.6%, rgba(200,164,78,0.05) 50.4%, transparent 50.4%),
+      linear-gradient(60deg,  transparent 49.6%, rgba(200,164,78,0.05) 49.6%, rgba(200,164,78,0.05) 50.4%, transparent 50.4%);
+    background-size: 36px 62px;
+    opacity: 0.7;
+    pointer-events: none;
+  }
+
+  /* LEFT — portrait section */
+  .portrait-wrap {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+  }
+  .portrait {
+    position: absolute;
+    inset: 0;
+    background-image: url('khatib-portrait-original.jpg');
+    background-size: cover;
+    background-position: center 30%;
+  }
+  /* Right-edge fade into navy */
+  .portrait-wrap::after {
+    content: '';
+    position: absolute;
+    top: 0; right: 0; bottom: 0;
+    width: 30%;
+    background: linear-gradient(to right, transparent, #0A0E17 95%);
+    pointer-events: none;
+  }
+  /* Subtle navy tint over the portrait so it sits in the brand world */
+  .portrait-wrap::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: linear-gradient(to bottom, rgba(10,14,23,0) 0%, rgba(10,14,23,0.15) 100%);
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  /* CENTER — pillars */
+  .center {
+    position: relative;
+    z-index: 2;
+    padding-left: 4vw;
+  }
+  .pillars {
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    gap: 1.1vw;
+    padding-left: 2.5vw;
+    border-left: 1px solid rgba(200,164,78,0.35);
+  }
+  .pillar-mono {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.7vw;
+    letter-spacing: 0.3em;
+    color: #C8A44E;
+    text-transform: uppercase;
+  }
+  .pillar-h {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 600;
+    font-size: 1.55vw;
+    color: #F5F1E8;
+    margin-top: 0.2vw;
+    line-height: 1.1;
+  }
+
+  /* RIGHT — name + tagline */
+  .right {
+    position: relative;
+    z-index: 2;
+    padding-right: 4vw;
+    text-align: right;
+  }
+  .right-mono {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.65vw;
+    letter-spacing: 0.3em;
+    color: #C8A44E;
+    text-transform: uppercase;
+    margin-bottom: 0.8vw;
+  }
+  .gold-rule {
+    width: 4vw;
+    height: 1px;
+    background: #C8A44E;
+    margin-left: auto;
+    margin-bottom: 1vw;
+  }
+  .name-en {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700;
+    font-size: 2.2vw;
+    color: #FFFFFF;
+    line-height: 1;
+    letter-spacing: -0.005em;
+  }
+  .name-en-sub {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 500;
+    font-size: 0.7vw;
+    letter-spacing: 0.3em;
+    color: #C8A44E;
+    text-transform: uppercase;
+    margin-top: 0.6vw;
+  }
+  .arabic-name {
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+    font-weight: 500;
+    font-size: 1.4vw;
+    color: #9A9589;
+    direction: rtl;
+    margin-top: 0.8vw;
+  }
+  .tagline {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1vw;
+    color: #D4B76A;
+    margin-top: 1vw;
+  }
+</style>
+</head>
+<body>
+  <div class="banner">
+
+    <div class="portrait-wrap">
+      <div class="portrait"></div>
+    </div>
+
+    <div class="center">
+      <div class="pillars">
+        <div>
+          <div class="pillar-mono">Structural</div>
+          <div class="pillar-h">Post-tension &amp; seismic</div>
+        </div>
+        <div>
+          <div class="pillar-mono">Geotechnical</div>
+          <div class="pillar-h">Dam grouting · GIN method</div>
+        </div>
+        <div>
+          <div class="pillar-mono">Forensic</div>
+          <div class="pillar-h">Failure analysis · Expert witness</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="right">
+      <div class="right-mono">Beirut · OEA Registered</div>
+      <div class="gold-rule"></div>
+      <div class="name-en">Dr. Milad Khatib</div>
+      <div class="name-en-sub">Civil Engineering Consultancy</div>
+      <div class="arabic-name" dir="rtl">د. ميلاد الخطيب</div>
+      <div class="tagline">— Engineering by proof.</div>
+    </div>
+
+  </div>
+</body>
+</html>

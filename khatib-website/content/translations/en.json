@@ -1,0 +1,296 @@
+{
+  "meta": {
+    "siteName": "Dr. Milad Khatib · Civil Engineering Consultancy",
+    "shortName": "Dr. Milad Khatib",
+    "tagline": "Engineering by proof.",
+    "city": "Beirut",
+    "country": "Lebanon",
+    "languageName": "English",
+    "altLanguageLabel": "العربية",
+    "altLanguageHref": "/ar"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "patents": "Patents",
+    "publications": "Publications",
+    "editorial": "Editorial",
+    "teaching": "Teaching",
+    "speaking": "Speaking",
+    "contact": "Contact",
+    "languageToggle": "العربية",
+    "skipToContent": "Skip to content"
+  },
+  "footer": {
+    "practice": "Practice",
+    "registration": "Registration",
+    "innovation": "Innovation",
+    "oeaLine": "OEA Beirut · member since January 1999",
+    "rights": "All rights reserved.",
+    "imprint": "Imprint",
+    "privacy": "Privacy",
+    "terms": "Terms"
+  },
+  "home": {
+    "eyebrow": "Civil Engineering · Beirut · OEA Member since 1999",
+    "h1": "Dr. Milad Khatib",
+    "subline": "Civil Engineering Consultancy",
+    "credentials": [
+      "PhD · BAU · 2018",
+      "LIU · Balamand · Cnam",
+      "2 Patents · LB",
+      "52 Publications · 21 Editorial Roles"
+    ],
+    "pillarsTitle": "Three pillars of practice",
+    "pillarsLede": "One intellectual project, three lines of inquiry.",
+    "pillars": {
+      "structural": {
+        "number": "01",
+        "title": "Structural Engineering",
+        "summary": "Post-tensioned and prestressed concrete, fiber-reinforced systems, monostrand anchorage. Methodology grounded in peer-reviewed research.",
+        "href": "/services/structural"
+      },
+      "geotechnical": {
+        "number": "02",
+        "title": "Geotechnical Engineering",
+        "summary": "Slope stability, dam grouting by GIN method, diaphragm walls, water-resource engineering for Lebanese terrain.",
+        "href": "/services/geotechnical"
+      },
+      "forensic": {
+        "number": "03",
+        "title": "Forensic & Expert Witness",
+        "summary": "Defensible technical reports for insurers, law firms, and courts. Methodology before conclusion.",
+        "href": "/services/forensic"
+      }
+    },
+    "selectedTitle": "Selected publications",
+    "selectedLede": "Six papers from the record. Each links to a DOI.",
+    "viewAll": "52 publications total — view full record →",
+    "patentsTitle": "Patents",
+    "patentsLede": "Two registered Lebanese patents, each with a peer-reviewed companion publication.",
+    "closingTagline": "Engineering by proof.",
+    "closingPair": "الهندسة بالبرهان.",
+    "contactMini": {
+      "label": "Direct contact",
+      "cta": "Open contact page →"
+    }
+  },
+  "about": {
+    "title": "About",
+    "lede": "Twenty-seven years in civilian civil engineering. Academic, consulting, and patent record traceable to publications, registration numbers, and stamped reports.",
+    "section1Title": "Practice",
+    "section2Title": "Career timeline",
+    "section3Title": "Languages, software, memberships",
+    "bio": [
+      "Dr. Milad Khatib is a Beirut-based civil engineering consultant, academic, and patent-holder. He holds a PhD in Structural and Geotechnical Engineering from Beirut Arab University (2018), is currently completing an MBA at the American University of Science and Technology, and holds assistant-professor and research-supervisor roles at the Lebanese International University, the University of Balamand, and ISSAE-Cnam Liban. His published record includes fifty-two peer-reviewed contributions across IWA, Springer, Elsevier, and Taylor & Francis, twenty-one editorial and reviewer positions at international journals, and a book published on Amazon. He has been an OEA Beirut member since 1999."
+    ],
+    "softwareLabel": "Software",
+    "languagesLabel": "Languages",
+    "membershipsLabel": "Memberships",
+    "software": ["MATLAB", "AutoCAD", "ANSYS", "ABAQUS", "ETABS", "Primavera P6"],
+    "languages": [
+      { "name": "English", "level": "fluent" },
+      { "name": "French", "level": "fluent" },
+      { "name": "Italian", "level": "intermediate" },
+      { "name": "Arabic", "level": "native" }
+    ],
+    "memberships": [
+      "OEA Beirut · member since January 1999",
+      "SPSC Sustainability Ambassador · code 00014774",
+      "ACSE",
+      "Editorial / reviewer roles at 21 international journals — see /editorial"
+    ]
+  },
+  "services": {
+    "title": "Services",
+    "lede": "Three pillars. Each grounded in published research and stamped on signed reports.",
+    "structural": {
+      "title": "Structural Engineering",
+      "lede": "Post-tensioned and prestressed concrete; seismic mitigation; fiber-reinforced systems; monostrand anchorage; inverted-U-shaped reinforcement.",
+      "methodology": [
+        "ACI 318 and Eurocode 2 verification on every design review",
+        "Inverted-U-shaped reinforcement methodology (Khatib, Case Studies in Construction Materials, 2020)",
+        "Monostrand anchorage re-validation (Khatib, Heliyon, 2024)",
+        "Finite-element re-analysis using ETABS, ABAQUS, ANSYS"
+      ],
+      "representative": [
+        "Post-tensioned flat-slab serviceability remediation (published methodology)",
+        "Inverted-U shear-strength enhancement — book and 2020 paper",
+        "Monostrand anchorage in unbonded post-tension flat-slab systems (Heliyon 2024)",
+        "AI-assisted seismic isolator optimization (forthcoming, EC8 / UBC-97)"
+      ],
+      "when": [
+        "A serviceability or shear-capacity finding needs an independent peer-grounded re-analysis.",
+        "A design verification must withstand a sworn deposition.",
+        "An academic collaboration requires an industry co-author with stamped credentials."
+      ]
+    },
+    "geotechnical": {
+      "title": "Geotechnical Engineering",
+      "lede": "Slope stability; dam grouting by GIN method; diaphragm walls; groundwater dam comparative analysis; Lebanese-terrain water-resource engineering.",
+      "methodology": [
+        "GIN-method curtain grouting parameter envelopes (Khatib, Water Practice & Technology, 2022)",
+        "Thermo-mechanical analysis of insulated diaphragm walls in PLAXIS 2D (2025)",
+        "Gravity-vs-arch dam comparative load and seepage modelling",
+        "Site-specific characterisation of Lebanese clay and limestone substrates"
+      ],
+      "representative": [
+        "Curtain grouting recommendation envelope, Lebanese gravity dam (2022)",
+        "Insulated diaphragm-wall PLAXIS case study, urban excavation (2025)",
+        "Groundwater dam — comparative analysis between gravity and arch (2025)",
+        "Slope stability and water-quality risk assessment, Alkalaa, South Lebanon (2024)"
+      ],
+      "when": [
+        "A dam or curtain-grouting envelope needs defensible re-validation.",
+        "An urban excavation requires a thermo-mechanical PLAXIS case-study before signoff.",
+        "A water-resource project needs published methodology behind the recommendation."
+      ]
+    },
+    "forensic": {
+      "title": "Forensic & Expert-Witness",
+      "lede": "Defensible technical opinions for insurers, law firms, and courts. Methodology grounded in published research; conclusions earned through evidence.",
+      "methodology": [
+        "Methodology before conclusion — every report opens with the analytical framework",
+        "Published-research backing on every methodology citation (DOIs in every report)",
+        "Bilingual reports (English / Arabic) on request, RTL-correct typesetting",
+        "Sworn-deposition-ready: limitations and assumptions stated explicitly"
+      ],
+      "representative": [
+        "Inverted-U reinforcement re-analysis methodology (CSCM 2020) — applied to flat-slab failure",
+        "Monostrand anchorage re-validation (Heliyon 2024) — applied to post-tension serviceability",
+        "GIN-method dam grouting envelopes (WPT 2022) — applied to seepage failure analysis"
+      ],
+      "when": [
+        "An insurance carrier needs an independent technical opinion before settlement.",
+        "A law firm requires a sworn expert with publication-grounded methodology.",
+        "A court requires a bilingual report with both English and Arabic registers."
+      ],
+      "jurisdictions": "Lebanese Republic · Gulf Cooperation Council on retainer",
+      "retainer": "Standard retainer model with capped re-analysis hours; specific commercial terms quoted per matter."
+    }
+  },
+  "patents": {
+    "title": "Patents",
+    "lede": "Two Lebanese-registered patents, each with a peer-reviewed companion publication.",
+    "vessel": {
+      "year": "2023",
+      "jurisdiction": "Lebanon",
+      "title": "Economic Vessel for Solid-Waste Recovery in Waterways",
+      "summary": "Cost-accessible waterway remediation. Co-invented with Dr. Bassam Mahmoud. Companion publication at Springer Singapore.",
+      "href": "/patents/economic-vessel-2023"
+    },
+    "foodCollector": {
+      "year": "2025",
+      "jurisdiction": "Lebanon",
+      "title": "Food-Particle Collection Device for Post-Eating Hygiene",
+      "summary": "Sole-inventor device, registered in Lebanon. Companion publication forthcoming.",
+      "href": "/patents/food-particle-2025"
+    }
+  },
+  "publications": {
+    "title": "Publications",
+    "lede": "52 peer-reviewed publications. One book. Filterable by topic, year, and venue type.",
+    "stats": "52 publications · 21 editorial positions · 2 patents · 1 book",
+    "filters": {
+      "topic": "Topic",
+      "year": "Year",
+      "type": "Venue type",
+      "search": "Search by title",
+      "clear": "Clear filters",
+      "all": "All",
+      "noResults": "No publications match the current filters."
+    },
+    "topics": {
+      "post-tension": "Post-tensioned & prestressed concrete",
+      "geotech": "Geotechnical & dam engineering",
+      "water": "Water resources & water quality",
+      "sustainable": "Sustainable construction & materials",
+      "seismic": "Disaster engineering & seismic",
+      "other": "Other"
+    },
+    "types": {
+      "journal": "Journal article",
+      "book-chapter": "Book chapter",
+      "conference": "Conference proceedings",
+      "book": "Book",
+      "thesis": "Thesis"
+    },
+    "doiLabel": "DOI",
+    "viewVenue": "view →"
+  },
+  "editorial": {
+    "title": "Editorial & Reviewer Positions",
+    "lede": "Twenty-one editorial board memberships and reviewer roles, across journals in the United States, the United Kingdom, India, China, and Singapore.",
+    "groups": {
+      "americas": "Americas",
+      "europe": "Europe",
+      "asia": "Asia",
+      "middle-east": "Middle East"
+    }
+  },
+  "teaching": {
+    "title": "Teaching",
+    "lede": "Concurrent academic posts at three Lebanese institutions. Master's, undergraduate, and research-supervisor.",
+    "columns": {
+      "institution": "Institution",
+      "period": "Period",
+      "courses": "Courses"
+    }
+  },
+  "speaking": {
+    "title": "Speaking",
+    "lede": "Selected civilian-venue presentations, keynotes, and interviews.",
+    "columns": {
+      "date": "Date",
+      "title": "Title",
+      "venue": "Venue",
+      "country": "Country"
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "lede": "Direct contact below. Inquiries are answered within two business days, in English or Arabic.",
+    "directLabel": "Direct contact",
+    "academicLabel": "Academic profiles",
+    "inquiryLabel": "Inquiry",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "topic": "Topic",
+      "message": "What are you working on?",
+      "submit": "Send inquiry",
+      "topicOptions": {
+        "structural": "Structural",
+        "geotechnical": "Geotechnical",
+        "forensic": "Forensic / Expert-witness",
+        "patent": "Patent licensing",
+        "academic": "Academic collaboration",
+        "other": "Other"
+      },
+      "success": "Thank you. Dr. Khatib will reply within two business days.",
+      "error": "Could not send. Please email milad@miladkhatib.com directly.",
+      "required": "Required"
+    }
+  },
+  "legal": {
+    "privacy": {
+      "title": "Privacy",
+      "body": "This site collects no analytics cookies. Contact-form submissions are routed to Dr. Khatib's email and retained for the duration of the inquiry. No data is shared with third parties beyond the email-delivery provider (Resend)."
+    },
+    "terms": {
+      "title": "Terms of Use",
+      "body": "Content on this site is informational. Engineering opinions are issued only after a signed engagement letter. Lebanese law governs any matter arising from use of this site."
+    },
+    "imprint": {
+      "title": "Imprint",
+      "body": "Dr. Milad Khatib · Civil Engineering Consultancy · Beirut, Lebanese Republic. OEA Beirut member since January 1999. Civilian engineering practice with concurrent academic posts at the Lebanese International University, the University of Balamand, and ISSAE-Cnam Liban."
+    }
+  },
+  "common": {
+    "viewMore": "View more →",
+    "back": "Back",
+    "viewExternal": "View external →",
+    "loading": "Loading…"
+  }
+}

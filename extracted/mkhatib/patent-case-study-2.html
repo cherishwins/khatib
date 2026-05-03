@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Patent Case Study · 2025 · Dr. Milad Khatib</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet"/>
+<style>
+  @page { size: A4; margin: 0; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: #2a2a2a; }
+  body { display: flex; align-items: center; justify-content: center; min-height: 100vh; font-family: 'IBM Plex Sans', Arial, sans-serif; }
+
+  .sheet {
+    width: 210mm; min-height: 297mm;
+    background: #F5F1E8;
+    color: #5A5651;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+  }
+
+  .topband {
+    background: #0A0E17;
+    color: #F5F1E8;
+    padding: 18mm 22mm 14mm;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+  .topband::before {
+    content: '';
+    position: absolute; inset: 0;
+    background-image:
+      linear-gradient(120deg, transparent 49.6%, rgba(200,164,78,0.06) 49.6%, rgba(200,164,78,0.06) 50.4%, transparent 50.4%),
+      linear-gradient(60deg,  transparent 49.6%, rgba(200,164,78,0.06) 49.6%, rgba(200,164,78,0.06) 50.4%, transparent 50.4%);
+    background-size: 36px 62px;
+    opacity: 0.6;
+    z-index: 0;
+    pointer-events: none;
+  }
+  .topband > * { position: relative; z-index: 2; }
+  .eyebrow {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 8pt;
+    letter-spacing: 0.4em;
+    color: #C8A44E;
+    text-transform: uppercase;
+    margin-bottom: 5mm;
+  }
+  .gold-rule { width: 24mm; height: 1px; background: #C8A44E; margin-bottom: 5mm; }
+  h1 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 700;
+    font-size: 26pt;
+    line-height: 1.12;
+    color: #FFFFFF;
+    letter-spacing: -0.005em;
+    margin-bottom: 4mm;
+    display: block;
+  }
+  .topband-arabic {
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+    font-weight: 500;
+    font-size: 13pt;
+    color: #9A9589;
+    direction: rtl;
+    text-align: right;
+  }
+
+  .meta-strip {
+    background: #1A2640;
+    color: #F5F1E8;
+    padding: 6mm 22mm;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8mm;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 8pt;
+    letter-spacing: 0.05em;
+    border-bottom: 1px solid #C8A44E;
+    flex-shrink: 0;
+  }
+  .ms-label {
+    color: #C8A44E;
+    text-transform: uppercase;
+    font-size: 7pt;
+    letter-spacing: 0.25em;
+    margin-bottom: 1.5mm;
+  }
+  .ms-val {
+    color: #F5F1E8;
+    font-weight: 500;
+    font-size: 9pt;
+  }
+  .ms-val.placeholder { color: #C8A44E; opacity: 0.7; }
+
+  .body-grid {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 0;
+    padding: 0;
+  }
+  .body-left {
+    padding: 14mm 12mm 14mm 22mm;
+    border-right: 1px solid rgba(200,164,78,0.3);
+  }
+  .body-right {
+    padding: 14mm 22mm 14mm 12mm;
+    background: #EFE9DC;
+    position: relative;
+    overflow: hidden;
+  }
+  .body-right::before {
+    content: '';
+    position: absolute; inset: 0;
+    opacity: 0.08;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 400'><g stroke='%230A0E17' stroke-width='0.5' fill='none' opacity='0.5'><circle cx='300' cy='200' r='80'/><circle cx='300' cy='200' r='50'/><line x1='220' y1='200' x2='380' y2='200'/><line x1='300' y1='120' x2='300' y2='280'/></g><g><line stroke='%230A0E17' stroke-width='0.6' opacity='0.5' x1='100' y1='80' x2='220' y2='160'/><circle stroke='%230A0E17' stroke-width='0.8' fill='none' cx='100' cy='80' r='14'/><line stroke='%230A0E17' stroke-width='0.6' opacity='0.5' x1='500' y1='100' x2='380' y2='200'/><circle stroke='%230A0E17' stroke-width='0.8' fill='none' cx='500' cy='100' r='14'/></g></svg>");
+    background-size: cover;
+  }
+  .body-right > * { position: relative; z-index: 1; }
+
+  .h2 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 600;
+    font-size: 14pt;
+    color: #0A0E17;
+    margin-bottom: 3mm;
+    letter-spacing: -0.005em;
+  }
+  .h2-rule { width: 14mm; height: 1px; background: #C8A44E; margin-bottom: 4mm; }
+  p {
+    font-size: 9.5pt;
+    line-height: 1.55;
+    color: #5A5651;
+    margin-bottom: 4mm;
+  }
+  p strong { color: #0A0E17; font-weight: 600; }
+  ul.claims {
+    list-style: none;
+    counter-reset: claim;
+    padding-left: 0;
+  }
+  ul.claims li {
+    counter-increment: claim;
+    padding: 2mm 0 2mm 12mm;
+    border-top: 1px solid rgba(200,164,78,0.3);
+    position: relative;
+    font-size: 9.5pt;
+    line-height: 1.5;
+  }
+  ul.claims li:last-child { border-bottom: 1px solid rgba(200,164,78,0.3); }
+  ul.claims li::before {
+    content: counter(claim, decimal-leading-zero);
+    position: absolute;
+    left: 0; top: 2mm;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 8pt;
+    font-weight: 500;
+    color: #C8A44E;
+    letter-spacing: 0.05em;
+  }
+
+  .stat-block {
+    background: #F5F1E8;
+    border: 1px solid rgba(200,164,78,0.4);
+    border-left: 2px solid #C8A44E;
+    padding: 5mm 6mm;
+    margin-bottom: 5mm;
+  }
+  .stat-label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 7.5pt;
+    letter-spacing: 0.25em;
+    color: #A68A3E;
+    text-transform: uppercase;
+    margin-bottom: 1.5mm;
+  }
+  .stat-value {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    font-size: 14pt;
+    color: #0A0E17;
+    line-height: 1.2;
+  }
+  .stat-value-mono {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 8pt;
+    color: #5A5651;
+    margin-top: 1mm;
+  }
+
+  .cta-strip {
+    background: #1A4D2E;
+    color: #F5F1E8;
+    padding: 7mm 22mm;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 8mm;
+    align-items: center;
+    border-top: 1px solid #C8A44E;
+    flex-shrink: 0;
+  }
+  .cta-h {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 14pt;
+    color: #FFFFFF;
+  }
+  .cta-h-sub {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 9pt;
+    color: #D4B76A;
+    margin-top: 1mm;
+    letter-spacing: 0.05em;
+  }
+  .cta-contact {
+    text-align: right;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 8pt;
+    color: #F5F1E8;
+    letter-spacing: 0.08em;
+    line-height: 1.7;
+  }
+  .cta-contact strong { color: #C8A44E; font-weight: 500; }
+
+  .foot {
+    background: #0A0E17;
+    color: #9A9589;
+    padding: 5mm 22mm;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 7pt;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    flex-shrink: 0;
+  }
+  .foot-r { text-align: right; }
+  .foot strong { color: #C8A44E; font-weight: 500; }
+</style>
+</head>
+<body>
+<div class="sheet">
+
+  <header class="topband">
+    <div class="eyebrow">Patent Case Study · LB · 2025</div>
+    <div class="gold-rule"></div>
+    <h1>Food-Particle Collection Device<br/>for Post-Eating Hygiene</h1>
+    <div class="topband-arabic" dir="rtl">جهاز تجميع جزيئات الطعام والسوائل من الفم بعد الأكل</div>
+  </header>
+
+  <div class="meta-strip">
+    <div>
+      <div class="ms-label">Jurisdiction</div>
+      <div class="ms-val">Lebanon</div>
+    </div>
+    <div>
+      <div class="ms-label">Filed</div>
+      <div class="ms-val">2025</div>
+    </div>
+    <div>
+      <div class="ms-label">Registration #</div>
+      <!-- pending: actual LB patent registration number from client -->
+      <div class="ms-val placeholder">[ to be confirmed ]</div>
+    </div>
+    <div>
+      <div class="ms-label">Status</div>
+      <div class="ms-val">Registered · LB</div>
+    </div>
+  </div>
+
+  <div class="body-grid">
+
+    <div class="body-left">
+      <div class="h2">Abstract</div>
+      <div class="h2-rule"></div>
+      <p>
+        A small personal-hygiene device for collecting food particles
+        and liquid spills &mdash; milk, food remnants, seed shells &mdash;
+        from the mouth after eating. Designed as a domestic and
+        clinical-care product, with applications in both general
+        hygiene and assisted-living contexts where conventional
+        post-meal cleaning is impractical or insufficient.
+      </p>
+      <p>
+        The device occupies a small market gap between disposable
+        wipes and dental-hygiene equipment, offering a reusable
+        single-use-cartridge approach designed for cost-conscious
+        manufacture in regional supply chains. Sole inventor.
+      </p>
+
+      <div class="h2" style="margin-top:8mm">Claim Summary</div>
+      <div class="h2-rule"></div>
+      <ul class="claims">
+        <li>A handheld personal-care device for the collection of solid and liquid post-meal residues from the oral cavity.</li>
+        <li>A modular collection chamber designed for single-use replacement, allowing rapid changeover without device disassembly.</li>
+        <li>An ergonomic form factor configured for use by both able-bodied and assisted users.</li>
+        <li>A material specification compatible with regional manufacture and cleaning protocols.</li>
+      </ul>
+    </div>
+
+    <div class="body-right">
+      <div class="stat-block">
+        <div class="stat-label">Companion publication</div>
+        <!-- pending: confirm with client whether companion paper exists or is forthcoming -->
+        <div class="stat-value" style="font-size:11pt;font-style:italic">Forthcoming or under preparation</div>
+        <div class="stat-value-mono" style="font-size:8pt;margin-top:1mm">Will be cited here on confirmation</div>
+      </div>
+      <div class="stat-block">
+        <div class="stat-label">Application areas</div>
+        <div class="stat-value" style="font-size:11pt">Domestic hygiene · assisted living · clinical care</div>
+      </div>
+      <div class="stat-block">
+        <div class="stat-label">Inventor</div>
+        <div class="stat-value" style="font-size:11pt">Dr. Milad Khatib</div>
+        <div class="stat-value-mono">Sole inventor</div>
+      </div>
+      <div class="stat-block" style="background:#0A0E17;color:#F5F1E8;border-color:#C8A44E">
+        <div class="stat-label" style="color:#C8A44E">Licensing &amp; partners</div>
+        <div class="stat-value" style="font-size:11pt;color:#FFFFFF">Open to discussion</div>
+        <div class="stat-value-mono" style="color:#9A9589">Manufacturing · distribution · regional licensing</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cta-strip">
+    <div>
+      <div class="cta-h">"Engineering by proof."</div>
+      <div class="cta-h-sub">Full claim text and technical drawings available under NCNDA.</div>
+    </div>
+    <div class="cta-contact">
+      <strong>CONTACT</strong> &nbsp; milad@miladkhatib.com<br/>
+      <strong>PHONE</strong> &nbsp; +961 3 927 934<br/>
+      <strong>WEB</strong> &nbsp; miladkhatib.com
+    </div>
+  </div>
+
+  <footer class="foot">
+    <div><strong>©</strong> &nbsp; Dr. Milad Khatib · 2026</div>
+    <div class="foot-r">Patent · LB · 2025 &nbsp; <strong>·</strong> &nbsp; Document v1.0</div>
+  </footer>
+
+</div>
+</body>
+</html>
