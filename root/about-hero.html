@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>About Hero · Dr. Milad Khatib</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; }
+  body { background: #0A0E17; font-family: 'IBM Plex Sans', sans-serif; overflow: hidden; }
+
+  .hero {
+    width: 100vw; height: 100vh;
+    background: #0A0E17;
+    display: grid;
+    grid-template-columns: 1.15fr 1fr;
+    overflow: hidden;
+    position: relative;
+  }
+  .hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background-image:
+      linear-gradient(120deg, transparent 49.6%, rgba(200,164,78,0.04) 49.6%, rgba(200,164,78,0.04) 50.4%, transparent 50.4%),
+      linear-gradient(60deg,  transparent 49.6%, rgba(200,164,78,0.04) 49.6%, rgba(200,164,78,0.04) 50.4%, transparent 50.4%);
+    background-size: 48px 83px;
+    opacity: 0.6;
+    pointer-events: none;
+  }
+
+  /* LEFT — type column */
+  .col-text {
+    padding: 7vh 6vw 7vh 8vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #F5F1E8;
+    position: relative;
+    z-index: 2;
+  }
+  .eyebrow {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.85vw;
+    letter-spacing: 0.4em;
+    color: #C8A44E;
+    text-transform: uppercase;
+    margin-bottom: 2vh;
+  }
+  .gold-rule {
+    width: 5vw;
+    height: 1px;
+    background: #C8A44E;
+    margin-bottom: 3vh;
+  }
+  h1 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 700;
+    font-size: 5.2vw;
+    line-height: 0.95;
+    color: #FFFFFF;
+    letter-spacing: -0.01em;
+    margin-bottom: 2vh;
+  }
+  .sub {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 500;
+    font-size: 1.1vw;
+    letter-spacing: 0.32em;
+    color: #C8A44E;
+    text-transform: uppercase;
+    margin-bottom: 4vh;
+  }
+  .arabic {
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+    font-weight: 500;
+    font-size: 1.7vw;
+    color: #9A9589;
+    direction: rtl;
+    text-align: left;
+    margin-bottom: 0.5vh;
+  }
+  .arabic-sub {
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+    font-weight: 400;
+    font-size: 0.95vw;
+    color: #9A9589;
+    direction: rtl;
+    text-align: left;
+    margin-bottom: 4vh;
+  }
+  .lede {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1.4vw;
+    color: #D4B76A;
+    line-height: 1.4;
+    max-width: 32vw;
+    border-top: 1px solid rgba(200,164,78,0.3);
+    padding-top: 3vh;
+  }
+
+  /* Bottom credentials strip */
+  .creds {
+    margin-top: auto;
+    padding-top: 4vh;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 2.5vw;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.7vw;
+    letter-spacing: 0.05em;
+    line-height: 1.6;
+    color: #9A9589;
+  }
+  .cred-h {
+    color: #C8A44E;
+    font-size: 0.6vw;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    margin-bottom: 0.5vh;
+  }
+  .cred-v {
+    color: #F5F1E8;
+    font-size: 0.85vw;
+    font-weight: 500;
+  }
+
+  /* RIGHT — portrait column */
+  .col-photo {
+    position: relative;
+    overflow: hidden;
+    background-image: url('khatib-portrait-original.jpg');
+    background-size: cover;
+    background-position: center 25%;
+  }
+  /* Left-edge fade into navy */
+  .col-photo::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; bottom: 0;
+    width: 22%;
+    background: linear-gradient(to right, #0A0E17 0%, transparent 100%);
+    z-index: 1;
+  }
+  /* Subtle navy tint over photo */
+  .col-photo::after {
+    content: '';
+    position: absolute; inset: 0;
+    background: linear-gradient(135deg, rgba(10,14,23,0.35) 0%, rgba(10,14,23,0) 35%);
+    pointer-events: none;
+  }
+
+  /* Photo caption — bottom right of photo column */
+  .photo-caption {
+    position: absolute;
+    bottom: 4vh;
+    right: 3vw;
+    z-index: 2;
+    text-align: right;
+    font-family: 'IBM Plex Mono', monospace;
+    color: rgba(245, 241, 232, 0.7);
+    font-size: 0.7vw;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+</style>
+</head>
+<body>
+  <section class="hero">
+
+    <div class="col-text">
+      <div class="eyebrow">About · 01</div>
+      <div class="gold-rule"></div>
+      <h1>Dr. Milad<br/>Khatib</h1>
+      <div class="sub">Civil Engineering Consultancy</div>
+      <div class="arabic" dir="rtl">د. ميلاد الخطيب</div>
+      <div class="arabic-sub" dir="rtl">الاستشارات الهندسية المدنية</div>
+
+      <div class="lede">
+        A solo Beirut consulting practice in structural,
+        geotechnical, and forensic civil engineering &mdash;
+        patent-holding, peer-reviewed, OEA-registered.
+      </div>
+
+      <div class="creds">
+        <div>
+          <div class="cred-h">Education</div>
+          <div class="cred-v">PhD · BAU · 2018</div>
+          <div>Structural &amp; Geotechnical</div>
+        </div>
+        <div>
+          <div class="cred-h">Affiliation</div>
+          <div class="cred-v">LIU · ISSAE-Cnam</div>
+          <div>Assistant Professor</div>
+        </div>
+        <div>
+          <div class="cred-h">Innovation</div>
+          <div class="cred-v">2 Patents · LB</div>
+          <div>2023 · 2025</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-photo">
+      <div class="photo-caption">Beirut · 2026</div>
+    </div>
+
+  </section>
+</body>
+</html>

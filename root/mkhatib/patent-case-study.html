@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Patent Case Study · Dr. Milad Khatib</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet"/>
+<style>
+  @page { size: A4; margin: 0; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: #2a2a2a; }
+  body { display: flex; align-items: center; justify-content: center; min-height: 100vh; font-family: 'IBM Plex Sans', Arial, sans-serif; }
+
+  .sheet {
+    width: 210mm; height: 297mm;
+    background: #F5F1E8;
+    color: #5A5651;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+  }
+
+  /* Top navy band */
+  .topband {
+    background: #0A0E17;
+    color: #F5F1E8;
+    padding: 18mm 22mm 14mm;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+  .topband::before {
+    content: '';
+    position: absolute; inset: 0;
+    background-image:
+      linear-gradient(120deg, transparent 49.6%, rgba(200,164,78,0.06) 49.6%, rgba(200,164,78,0.06) 50.4%, transparent 50.4%),
+      linear-gradient(60deg,  transparent 49.6%, rgba(200,164,78,0.06) 49.6%, rgba(200,164,78,0.06) 50.4%, transparent 50.4%);
+    background-size: 36px 62px;
+    opacity: 0.6;
+    z-index: 0;
+    pointer-events: none;
+  }
+  .topband > * { position: relative; z-index: 2; }
+  .eyebrow {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 8pt;
+    letter-spacing: 0.4em;
+    color: #C8A44E;
+    text-transform: uppercase;
+    margin-bottom: 5mm;
+  }
+  .gold-rule { width: 24mm; height: 1px; background: #C8A44E; margin-bottom: 5mm; }
+  h1 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 700;
+    font-size: 26pt;
+    line-height: 1.12;
+    color: #FFFFFF;
+    letter-spacing: -0.005em;
+    margin-bottom: 4mm;
+    display: block;
+  }
+  .topband-arabic {
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+    font-weight: 500;
+    font-size: 13pt;
+    color: #9A9589;
+    direction: rtl;
+    text-align: right;
+    margin-top: 0;
+  }
+
+  /* Patent meta strip */
+  .meta-strip {
+    background: #1A2640;
+    color: #F5F1E8;
+    padding: 6mm 22mm;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8mm;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 8pt;
+    letter-spacing: 0.05em;
+    border-bottom: 1px solid #C8A44E;
+    flex-shrink: 0;
+  }
+  .ms-label {
+    color: #C8A44E;
+    text-transform: uppercase;
+    font-size: 7pt;
+    letter-spacing: 0.25em;
+    margin-bottom: 1.5mm;
+  }
+  .ms-val {
+    color: #F5F1E8;
+    font-weight: 500;
+    font-size: 9pt;
+  }
+  .ms-val.placeholder { color: #C8A44E; opacity: 0.7; }
+
+  /* Body grid */
+  .body-grid {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 0;
+    padding: 0;
+  }
+  .body-left {
+    padding: 14mm 12mm 14mm 22mm;
+    border-right: 1px solid rgba(200,164,78,0.3);
+  }
+  .body-right {
+    padding: 14mm 22mm 14mm 12mm;
+    background: #EFE9DC;
+    position: relative;
+    overflow: hidden;
+  }
+  .body-right::before {
+    content: '';
+    position: absolute; inset: 0;
+    opacity: 0.08;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 400'><g stroke='%230A0E17' stroke-width='0.5' fill='none' opacity='0.5'><path d='M 200 150 L 280 130 L 360 140 L 430 180 L 420 240 L 350 270 L 280 280 L 220 240 Z'/><line x1='280' y1='130' x2='280' y2='280'/><line x1='200' y1='150' x2='430' y2='180'/></g><g><line stroke='%230A0E17' stroke-width='0.6' opacity='0.5' x1='60' y1='60' x2='180' y2='120'/><circle stroke='%230A0E17' stroke-width='0.8' fill='none' cx='60' cy='60' r='14'/><line stroke='%230A0E17' stroke-width='0.6' opacity='0.5' x1='420' y1='55' x2='350' y2='180'/><circle stroke='%230A0E17' stroke-width='0.8' fill='none' cx='420' cy='55' r='14'/><line stroke='%230A0E17' stroke-width='0.6' opacity='0.5' x1='540' y1='100' x2='430' y2='200'/><circle stroke='%230A0E17' stroke-width='0.8' fill='none' cx='540' cy='100' r='14'/></g></svg>");
+    background-size: cover;
+  }
+  .body-right > * { position: relative; z-index: 1; }
+
+  .h2 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 600;
+    font-size: 14pt;
+    color: #0A0E17;
+    margin-bottom: 3mm;
+    letter-spacing: -0.005em;
+  }
+  .h2-rule { width: 14mm; height: 1px; background: #C8A44E; margin-bottom: 4mm; }
+  p {
+    font-size: 9.5pt;
+    line-height: 1.55;
+    color: #5A5651;
+    margin-bottom: 4mm;
+  }
+  p strong { color: #0A0E17; font-weight: 600; }
+  ul.claims {
+    list-style: none;
+    counter-reset: claim;
+    padding-left: 0;
+  }
+  ul.claims li {
+    counter-increment: claim;
+    padding: 2mm 0 2mm 12mm;
+    border-top: 1px solid rgba(200,164,78,0.3);
+    position: relative;
+    font-size: 9.5pt;
+    line-height: 1.5;
+  }
+  ul.claims li:last-child { border-bottom: 1px solid rgba(200,164,78,0.3); }
+  ul.claims li::before {
+    content: counter(claim, decimal-leading-zero);
+    position: absolute;
+    left: 0; top: 2mm;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 8pt;
+    font-weight: 500;
+    color: #C8A44E;
+    letter-spacing: 0.05em;
+  }
+
+  /* Right column items */
+  .stat-block {
+    background: #F5F1E8;
+    border: 1px solid rgba(200,164,78,0.4);
+    border-left: 2px solid #C8A44E;
+    padding: 5mm 6mm;
+    margin-bottom: 5mm;
+  }
+  .stat-label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 7.5pt;
+    letter-spacing: 0.25em;
+    color: #A68A3E;
+    text-transform: uppercase;
+    margin-bottom: 1.5mm;
+  }
+  .stat-value {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    font-size: 14pt;
+    color: #0A0E17;
+    line-height: 1.2;
+  }
+  .stat-value-mono {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10pt;
+    color: #0A0E17;
+    font-weight: 500;
+  }
+
+  /* CTA at bottom */
+  .cta-strip {
+    background: #1A4D2E;
+    color: #F5F1E8;
+    padding: 7mm 22mm;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 8mm;
+    align-items: center;
+    border-top: 1px solid #C8A44E;
+    flex-shrink: 0;
+  }
+  .cta-h {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 14pt;
+    color: #FFFFFF;
+  }
+  .cta-h-sub {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 9pt;
+    color: #D4B76A;
+    margin-top: 1mm;
+    letter-spacing: 0.05em;
+  }
+  .cta-contact {
+    text-align: right;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 8pt;
+    color: #F5F1E8;
+    letter-spacing: 0.08em;
+    line-height: 1.7;
+  }
+  .cta-contact strong { color: #C8A44E; font-weight: 500; }
+
+  /* Footer */
+  .foot {
+    background: #0A0E17;
+    color: #9A9589;
+    padding: 5mm 22mm;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 7pt;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    flex-shrink: 0;
+  }
+  .foot-r { text-align: right; }
+  .foot strong { color: #C8A44E; font-weight: 500; }
+</style>
+</head>
+<body>
+<div class="sheet">
+
+  <!-- Top branded band -->
+  <header class="topband">
+    <div class="eyebrow">Patent Case Study · LB · 2023</div>
+    <div class="gold-rule"></div>
+    <h1>Economic Vessel<br/>for Solid-Waste Recovery<br/>in Waterways</h1>
+    <div class="topband-arabic" dir="rtl">سفينة اقتصادية لتجميع النفايات الصلبة في الممرات المائية</div>
+  </header>
+
+  <!-- Patent metadata strip -->
+  <div class="meta-strip">
+    <div>
+      <div class="ms-label">Jurisdiction</div>
+      <div class="ms-val">Lebanon</div>
+    </div>
+    <div>
+      <div class="ms-label">Filed</div>
+      <div class="ms-val">2023</div>
+    </div>
+    <div>
+      <div class="ms-label">Registration #</div>
+      <div class="ms-val placeholder">[ to be inserted ]</div>
+    </div>
+    <div>
+      <div class="ms-label">Status</div>
+      <div class="ms-val">Registered · LB</div>
+    </div>
+  </div>
+
+  <!-- Body -->
+  <div class="body-grid">
+
+    <div class="body-left">
+      <div class="h2">Abstract</div>
+      <div class="h2-rule"></div>
+      <p>
+        A small, low-cost vessel designed to collect solid waste &mdash;
+        plastics, organic debris, urban runoff &mdash; from rivers,
+        lakes, and protected coastal waters. The system uses a passive
+        collection grille combined with a buoyant skiff that can be
+        deployed by a single operator from any accessible bank or jetty.
+      </p>
+      <p>
+        Designed for Lebanese waterways where scale, budget, and
+        accessibility constraints make industrial trash-skimmers
+        impractical. Material specification favours locally-sourced
+        marine-grade aluminium and HDPE. <strong>Co-inventor:</strong>
+        Dr. Bassam Mahmoud.
+      </p>
+      <p>
+        The underlying engineering is documented in a peer-reviewed book
+        chapter at Springer: <em>Khatib &amp; Mahmoud, Lecture Notes in
+        Civil Engineering, Vol.&nbsp;366 (2023), Springer Singapore.
+        DOI&nbsp;10.1007/978-981-99-3737-0_11.</em>
+      </p>
+
+      <div class="h2" style="margin-top:8mm">Claim Summary</div>
+      <div class="h2-rule"></div>
+      <ul class="claims">
+        <li>A floating collection vessel with a removable grille assembly that captures floating debris while permitting water passage.</li>
+        <li>A modular grille designed for tool-free replacement, allowing rapid changeover during operation.</li>
+        <li>Buoyancy and trim configured for single-operator deployment from a fixed shore point.</li>
+        <li>Local-material specification compatible with Lebanese supply chains and small-municipality budgets.</li>
+      </ul>
+    </div>
+
+    <div class="body-right">
+      <div class="stat-block">
+        <div class="stat-label">Companion publication</div>
+        <div class="stat-value" style="font-size:11pt;font-style:italic">Khatib &amp; Mahmoud, 2023</div>
+        <div class="stat-value-mono" style="font-size:8pt;margin-top:1mm">Lecture Notes in Civil Engineering, Vol. 366<br/>Springer Singapore · DOI 10.1007/978-981-99-3737-0_11</div>
+      </div>
+      <div class="stat-block">
+        <div class="stat-label">Target users</div>
+        <div class="stat-value" style="font-size:11pt">Lebanese municipalities · river authorities · coastal NGOs</div>
+      </div>
+      <div class="stat-block">
+        <div class="stat-label">Estimated unit cost</div>
+        <div class="stat-value" style="font-size:11pt">Single-operator scale</div>
+        <div class="stat-value-mono" style="font-size:8pt;margin-top:1mm">Detail under NCNDA</div>
+      </div>
+      <div class="stat-block" style="background:#0A0E17;color:#F5F1E8;border-color:#C8A44E">
+        <div class="stat-label" style="color:#C8A44E">Licensing &amp; partners</div>
+        <div class="stat-value" style="font-size:11pt;color:#FFFFFF">Open to discussion</div>
+        <div class="stat-value-mono" style="font-size:8pt;margin-top:1mm;color:#9A9589">Manufacturing · deployment · regional licensing</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA strip -->
+  <div class="cta-strip">
+    <div>
+      <div class="cta-h">"Engineering by proof."</div>
+      <div class="cta-h-sub">Full claim text and technical drawings available under NCNDA.</div>
+    </div>
+    <div class="cta-contact">
+      <strong>CONTACT</strong> &nbsp; milad@miladkhatib.com<br/>
+      <strong>PHONE</strong> &nbsp; +961 3 927 934<br/>
+      <strong>WEB</strong> &nbsp; miladkhatib.com
+    </div>
+  </div>
+
+  <footer class="foot">
+    <div><strong>©</strong> &nbsp; Dr. Milad Khatib · 2026</div>
+    <div class="foot-r">Patent · LB · 2023 &nbsp; <strong>·</strong> &nbsp; Document v1.0</div>
+  </footer>
+
+</div>
+</body>
+</html>

@@ -29,10 +29,10 @@ export function ContactPage({ locale, dict }: { locale: Locale; dict: Dictionary
             <ul className="flex flex-col gap-2 text-sm text-warm-gray">
               <li>
                 <a
-                  href={`mailto:${brand.emailPlaceholder}`}
+                  href={`mailto:${brand.email}`}
                   className="text-cream hover:text-gold"
                 >
-                  {brand.emailPlaceholder}
+                  {brand.email}
                 </a>
               </li>
               <li>

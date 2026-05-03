@@ -1,0 +1,241 @@
+brand:
+  id: khatib-civil-engineering-consultancy
+  version: "3.0"
+  name_en: "Dr. Milad Khatib · Civil Engineering Consultancy"
+  name_ar: "د. ميلاد الخطيب · الاستشارات الهندسية المدنية"
+  domain: miladkhatib.com
+  tagline_en: "Engineering by proof."
+  tagline_ar: "الهندسة بالبرهان."
+  inspired_by: ibrahim-energy-partners
+  distinct_from:
+    - ibrahim-energy-partners
+    - juchekang
+    - ipurpose
+    - cherish
+    - vi-care
+    - fit-for-gov
+  positioning: "civilian engineering consultancy + academic + patent-holder"
+  client_directive_2026_05_02: |
+    Dr. Khatib confirmed via WhatsApp (2 May 2026) that he does not want
+    his military service referenced on any public materials. This is final
+    and applies to website, social, letterhead, capability statements,
+    case studies, OG metadata, and any future content. The civilian
+    engineering record alone is the brand.
+
+# ───────────────────────────────────────────────────────────
+# CV INVENTORY — civilian record only
+# ───────────────────────────────────────────────────────────
+cv_inventory:
+  publications: 52
+  patents: 2
+  editorial_positions: 21
+  oral_presentations_civilian: "see CV — selected for public use only"
+  oea_beirut_member_since: "1999-01"
+  career_first_year: 1998
+  span_years: 27
+  current_civilian_postings:
+    - "Assistant Professor, Lebanese International University"
+    - "Research Supervisor, University of Balamand"
+    - "Research Supervisor, ISSAE-Cnam Liban"
+  education_complete:
+    - "Bachelor, Civil Engineering, Beirut Arab University, 1998"
+    - "Master, Civil Engineering, Beirut Arab University, 2005"
+    - "PhD, Structural and Geotechnical Engineering, Beirut Arab University, 2018"
+  education_in_progress:
+    - "MBA, American University of Science and Technology (AUST) — expected end of current semester"
+
+# ───────────────────────────────────────────────────────────
+# IDENTITY
+# ───────────────────────────────────────────────────────────
+identity:
+  practice_type: "solo civilian consultancy + concurrent academic posts"
+  founder:
+    name_en: "Dr. Milad Khatib"
+    name_ar: "د. ميلاد الخطيب"
+    titles:
+      - "PhD"
+      - "Eng."
+      - "Assistant Professor (Lebanese International University)"
+      - "MBA Candidate (AUST)"
+    languages:
+      - { code: en, level: "fluent" }
+      - { code: fr, level: "fluent" }
+      - { code: it, level: "intermediate" }
+      - { code: ar, level: "native" }
+  patents:
+    - id: "lb-2023-vessel"
+      title_en: "Economic Vessel to Clean Polluted Water by Solid Waste in Waterway"
+      filed: 2023
+      jurisdiction: Lebanon
+      number: "TO BE CONFIRMED BY CLIENT"
+      co_inventor: "Dr. Bassam Mahmoud"
+      status: "registered (Lebanon)"
+      international_filing: "none confirmed"
+      companion_publication:
+        citation: "Khatib & Mahmoud (2023), Lecture Notes in Civil Engineering, Vol. 366, Springer Singapore"
+        doi: "10.1007/978-981-99-3737-0_11"
+    - id: "lb-2025-collector"
+      title_en: "Food Particle Collection Device"
+      filed: 2025
+      jurisdiction: Lebanon
+      number: "TO BE CONFIRMED BY CLIENT"
+      sole_inventor: "Dr. Milad Khatib"
+      status: "registered (Lebanon)"
+      international_filing: "none confirmed"
+      companion_publication:
+        status: "forthcoming or under preparation"
+  book:
+    title: "Breaking Limits in Prestressed Concrete: Shear Strength Enhancement through Inverted-U-Shaped Reinforcement"
+    publisher: "Self-published / Amazon"
+    amazon_url: "https://www.amazon.in/-/hi/M-S-Khatib-ebook/dp/B0FZ5XV829"
+  external_profiles:
+    orcid: "0000-0002-0140-0941"
+    scopus: "57202890131"
+    google_scholar: "rZQRkikAAAAJ"
+    researchgate: "Milad-Khatib"
+    publons: "3464477/milad-khatib"
+    sciprofiles: "1156816"
+
+# ───────────────────────────────────────────────────────────
+# AUDIENCE — civilian-facing tiers only
+# ───────────────────────────────────────────────────────────
+audience:
+  primary:
+    - "Lebanese ministries, municipalities, water authorities, OEA-referred public engagements"
+    - "Insurance and law firms commissioning forensic / expert-witness work"
+    - "Lebanese contractors and developers"
+  secondary:
+    - "Gulf institutional clients (KSA, UAE consultancies)"
+    - "Academic collaborators, journal editors, PhD students"
+  tertiary:
+    - "Patent licensees and commercialisation partners"
+
+# ───────────────────────────────────────────────────────────
+# COLORS (unchanged)
+# ───────────────────────────────────────────────────────────
+colors:
+  primary_navy:
+    deep_navy:    "#0A0E17"
+    navy:         "#0F1A2E"
+    midnight:     "#1A2640"
+  secondary_gold:
+    gold:         "#C8A44E"
+    gold_light:   "#D4B76A"
+    gold_dark:    "#A68A3E"
+  tertiary_green:
+    heritage_green: "#1A4D2E"
+    green_light:    "#2A6B40"
+    green_dark:     "#0F3A1F"
+  tertiary_blue:
+    blueprint_blue: "#2E5E8B"
+    blueprint_light: "#5A8AB8"
+    blueprint_dark:  "#1F4567"
+  neutrals:
+    cream:        "#F5F1E8"
+    warm_gray:    "#9A9589"
+    stone:        "#5A5651"
+    white:        "#FFFFFF"
+
+# ───────────────────────────────────────────────────────────
+# TYPOGRAPHY (unchanged)
+# ───────────────────────────────────────────────────────────
+typography:
+  display_en:    "Cormorant Garamond"
+  body_en:       "IBM Plex Sans"
+  body_ar:       "IBM Plex Sans Arabic"
+  technical_mono: "IBM Plex Mono"
+  numerals: "Western Arabic (0–9) by default in both EN and AR"
+
+# ───────────────────────────────────────────────────────────
+# VOICE
+# ───────────────────────────────────────────────────────────
+voice:
+  english_consultant:
+    motto: "Engineering by proof."
+    tone: "senior, plain-spoken, technical; numbers carry the argument"
+  arabic_heritage:
+    motto: "الهندسة بالبرهان."
+    tone: "formal, scholarly, technically precise"
+  anti_patterns:
+    - "Any mention of military service or military-adjacent framing"
+    - "Defence-policy or strategic-security references"
+    - "26+ years experience (replace with timeline)"
+    - "World-renowned / cutting-edge / award-winning (replace with the specific record)"
+    - "Aggregate citation count (use individual publications with DOIs)"
+    - "Stock construction imagery"
+    - "Borrowing equity from Khatib & Alami"
+
+# ───────────────────────────────────────────────────────────
+# CONFIRMATIONS STATUS
+# ───────────────────────────────────────────────────────────
+confirmations_status:
+
+  confirmed_by_cv:
+    - "OEA Beirut membership since January 1999"
+    - "PhD Beirut Arab University, Structural & Geotechnical Engineering, 2018"
+    - "Master Beirut Arab University, 2005"
+    - "Bachelor Beirut Arab University, 1998"
+    - "Lebanese International University assistant professor, current"
+    - "University of Balamand affiliation, current"
+    - "ISSAE-Cnam Liban research supervisor, current"
+    - "52 peer-reviewed publications with DOIs (full list in CV)"
+    - "21 editorial board / reviewer positions at named journals (full list in CV)"
+    - "Patent: Economic Vessel for Solid-Waste Recovery in Waterways, 2023, co-inventor Dr. Bassam Mahmoud, Lebanese-registered"
+    - "Patent: Food-Particle Collection Device, 2025, sole inventor, Lebanese-registered"
+    - "Published book: Breaking Limits in Prestressed Concrete (Amazon)"
+    - "Languages: English, French, Italian, Arabic native"
+    - "ACI 1st Lebanese speaker, 24 Hours of Concrete Knowledge"
+    - "ICCEIC 2024 keynote speaker, China"
+    - "SPSC Sustainability Ambassadorship, Verification Code 00014774"
+
+  confirmed_by_whatsapp_2026_05_02:
+    - "Approval of existing brand visuals (May 2026)"
+    - "Request to add University of Balamand affiliation"
+    - "Request to add new publications"
+    - "Approval of CV as the source of record"
+    - "No PDF downloads needed for publications"
+    - "Authorised photo provided by client for use in social and website (Beirut, 2026)"
+    - "Civilian-only directive: no military references on any public materials"
+    - "MBA in progress at AUST, expected end of current semester"
+
+  excluded_by_client_request:
+    - "Lebanese Armed Forces career and all postings"
+    - "Battalion Commander Course"
+    - "All military medals (Valour, War, Anti-Terrorism, Merit)"
+    - "Army Commander Felicitations and Commendations"
+    - "PLA Shijiazhuang course"
+    - "Office of Military Housing roles"
+    - "Engineering Moderate / Real Estate Service / Properties Section postings"
+    - "Public-service committee chairmanships (the pattern is identifying)"
+    - "AUST Strategic and Security Analysis diploma (military-policy adjacent)"
+    - "French Ministry of Defense as named certifier of language certificates"
+
+  pending_client_confirmation:
+    - "Specific OEA Beirut registration number (membership year 1999 is confirmed; the registration number itself is not in the CV)"
+    - "Patent registration numbers for both 2023 and 2025 patents"
+    - "Companion publication for the 2025 Food-Particle Collection Device patent (forthcoming or under preparation)"
+    - "Professional indemnity insurance carrier and policy number for inclusion in expert-witness materials"
+    - "Authorised photo library for project / conference / patent demonstration shots beyond the official portrait"
+    - "Confirmation of preferred Arabic surname spelling (الخطيب appears throughout the kit)"
+    - "Whether to publish phone number publicly on contact page"
+    - "MBA conferral confirmation (currently shown as 'in progress')"
+
+# ───────────────────────────────────────────────────────────
+# PROVENANCE
+# ───────────────────────────────────────────────────────────
+provenance:
+  inspired_by_brand: ibrahim-energy-partners
+  shared_dna:
+    - "Deep Navy / Gold / Heritage Green / Cream palette (with Blueprint Blue elevated as tertiary)"
+    - "Cormorant Garamond + IBM Plex Sans + IBM Plex Sans Arabic typography stack"
+    - "Two-register voice (technical + relational)"
+    - "Gold rules above and below the primary lockup"
+    - "Bilingual EN/AR by default"
+  distinct_elements:
+    - "MK isometric cube monogram (vs. IE Islamic hexagon)"
+    - "IBM Plex Mono for technical metadata"
+    - "Patent schematic pattern (vs. Islamic geometric)"
+    - "Engineering-voice motto: 'Engineering by proof.' (vs. 'Verification first.')"
+    - "Innovation-accent role for Gold (vs. general-headline role)"
+    - "Practice is solo personal civilian consultancy combined with three concurrent academic posts"
+    - "Three pillars: Structural · Geotechnical · Forensic (the disaster-assessment pillar from v2 is excluded per client preference)"

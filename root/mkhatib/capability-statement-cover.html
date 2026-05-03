@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Capability Statement · Cover · Dr. Milad Khatib</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet"/>
+<style>
+  @page { size: A4; margin: 0; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: #2a2a2a; }
+  body { display: flex; align-items: center; justify-content: center; min-height: 100vh; font-family: 'IBM Plex Sans', Arial, sans-serif; }
+
+  .sheet {
+    width: 210mm; height: 297mm;
+    background: #0A0E17;
+    color: #F5F1E8;
+    padding: 25mm 22mm;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+  }
+
+  /* iso grid texture */
+  .sheet::before {
+    content: '';
+    position: absolute; inset: 0;
+    background-image:
+      linear-gradient(120deg, transparent 49.6%, rgba(200,164,78,0.05) 49.6%, rgba(200,164,78,0.05) 50.4%, transparent 50.4%),
+      linear-gradient(60deg,  transparent 49.6%, rgba(200,164,78,0.05) 49.6%, rgba(200,164,78,0.05) 50.4%, transparent 50.4%);
+    background-size: 36px 62px;
+    opacity: 0.7;
+    pointer-events: none;
+  }
+
+  /* Decorative isometric cube top right */
+  .deco-cube {
+    position: absolute;
+    top: 22mm; right: 18mm;
+    width: 38mm; height: 38mm;
+    z-index: 1;
+    opacity: 0.5;
+  }
+
+  .head, .body, .foot { position: relative; z-index: 2; }
+
+  .head {
+    text-align: left;
+  }
+  .eyebrow {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 8pt;
+    letter-spacing: 0.4em;
+    color: #C8A44E;
+    text-transform: uppercase;
+    margin-bottom: 6mm;
+  }
+  .gold-rule { width: 24mm; height: 1px; background: #C8A44E; margin-bottom: 6mm; }
+
+  .body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 30mm;
+  }
+
+  h1 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 700;
+    font-size: 56pt;
+    line-height: 0.95;
+    color: #FFFFFF;
+    letter-spacing: -0.01em;
+    margin-bottom: 6mm;
+  }
+  .h-sub {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 500;
+    font-size: 11pt;
+    letter-spacing: 0.32em;
+    color: #C8A44E;
+    text-transform: uppercase;
+    margin-bottom: 8mm;
+  }
+  .h-arabic {
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+    font-weight: 500;
+    font-size: 22pt;
+    color: #F5F1E8;
+    direction: rtl;
+    text-align: right;
+    margin-bottom: 2mm;
+  }
+  .h-arabic-sub {
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+    font-weight: 400;
+    font-size: 12pt;
+    color: #9A9589;
+    direction: rtl;
+    text-align: right;
+  }
+
+  .doc-title {
+    margin-top: 16mm;
+    padding-top: 6mm;
+    border-top: 1px solid rgba(200,164,78,0.4);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22pt;
+    color: #D4B76A;
+    font-style: italic;
+  }
+  .doc-title-mono {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 8pt;
+    letter-spacing: 0.3em;
+    color: #9A9589;
+    text-transform: uppercase;
+    margin-top: 3mm;
+  }
+
+  /* Pillars at bottom */
+  .pillars {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10mm;
+    margin-top: 16mm;
+    padding-top: 8mm;
+    border-top: 1px solid rgba(200,164,78,0.3);
+  }
+  .pillar-mono {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 7pt;
+    letter-spacing: 0.3em;
+    color: #C8A44E;
+    text-transform: uppercase;
+    margin-bottom: 2mm;
+  }
+  .pillar-h {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 13pt;
+    color: #F5F1E8;
+    line-height: 1.2;
+  }
+
+  .foot {
+    margin-top: auto;
+    padding-top: 10mm;
+    border-top: 1px solid rgba(200,164,78,0.3);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 8mm;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 7pt;
+    color: #9A9589;
+    letter-spacing: 0.05em;
+    line-height: 1.7;
+  }
+  .foot-h {
+    color: #C8A44E;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-bottom: 1.5mm;
+    font-size: 6.5pt;
+    letter-spacing: 0.2em;
+  }
+  .foot strong { color: #F5F1E8; font-weight: 500; }
+  .placeholder { color: #C8A44E; }
+</style>
+</head>
+<body>
+<div class="sheet">
+
+  <!-- Decorative isometric cube -->
+  <svg class="deco-cube" viewBox="0 0 200 200">
+    <g stroke="#C8A44E" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M 100 30 L 165 67 L 100 105 L 35 67 Z"/>
+      <path d="M 35 67 L 100 105 L 100 175 L 35 137 Z"/>
+      <path d="M 165 67 L 100 105 L 100 175 L 165 137 Z"/>
+    </g>
+  </svg>
+
+  <header class="head">
+    <div class="eyebrow">Capability Statement &nbsp;·&nbsp; 2026</div>
+    <div class="gold-rule"></div>
+  </header>
+
+  <div class="body">
+    <h1>Dr. Milad<br/>Khatib</h1>
+    <div class="h-sub">Civil Engineering Consultancy</div>
+
+    <div style="margin-top: 4mm">
+      <div class="h-arabic" dir="rtl">د. ميلاد الخطيب</div>
+      <div class="h-arabic-sub" dir="rtl">الاستشارات الهندسية المدنية</div>
+    </div>
+
+    <div class="doc-title">
+      Engineering by proof. — الهندسة بالبرهان.
+      <div class="doc-title-mono">Beirut · Lebanon &nbsp;·&nbsp; A solo consulting practice</div>
+    </div>
+
+    <div class="pillars">
+      <div>
+        <div class="pillar-mono">01 · Structural</div>
+        <div class="pillar-h">Post-tensioned slabs · seismic analysis · retrofit verification</div>
+      </div>
+      <div>
+        <div class="pillar-mono">02 · Geotechnical</div>
+        <div class="pillar-h">Dam grouting · GIN method · slope &amp; foundation review</div>
+      </div>
+      <div>
+        <div class="pillar-mono">03 · Forensic</div>
+        <div class="pillar-h">Failure analysis · technical opinion · expert witness</div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="foot">
+    <div>
+      <div class="foot-h">Practice</div>
+      <div><strong>Beirut</strong>&nbsp;·&nbsp;Lebanon</div>
+      <div>milad@miladkhatib.com</div>
+      <div>+961 3 927 934</div>
+    </div>
+    <div>
+      <div class="foot-h">Registration</div>
+      <div><strong>OEA · Beirut</strong>&nbsp;<span class="placeholder">[ # ]</span></div>
+      <div><strong>ORCID</strong>&nbsp;0000-0002-0140-0941</div>
+      <div><strong>Scopus</strong>&nbsp;57202890131</div>
+    </div>
+    <div>
+      <div class="foot-h">Innovation</div>
+      <div><strong>LB Patents</strong>&nbsp;·&nbsp;2023, 2025</div>
+      <div>Editorial · 21 international journals</div>
+      <div>52 publications · 1 book</div>
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>

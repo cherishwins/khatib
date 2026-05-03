@@ -67,6 +67,8 @@
     "selectedTitle": "Selected publications",
     "selectedLede": "Six papers from the record. Each links to a DOI.",
     "viewAll": "52 publications total — view full record →",
+    "pillarCta": "Read pillar →",
+    "patentCta": "View case study →",
     "patentsTitle": "Patents",
     "patentsLede": "Two registered Lebanese patents, each with a peer-reviewed companion publication.",
     "closingTagline": "Engineering by proof.",
@@ -270,7 +272,8 @@
       },
       "success": "Thank you. Dr. Khatib will reply within two business days.",
       "error": "Could not send. Please email milad@miladkhatib.com directly.",
-      "required": "Required"
+      "required": "Required",
+      "invalid": "Please check this field"
     }
   },
   "legal": {

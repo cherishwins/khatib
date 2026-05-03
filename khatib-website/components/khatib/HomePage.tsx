@@ -67,8 +67,13 @@ export function HomePage({ locale, dict }: { locale: Locale; dict: Dictionary })
               {dict.home.subline}
             </p>
             <p
-              dir={isAr ? 'rtl' : 'ltr'}
-              className="font-arabic text-2xl text-warm-gray md:text-3xl"
+              dir={isAr ? 'ltr' : 'rtl'}
+              lang={isAr ? 'en' : 'ar'}
+              className={
+                isAr
+                  ? 'font-display text-2xl text-warm-gray md:text-3xl'
+                  : 'font-arabic text-2xl text-warm-gray md:text-3xl'
+              }
             >
               {isAr ? brand.shortNameEn : brand.shortNameAr}
             </p>
@@ -103,9 +108,9 @@ export function HomePage({ locale, dict }: { locale: Locale; dict: Dictionary })
             lede={dict.home.pillarsLede}
           />
           <div className="mt-12 grid gap-6 md:grid-cols-3 md:gap-8">
-            <PillarCard {...dict.home.pillars.structural} />
-            <PillarCard {...dict.home.pillars.geotechnical} />
-            <PillarCard {...dict.home.pillars.forensic} />
+            <PillarCard {...dict.home.pillars.structural} cta={dict.home.pillarCta} />
+            <PillarCard {...dict.home.pillars.geotechnical} cta={dict.home.pillarCta} />
+            <PillarCard {...dict.home.pillars.forensic} cta={dict.home.pillarCta} />
           </div>
         </div>
       </section>
@@ -185,6 +190,7 @@ export function HomePage({ locale, dict }: { locale: Locale; dict: Dictionary })
               jurisdiction={dict.patents.vessel.jurisdiction}
               summary={dict.patents.vessel.summary}
               href={dict.patents.vessel.href}
+              cta={dict.home.patentCta}
             />
             <PatentCard
               year={dict.patents.foodCollector.year}
@@ -192,6 +198,7 @@ export function HomePage({ locale, dict }: { locale: Locale; dict: Dictionary })
               jurisdiction={dict.patents.foodCollector.jurisdiction}
               summary={dict.patents.foodCollector.summary}
               href={dict.patents.foodCollector.href}
+              cta={dict.home.patentCta}
             />
           </div>
           <p className="mt-6 max-w-prose text-sm text-warm-gray">
@@ -212,6 +219,7 @@ export function HomePage({ locale, dict }: { locale: Locale; dict: Dictionary })
           </p>
           <p
             dir={isAr ? 'ltr' : 'rtl'}
+            lang={isAr ? 'en' : 'ar'}
             className={isAr ? 'font-display text-xl italic text-warm-gray md:text-2xl' : 'font-arabic text-xl text-warm-gray md:text-2xl'}
           >
             {dict.home.closingPair}
@@ -221,8 +229,8 @@ export function HomePage({ locale, dict }: { locale: Locale; dict: Dictionary })
             <Mono className="text-[10px] uppercase tracking-tracked text-gold">
               {dict.home.contactMini.label}
             </Mono>
-            <a className="text-base text-cream hover:text-gold" href={`mailto:${brand.emailPlaceholder}`}>
-              {brand.emailPlaceholder}
+            <a className="text-base text-cream hover:text-gold" href={`mailto:${brand.email}`}>
+              {brand.email}
             </a>
             <Link
               href={`${prefix}/contact`}

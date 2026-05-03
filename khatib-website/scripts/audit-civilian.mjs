@@ -9,7 +9,10 @@ import { extname, join } from 'node:path';
 
 const ROOT = process.cwd();
 const SCAN_EXTS = new Set(['.ts', '.tsx', '.js', '.jsx', '.mjs', '.json', '.md', '.html', '.css']);
-const SKIP_DIRS = new Set(['node_modules', '.next', '.git', 'out', 'extracted', 'public/icons-and-meta']);
+// Single-segment directory names skipped at any depth.
+const SKIP_DIRS = new Set(['node_modules', '.next', '.git', 'out', 'extracted']);
+// Multi-segment paths skipped only when matched relative to ROOT.
+const SKIP_PATHS = new Set(['public/icons-and-meta']);
 
 // Match the regex documented in WEBSITE-PRODUCTION-BUILD-PROMPT.md. The "Beirut Port"
 // alternation is included verbatim because the preserved-for-later optional asset
@@ -46,6 +49,8 @@ function walk(dir) {
   for (const name of entries) {
     if (SKIP_DIRS.has(name)) continue;
     const full = join(dir, name);
+    const rel = full.startsWith(`${ROOT}/`) ? full.slice(ROOT.length + 1) : full;
+    if (SKIP_PATHS.has(rel)) continue;
     let stat;
     try {
       stat = statSync(full);

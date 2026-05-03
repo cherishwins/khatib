@@ -29,6 +29,7 @@ export function PatentsIndexPage({ locale, dict }: { locale: Locale; dict: Dicti
             jurisdiction={dict.patents.vessel.jurisdiction}
             summary={dict.patents.vessel.summary}
             href={dict.patents.vessel.href}
+            cta={dict.home.patentCta}
           />
           <PatentCard
             year={dict.patents.foodCollector.year}
@@ -36,6 +37,7 @@ export function PatentsIndexPage({ locale, dict }: { locale: Locale; dict: Dicti
             jurisdiction={dict.patents.foodCollector.jurisdiction}
             summary={dict.patents.foodCollector.summary}
             href={dict.patents.foodCollector.href}
+            cta={dict.home.patentCta}
           />
         </div>
       </section>

@@ -43,10 +43,10 @@ export function Tagline({ lang = 'both', className }: { lang?: 'en' | 'ar' | 'bo
   return (
     <div className={clsx('flex flex-col gap-1 font-display italic', className)}>
       {(lang === 'en' || lang === 'both') && (
-        <span className="text-gold">Engineering by proof.</span>
+        <span lang="en" className="text-gold">Engineering by proof.</span>
       )}
       {(lang === 'ar' || lang === 'both') && (
-        <span dir="rtl" className="font-arabic text-warm-gray not-italic">
+        <span lang="ar" dir="rtl" className="font-arabic text-warm-gray not-italic">
           الهندسة بالبرهان.
         </span>
       )}

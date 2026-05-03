@@ -10,14 +10,60 @@ const Schema = z.object({
   topic: z.enum(['structural', 'geotechnical', 'forensic', 'patent', 'academic', 'other']),
   message: z.string().min(1).max(4000),
   locale: z.enum(['en', 'ar']),
+  // Honeypot — bots fill every input; humans never see this field. Reject if present.
+  company: z.string().max(200).optional(),
 });
 
+// Per-instance rate limiter. Honest about its limit: only one Fluid Compute instance
+// sees a given submitter, so bursts across regions/instances aren't accounted for.
+// Sufficient as a first line; upgrade to Vercel KV / Upstash Redis when traffic
+// justifies cross-instance accounting.
+const RATE_LIMIT = { windowMs: 10 * 60 * 1000, max: 3 };
+const submissions = new Map<string, number[]>();
+
+function clientIp(req: Request): string {
+  const xff = req.headers.get('x-forwarded-for');
+  if (xff) return xff.split(',')[0]?.trim() || 'unknown';
+  return req.headers.get('x-real-ip') ?? 'unknown';
+}
+
+function rateLimited(ip: string): boolean {
+  const now = Date.now();
+  const cutoff = now - RATE_LIMIT.windowMs;
+  const recent = (submissions.get(ip) ?? []).filter((t) => t > cutoff);
+  if (recent.length >= RATE_LIMIT.max) {
+    submissions.set(ip, recent);
+    return true;
+  }
+  recent.push(now);
+  submissions.set(ip, recent);
+  // Opportunistic cleanup so the map doesn't grow unbounded across long-lived instances.
+  if (submissions.size > 1000) {
+    for (const [k, v] of submissions) {
+      const kept = v.filter((t) => t > cutoff);
+      if (kept.length === 0) submissions.delete(k);
+      else submissions.set(k, kept);
+    }
+  }
+  return false;
+}
+
 export async function POST(request: Request) {
+  const ip = clientIp(request);
+  if (rateLimited(ip)) {
+    return NextResponse.json({ ok: false, error: 'rate-limited' }, { status: 429 });
+  }
+
   let parsed: z.infer<typeof Schema>;
   try {
     parsed = Schema.parse(await request.json());
   } catch {
     return NextResponse.json({ ok: false, error: 'invalid' }, { status: 400 });
+  }
+
+  // Honeypot tripped — silently accept so the bot has no signal to retry.
+  if (parsed.company && parsed.company.length > 0) {
+    return NextResponse.json({ ok: true });
   }
 
   const apiKey = process.env.RESEND_API_KEY;

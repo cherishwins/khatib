@@ -27,18 +27,21 @@ export function ServicesPage({ locale, dict }: { locale: Locale; dict: Dictionar
             title={dict.services.structural.title}
             summary={dict.services.structural.lede}
             href={isAr ? '/ar/services/structural' : '/services/structural'}
+            cta={dict.home.pillarCta}
           />
           <PillarCard
             number="02"
             title={dict.services.geotechnical.title}
             summary={dict.services.geotechnical.lede}
             href={isAr ? '/ar/services/geotechnical' : '/services/geotechnical'}
+            cta={dict.home.pillarCta}
           />
           <PillarCard
             number="03"
             title={dict.services.forensic.title}
             summary={dict.services.forensic.lede}
             href={isAr ? '/ar/services/forensic' : '/services/forensic'}
+            cta={dict.home.pillarCta}
           />
         </div>
       </section>

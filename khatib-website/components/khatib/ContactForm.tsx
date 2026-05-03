@@ -27,19 +27,23 @@ export function ContactForm({ locale, dict }: { locale: Locale; dict: Dictionary
     setState('submitting');
     setErrors({});
 
-    const formData = new FormData(e.currentTarget);
+    const form = e.currentTarget;
+    const formData = new FormData(form);
     const candidate = {
       name: String(formData.get('name') ?? ''),
       email: String(formData.get('email') ?? ''),
       topic: String(formData.get('topic') ?? ''),
       message: String(formData.get('message') ?? ''),
     };
+    // Honeypot — humans never see/fill this field; bots fill every input.
+    const honeypot = String(formData.get('company') ?? '');
     const parsed = ContactSchema.safeParse(candidate);
     if (!parsed.success) {
       const fieldErrors: typeof errors = {};
       for (const issue of parsed.error.issues) {
         const key = issue.path[0] as keyof ContactInput;
-        fieldErrors[key] = issue.message;
+        const isEmpty = candidate[key] === '';
+        fieldErrors[key] = isEmpty ? dict.contact.form.required : dict.contact.form.invalid;
       }
       setErrors(fieldErrors);
       setState('error');
@@ -50,11 +54,11 @@ export function ContactForm({ locale, dict }: { locale: Locale; dict: Dictionary
       const res = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ ...parsed.data, locale }),
+        body: JSON.stringify({ ...parsed.data, locale, company: honeypot }),
       });
       if (!res.ok) throw new Error('failed');
+      form.reset();
       setState('success');
-      e.currentTarget.reset();
     } catch {
       setState('error');
     }
@@ -73,7 +77,12 @@ export function ContactForm({ locale, dict }: { locale: Locale; dict: Dictionary
 
   return (
     <form onSubmit={onSubmit} className="flex flex-col gap-6" noValidate>
-      <Field label={f.name} name="name" required error={errors.name && f.required}>
+      {/* Honeypot — visually and semantically hidden; bots fill it, humans don't. */}
+      <div aria-hidden="true" className="hidden">
+        <label htmlFor="company">Company</label>
+        <input id="company" name="company" type="text" tabIndex={-1} autoComplete="off" />
+      </div>
+      <Field label={f.name} name="name" required error={errors.name}>
         <input
           id="name"
           name="name"
@@ -84,7 +93,7 @@ export function ContactForm({ locale, dict }: { locale: Locale; dict: Dictionary
           className="border border-warm-gray/30 bg-deep-navy/60 px-3 py-2 text-base text-cream focus:border-gold"
         />
       </Field>
-      <Field label={f.email} name="email" required error={errors.email && f.required}>
+      <Field label={f.email} name="email" required error={errors.email}>
         <input
           id="email"
           name="email"
@@ -95,7 +104,7 @@ export function ContactForm({ locale, dict }: { locale: Locale; dict: Dictionary
           className="border border-warm-gray/30 bg-deep-navy/60 px-3 py-2 text-base text-cream focus:border-gold"
         />
       </Field>
-      <Field label={f.topic} name="topic" required error={errors.topic && f.required}>
+      <Field label={f.topic} name="topic" required error={errors.topic}>
         <select
           id="topic"
           name="topic"
@@ -114,7 +123,7 @@ export function ContactForm({ locale, dict }: { locale: Locale; dict: Dictionary
           ))}
         </select>
       </Field>
-      <Field label={f.message} name="message" required error={errors.message && f.required}>
+      <Field label={f.message} name="message" required error={errors.message}>
         <textarea
           id="message"
           name="message"

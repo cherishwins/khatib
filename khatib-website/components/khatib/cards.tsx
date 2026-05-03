@@ -7,11 +7,13 @@ export function PillarCard({
   title,
   summary,
   href,
+  cta,
 }: {
   number: string;
   title: string;
   summary: string;
   href: string;
+  cta: string;
 }) {
   return (
     <Link
@@ -24,7 +26,7 @@ export function PillarCard({
       </h3>
       <p className="text-sm leading-relaxed text-warm-gray md:text-base">{summary}</p>
       <span className="mt-2 font-mono text-[11px] uppercase tracking-tracked-wide text-gold transition-transform group-hover:translate-x-0.5">
-        Read pillar &rarr;
+        {cta}
       </span>
     </Link>
   );
@@ -36,12 +38,14 @@ export function PatentCard({
   jurisdiction,
   summary,
   href,
+  cta,
 }: {
   year: string;
   title: string;
   jurisdiction: string;
   summary: string;
   href: string;
+  cta: string;
 }) {
   return (
     <Link
@@ -61,7 +65,7 @@ export function PatentCard({
       </h3>
       <p className="text-sm leading-relaxed text-warm-gray">{summary}</p>
       <span className="mt-1 font-mono text-[11px] uppercase tracking-tracked-wide text-gold transition-transform group-hover:translate-x-0.5">
-        View case study &rarr;
+        {cta}
       </span>
     </Link>
   );

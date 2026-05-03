@@ -21,18 +21,21 @@ export function Mark({ variant = 'navy', className }: MarkProps) {
       <div className="h-px w-full" style={{ backgroundColor: colors.rule }} />
       <div className="flex flex-col items-center gap-1 px-4">
         <div
+          lang="en"
           className="font-display text-2xl font-bold leading-tight md:text-3xl"
           style={{ color: colors.heading }}
         >
           DR. MILAD KHATIB
         </div>
         <div
+          lang="en"
           className="font-sans text-[11px] font-medium uppercase tracking-tracked-wide md:text-xs"
           style={{ color: colors.subline }}
         >
           Civil Engineering Consultancy
         </div>
         <div
+          lang="ar"
           dir="rtl"
           className="font-arabic text-base font-medium md:text-lg"
           style={{ color: colors.arabic }}
@@ -40,6 +43,7 @@ export function Mark({ variant = 'navy', className }: MarkProps) {
           د. ميلاد الخطيب
         </div>
         <div
+          lang="ar"
           dir="rtl"
           className="font-arabic text-xs"
           style={{ color: colors.arabic }}

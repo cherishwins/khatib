@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Letterhead · English · Dr. Milad Khatib</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<style>
+  @page { size: A4; margin: 0; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: #2a2a2a; }
+  body { display: flex; align-items: center; justify-content: center; min-height: 100vh; font-family: 'IBM Plex Sans', Arial, sans-serif; }
+
+  .sheet {
+    width: 210mm; height: 297mm;
+    background: #F5F1E8;
+    color: #5A5651;
+    padding: 30mm 25mm;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+  }
+
+  /* Header */
+  .head {
+    text-align: center;
+    padding-bottom: 22mm;
+    border-bottom: none;
+    position: relative;
+  }
+  .rule-top, .rule-bot { width: 100%; height: 1px; background: #C8A44E; }
+  .name {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 700;
+    font-size: 32pt;
+    color: #0A0E17;
+    letter-spacing: -0.01em;
+    margin: 5mm 0 2mm;
+  }
+  .sub {
+    font-family: 'IBM Plex Sans', Arial, sans-serif;
+    font-weight: 500;
+    font-size: 9pt;
+    letter-spacing: 0.32em;
+    color: #A68A3E;
+    text-transform: uppercase;
+  }
+  .ar-name {
+    font-family: 'IBM Plex Sans Arabic', Arial, sans-serif;
+    font-weight: 500;
+    font-size: 14pt;
+    color: #5A5651;
+    direction: rtl;
+    margin-top: 4mm;
+  }
+  .ar-sub {
+    font-family: 'IBM Plex Sans Arabic', Arial, sans-serif;
+    font-weight: 400;
+    font-size: 10pt;
+    color: #5A5651;
+    direction: rtl;
+    margin-top: 1.5mm;
+  }
+  .head-rule-spacer { height: 4mm; }
+
+  /* Body */
+  .body-area {
+    flex: 1;
+    padding: 12mm 0 8mm;
+    font-family: 'IBM Plex Sans', Arial, sans-serif;
+    font-size: 10.5pt;
+    line-height: 1.55;
+    color: #5A5651;
+  }
+  .meta {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 8pt;
+    color: #9A9589;
+    margin-bottom: 8mm;
+    letter-spacing: 0.05em;
+  }
+  .meta strong { color: #5A5651; font-weight: 500; }
+  .salutation { margin-bottom: 4mm; color: #0A0E17; font-weight: 500; }
+  p { margin-bottom: 4mm; }
+  .signoff { margin-top: 8mm; }
+  .signature {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic;
+    font-size: 14pt;
+    color: #0A0E17;
+    margin-bottom: 1mm;
+  }
+  .signature-line {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 500;
+    color: #0A0E17;
+    font-size: 10pt;
+  }
+  .signature-line-sub {
+    font-family: 'IBM Plex Sans', sans-serif;
+    color: #9A9589;
+    font-size: 9pt;
+  }
+
+  /* Footer */
+  .foot {
+    border-top: 1px solid #C8A44E;
+    padding-top: 4mm;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 8mm;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 7pt;
+    color: #9A9589;
+    letter-spacing: 0.05em;
+    line-height: 1.6;
+  }
+  .foot-col-h {
+    color: #C8A44E;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-bottom: 1.5mm;
+    font-size: 6.5pt;
+    letter-spacing: 0.15em;
+  }
+  .foot strong { color: #5A5651; font-weight: 500; }
+  .placeholder { color: #C8A44E; }
+</style>
+</head>
+<body>
+<div class="sheet">
+
+  <header class="head">
+    <div class="rule-top"></div>
+    <div class="name">DR. MILAD KHATIB</div>
+    <div class="sub">CIVIL ENGINEERING CONSULTANCY</div>
+    <div class="ar-name" dir="rtl">د. ميلاد الخطيب</div>
+    <div class="ar-sub" dir="rtl">الاستشارات الهندسية المدنية</div>
+    <div class="head-rule-spacer"></div>
+    <div class="rule-bot"></div>
+  </header>
+
+  <div class="body-area">
+    <div class="meta">
+      <strong>REF</strong>&nbsp;&nbsp;MK-2026-039 &nbsp; · &nbsp;
+      <strong>DATE</strong>&nbsp;&nbsp;02 May 2026 &nbsp; · &nbsp;
+      <strong>RE</strong>&nbsp;&nbsp;Forensic Structural Opinion &mdash; South Beirut Tower
+    </div>
+
+    <p class="salutation">Dear Counsel,</p>
+
+    <p>
+      Following the site inspection of 27 April 2026 and review of the
+      original post-tension shop drawings, our finite-element re-analysis
+      of slab levels 18 through 22 confirms the corner-deflection
+      pattern reported in the developer&rsquo;s 90-day monitoring data.
+      Total measured deflection at column line C4-C5 reached 38&nbsp;mm,
+      exceeding the L/240 serviceability limit prescribed by ACI&nbsp;318
+      and the Lebanese seismic provisions.
+    </p>
+
+    <p>
+      Three findings are material to your action. First, the failure
+      mode is consistent with monostrand anchorage slip at the boundary
+      tendons, a phenomenon I have characterised in peer-reviewed work
+      (Heliyon, 2024). Second, the inverted-U reinforcement detail
+      required by the original structural specification appears to have
+      been omitted at three of the affected gridlines. Third, the
+      in-place concrete cylinder strength averaged 28.4&nbsp;MPa
+      against a 35&nbsp;MPa specification.
+    </p>
+
+    <p>
+      A full technical report, with calculations, photographs, and
+      proposed remediation, will follow under separate cover within
+      ten business days. I am available for deposition by prior
+      arrangement and will testify in English or Arabic.
+    </p>
+
+    <div class="signoff">
+      <div class="signature">M. Khatib</div>
+      <div class="signature-line">Dr. Milad Khatib · PhD, Eng.</div>
+      <div class="signature-line-sub">Principal · Civil Engineering Consultancy</div>
+      <div class="signature-line-sub">OEA Beirut · Member since January 1999 &nbsp;·&nbsp; <span class="placeholder">Reg # to be inserted</span></div>
+    </div>
+  </div>
+
+  <footer class="foot">
+    <div>
+      <div class="foot-col-h">Practice</div>
+      <div><strong>Beirut</strong>&nbsp;·&nbsp;Lebanon</div>
+      <div>milad@miladkhatib.com</div>
+      <div>+961 3 927 934</div>
+    </div>
+    <div>
+      <div class="foot-col-h">Registration</div>
+      <div><strong>OEA · Beirut</strong>&nbsp;·&nbsp;Member since 1999</div>
+      <div><strong>ORCID</strong>&nbsp;·&nbsp;0000-0002-0140-0941</div>
+      <div><strong>Scopus</strong>&nbsp;·&nbsp;57202890131</div>
+    </div>
+    <div>
+      <div class="foot-col-h">Patents</div>
+      <div><strong>LB · 2023</strong>&nbsp;·&nbsp;Solid-waste vessel</div>
+      <div><strong>LB · 2025</strong>&nbsp;·&nbsp;Food-particle device</div>
+      <div>miladkhatib.com</div>
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>

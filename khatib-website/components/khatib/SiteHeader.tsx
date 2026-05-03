@@ -4,6 +4,7 @@ import type { Dictionary } from '@/lib/i18n';
 import { Wordmark } from './Wordmark';
 import { LanguageToggle } from './LanguageToggle';
 import { Monogram } from './Monogram';
+import { MobileMenu } from './MobileMenu';
 
 export function SiteHeader({ locale, dict }: { locale: Locale; dict: Dictionary }) {
   const home = locale === 'en' ? '/' : '/ar';
@@ -40,7 +41,10 @@ export function SiteHeader({ locale, dict }: { locale: Locale; dict: Dictionary 
             ))}
           </ul>
         </nav>
-        <LanguageToggle locale={locale} dict={dict} />
+        <div className="flex items-center gap-3">
+          <LanguageToggle locale={locale} dict={dict} />
+          <MobileMenu locale={locale} dict={dict} />
+        </div>
       </div>
     </header>
   );
