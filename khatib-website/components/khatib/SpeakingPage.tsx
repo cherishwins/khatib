@@ -7,11 +7,16 @@ import {
   SPEAKING_PENDING_NOTE_EN,
   talks,
 } from '@/content/speaking';
+import { speakingJsonLd } from '@/lib/speaking-jsonld';
 
 export function SpeakingPage({ locale, dict }: { locale: Locale; dict: Dictionary }) {
   const isAr = locale === 'ar';
   return (
     <article className="bg-deep-navy">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(speakingJsonLd()) }}
+      />
       <header className="border-b border-warm-gray/15 px-4 py-20 md:px-8 md:py-28">
         <div className="mx-auto max-w-5xl">
           <SectionHeading
@@ -25,7 +30,6 @@ export function SpeakingPage({ locale, dict }: { locale: Locale; dict: Dictionar
 
       <section className="px-4 py-16 md:px-8 md:py-20">
         <div className="mx-auto max-w-5xl">
-          {/* PENDING: Dr. Khatib has been asked for the full talk list; only confirmed entries shown. */}
           <ul className="flex flex-col">
             {talks.map((t) => (
               <li
